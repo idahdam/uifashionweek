@@ -1,12 +1,8 @@
 import React from "react";
-import { landingPageContainer } from "./landingPage.element";
+import { LandingPageContainer } from "./landingPage.element";
 
-const landingPage = () => {
-  return (
-    <>
-      <landingPageContainer>ini landing page</landingPageContainer>
-    </>
-  );
+const LandingPage = () => {
+  return <LandingPageContainer>ini landing</LandingPageContainer>;
 };
 
-export default landingPage;
+export default LandingPage;

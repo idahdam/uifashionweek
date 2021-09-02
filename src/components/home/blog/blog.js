@@ -1,7 +1,7 @@
 import React from "react";
 
-const blog = () => {
+const Blog = () => {
   return <>ini blog</>;
 };
 
-export default blog;
+export default Blog;

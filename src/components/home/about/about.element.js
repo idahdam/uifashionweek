@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-export const LandingPageContainer = styled.div`
+export const AboutContainer = styled.div`
   width: 100%;
-  z-index: 1;
   width: 100%;
   max-width: 1300px;
   margin-left: auto;
