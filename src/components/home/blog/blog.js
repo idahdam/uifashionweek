@@ -1,6 +1,6 @@
 import React from "react";
 import { BlogContainer } from "./blog.element";
-const blog = () => {
+const Blog = () => {
   return (
     <>
       <BlogContainer>ini blog</BlogContainer>
@@ -8,4 +8,4 @@ const blog = () => {
   );
 };
 
-export default blog;
+export default Blog;

@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const contact = () => {
-    return (
-        <>
-            ini contact
-        </>
-    )
-}
+const Contact = () => {
+  return <>ini contact</>;
+};
 
-export default contact
+export default Contact;
