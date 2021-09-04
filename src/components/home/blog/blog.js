@@ -3,7 +3,7 @@ import { BlogContainer } from "./blog.element";
 const Blog = () => {
   return (
     <>
-      <BlogContainer>ini blog</BlogContainer>
+      <BlogContainer>blog</BlogContainer>
     </>
   );
 };

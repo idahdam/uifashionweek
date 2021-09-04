@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BlogContainer = styled.div`
-  background-color: yellow;
+  background-color: blue;
   display: flex;
   width: 100%;
   max-width: 1366px;
