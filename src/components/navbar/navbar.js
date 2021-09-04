@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import logo from "../../assets/image/navbar/Logo-UIFW.png";
 import {
   Nav,
@@ -7,16 +7,17 @@ import {
   MobileIcon,
   NavMenu,
   NavItem,
+  NavItem2,
   NavLinks,
   NavLinks2,
-  NavImg,
-  NavText,
-  NavHref,
-  NavHrefDropdown,
-  NavDropdown,
-  NavItemDropdown,
-  NavArrowDown,
-  NavArrowUp,
+  NavImg
+  // NavText,
+  // NavHref,
+  // NavHrefDropdown,
+  // NavDropdown,
+  // NavItemDropdown,
+  // NavArrowDown,
+  // NavArrowUp,
 } from "./navbar.elements";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
@@ -25,6 +26,7 @@ const Navbar = () => {
   const [click, setClick] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [button, setButton] = useState(true);
+   // eslint-disable-next-line no-unused-vars
   const [navbar, setNavbar] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -44,7 +46,7 @@ const Navbar = () => {
         <Nav>
           <NavbarContainer>
             <NavLogo to="/" onClick={closeMobileMenu}>
-            <NavImg src={logo} alt="bye" />
+              <NavImg src={logo} alt="bye" />
             </NavLogo>
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
@@ -94,7 +96,7 @@ const Navbar = () => {
                   Contact Us
                 </NavLinks>
               </NavItem>
-              <NavItem>
+              <NavItem2>
                 <NavLinks2
                   onClick={() => {
                     handleClick() && setNavbar(false);
@@ -104,8 +106,7 @@ const Navbar = () => {
                 >
                   Register
                 </NavLinks2>
-              </NavItem>
-
+              </NavItem2>
             </NavMenu>
           </NavbarContainer>
         </Nav>

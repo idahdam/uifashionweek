@@ -7,7 +7,7 @@ import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 export const Nav = styled.nav`
   background-color: rgb(225, 216, 207, 0.9);
   backdrop-filter: blur(5px);
-  height: 72px;
+  height: 60px;
   display: flex;
   padding: 0 5%;
   justify-content: center;
@@ -21,7 +21,7 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
-  height: 72px;
+  height: 60px;
   z-index: 1;
   width: 100%;
   padding: 0 24px;
@@ -97,7 +97,7 @@ export const MobileIcon = styled.div`
 `;
 
 export const NavMenu = styled.ul`
-  width: 120%;
+  width: 100%;
   padding-left: 50%;
   display: flex;
   align-items: center;
@@ -123,14 +123,36 @@ export const NavMenu = styled.ul`
 `;
 
 export const NavItem = styled.li`
-  height: 80px;
+  height: 60px;
   padding: 0 3.5%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  width:100%;
   border-bottom: 2px solid transparent;
   &:hover {
     border-bottom: 2px solid #101522;
     transition: all 1s ease;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #8B4D20;
+  }
+  @media screen and (max-width: 960px) {
+    width: 50%;
+    &:hover {
+      border-bottom: 2px solid #101522;
+      transition: all 1s ease;
+      border-bottom: 2px solid black;
+    }
+  }
+`;
+
+export const NavItem2 = styled.li`
+  height: 60px;
+  padding: 0 3.5%;
+  margin-bottom: 0.5rem;
+  width:100%;
+  border-bottom: 2px solid transparent;
+  &:hover {
+    border-bottom: 2px solid #101522;
+    transition: all 1s ease;
+    border-bottom: 2px solid #028201;
   }
   @media screen and (max-width: 960px) {
     width: 50%;
