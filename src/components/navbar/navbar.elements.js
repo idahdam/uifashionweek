@@ -5,7 +5,7 @@ import { FaTimes } from "react-icons/fa";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 export const Nav = styled.nav`
-  background: #E1D8CF;
+  background-color: rgb(225, 216, 207, 0.9);
   backdrop-filter: blur(5px);
   height: 72px;
   display: flex;

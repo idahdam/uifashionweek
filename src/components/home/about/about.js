@@ -1,11 +1,11 @@
-import React from 'react';
-
+import React from "react";
+import { AboutContainer } from "./about.element";
 const about = () => {
-    return (
-        <>
-            about
-        </>
-    )
-}
+  return (
+    <>
+      <AboutContainer>about</AboutContainer>
+    </>
+  );
+};
 
-export default about
+export default about;
