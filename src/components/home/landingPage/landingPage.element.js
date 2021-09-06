@@ -1,41 +1,57 @@
 import styled from "styled-components";
-import bgimage from "../../../assets/image/landing-page/LandingPage-bg.png";
 
 export const LandingPageContainer = styled.div`
-  background-image: url(${bgimage});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+  z-index: 1;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   @media screen and (max-width: 960px) {
-    object-fit: cover;
-    height: 100vh;
+    padding-top: 5%;
   }
 `;
-export const LandingPageContent = styled.div`
-  // background-color: green;
-  position: absolute;
-  margin-left: 20%;
-  margin-bottom: 5%;
-  bottom: 0;
-  width: 50%;
-  height: 40%;
+
+export const LandingPageInside = styled.div`
+  position: relative;
+  display: inline-block;
+  min-width: 100%;
+  overflow: auto;
+  @media screen and (max-width: 960px) {
+    padding-top: 5%;
+  }
 `;
-export const LandingPageHeader = styled.h1`
+export const LandingPageBg = styled.img`
+  display: block;
+  width: 100%;
+  height: auto;
+  @media screen and (max-width: 960px) {
+    object-fit: cover;
+    height: 500px;
+  }
+`;
+
+export const LandingPageContent = styled.div`
+  width: 100%;
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 70%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: white;
+`;
+export const LandingPageHeader = styled.div`
   color: #f25918;
+  font-family: monstserrat;
   font-size: 72px;
-  line-height: 72px;
+  text-align: left;
 `;
 export const LandingPageImage = styled.img`
   display: block;
   height: auto;
   floating: left;
-  margin-top: 5%;
   margin-left: 20%;
-  @media screen and (max-width: 960px) {
-    object-fit: cover;
-    height: 500px;
-  }
 `;
 export const LandingPageCaption = styled.div`
   position: absolute;
@@ -43,15 +59,12 @@ export const LandingPageCaption = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 1366px;
-  @media screen and (max-width: 960px) {
-    text-align: left;
-    transform: translate(-85%, -50%);
-  }
+  max-width: 1566px;
 `;
 
 export const LandingPageButton = styled.button`
   background: #e97300;
+  left: 0;
   border: none;
   border-radius: 15px;
   position: absolute;
@@ -62,6 +75,10 @@ export const LandingPageButton = styled.button`
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  bottom: 0;
+  opacity: 1;
+  transition: 0.3s;
   cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
 `;
