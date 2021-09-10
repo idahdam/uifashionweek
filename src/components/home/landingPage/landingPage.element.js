@@ -1,10 +1,18 @@
 import styled from "styled-components";
+import bgimage from "../../../assets/image/landing-page/LandingPage-bg.png";
 
 export const LandingPageContainer = styled.div`
+  background-image: url(${bgimage});
   z-index: 1;
   width: 100%;
+  height: 100vh;
   margin-left: auto;
   margin-right: auto;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   @media screen and (max-width: 960px) {
     padding-top: 5%;
   }
@@ -43,15 +51,17 @@ export const LandingPageContent = styled.div`
 `;
 export const LandingPageHeader = styled.div`
   color: #f25918;
-  font-family: monstserrat;
-  font-size: 72px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 79px;
   text-align: left;
 `;
 export const LandingPageImage = styled.img`
   display: block;
   height: auto;
   floating: left;
-  margin-left: 20%;
+  margin-left: 18%;
+  margin-bottom: 10%;
 `;
 export const LandingPageCaption = styled.div`
   position: absolute;
@@ -71,6 +81,7 @@ export const LandingPageButton = styled.button`
   color: white;
   width: 203px;
   height: 47px;
+  top: 100%;
   font-size: 18px;
   text-align: center;
   text-decoration: none;

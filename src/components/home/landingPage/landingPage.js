@@ -16,8 +16,8 @@ const landingPage = () => {
   return (
     <>
       <LandingPageContainer>
-        <LandingPageInside>
-          <LandingPageBg src={bgimage} alt="vision" loading="lazy"/>
+        {/* <LandingPageInside> */}
+          {/* <LandingPageBg src={bgimage} alt="vision" loading="lazy"/> */}
           <LandingPageContent>
             <LandingPageImage src={CircleText} />
             <LandingPageCaption>
@@ -26,10 +26,9 @@ const landingPage = () => {
                 WEEK
               </LandingPageHeader>
             </LandingPageCaption>
-            <br/><br/><br/>
             <LandingPageButton>Register</LandingPageButton>
           </LandingPageContent>
-        </LandingPageInside>
+        {/* </LandingPageInside> */}
       </LandingPageContainer>
     </>
   );

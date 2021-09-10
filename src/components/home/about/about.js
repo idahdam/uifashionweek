@@ -1,25 +1,26 @@
 import React from "react";
 import {
   AboutContainer,
-  AboutHeaderContainer,
+  AboutSectionHeader,
   AboutHeader,
-  AboutContentContainer,
   ElipsBG1,
   ElipsBG2,
-  
+  AboutSection,
+  AboutSectionPart,
 } from "./about.element";
 const about = () => {
   return (
     <>
       <AboutContainer>
-        {/* <ElipsBG1/>
-        <ElipsBG2/> */}
-        <AboutHeaderContainer>
+        <AboutSectionHeader>
           <AboutHeader>About Us</AboutHeader>
-        </AboutHeaderContainer>
-        {/* <AboutContentContainer>
-          ini isi pertama
-        </AboutContentContainer> */}
+        </AboutSectionHeader>
+        <AboutSection>
+          <AboutSectionPart>ini section pertama part 1</AboutSectionPart>
+          <AboutSectionPart>ini section pertama part 2</AboutSectionPart>
+        </AboutSection>
+        <AboutSection>ini section kedua</AboutSection>
+        <AboutSection>ini section ketiga</AboutSection>
       </AboutContainer>
     </>
   );

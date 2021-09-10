@@ -2,10 +2,8 @@ import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 * {
-  @import url("https://fontlibrary.org//face/metropolis");
-	font-family: 'MetropolisRegular';
-  font-weight: normal;
-  font-style: normal;
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+	font-family: 'Montserrat', sans-serif;
 	box-sizing: border-none;
 	margin: 0;
 	padding: 0;
