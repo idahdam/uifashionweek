@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const AboutImage1 = styled.img`
+  width: 478px;
+  height: 716px;
+  background: red;
+  border-radius: 0 0 478px 0;
+  -moz-border-radius: 0 0 478px 0;
+  -webkit-border-radius: 0 0 478px 0;
+`;
 export const AboutContainer = styled.div`
   background-color: white;
   display: flex;
@@ -8,7 +16,20 @@ export const AboutContainer = styled.div`
   margin-right: auto;
   padding-bottom: 2px;
   height: 100vh;
-  max-width: 1366px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align: center;
+`;
+
+export const AboutContent = styled.div`
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2px;
+  height: 100vh;
+  max-width: 1230px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -16,7 +37,6 @@ export const AboutContainer = styled.div`
 `;
 
 export const AboutSectionHeader = styled.div`
-  max-wdith: 1366;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -26,7 +46,6 @@ export const AboutSectionHeader = styled.div`
 `;
 
 export const AboutSection = styled.div`
-  max-wdith: 1366;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -36,10 +55,16 @@ export const AboutSection = styled.div`
 `;
 
 export const AboutSectionPart = styled.div`
-  max-wdith: 1366;
   width: 100%;
   overflow: hidden;
   margin: 0;
+`;
+
+export const AboutSectionPartHalf = styled.div`
+  width: 50%;
+  display: flex;
+  float: left;
+  align-content: center;
 `;
 
 export const AboutHeader = styled.header`

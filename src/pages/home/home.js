@@ -8,7 +8,7 @@ import Sponsor from "../../components/home/sponsor/sponsor";
 const home = () => {
   return (
     <>
-      <LandingPage />
+      {/* <LandingPage /> */}
       <About />
       {/* <Blog />
       <Contact />
