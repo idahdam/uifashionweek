@@ -10,6 +10,9 @@ import {
   AboutSectionPartHalf,
   AboutContent,
   AboutImage1,
+  AboutImage1Container,
+  AboutImage2,
+  AboutImage2Container,
 } from "./about.element";
 import image_test from "../../../assets/image/about/img_tester.jpg";
 const about = () => {
@@ -23,7 +26,9 @@ const about = () => {
           <AboutSection>
             <AboutSectionPart>
               <AboutSectionPartHalf>
-                <AboutImage1 src={image_test} alt="vision" loading="Lazy"/>
+                <AboutImage1Container>
+                  <AboutImage1 src={image_test} alt="vision" loading="Lazy" />
+                </AboutImage1Container>
               </AboutSectionPartHalf>
               <AboutSectionPartHalf>
                 ini section pertama part 1_2
@@ -34,7 +39,9 @@ const about = () => {
                 ini section pertama part 2
               </AboutSectionPartHalf>
               <AboutSectionPartHalf>
-                ini section pertama part 2_2
+                <AboutImage1Container>
+                  <AboutImage2 src={image_test} alt="vision" loading="Lazy" />
+                </AboutImage1Container>
               </AboutSectionPartHalf>
             </AboutSectionPart>
           </AboutSection>

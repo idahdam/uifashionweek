@@ -1,13 +1,37 @@
 import styled from "styled-components";
 
 export const AboutImage1 = styled.img`
-  width: 478px;
-  height: 716px;
-  background: red;
-  border-radius: 0 0 478px 0;
-  -moz-border-radius: 0 0 478px 0;
-  -webkit-border-radius: 0 0 478px 0;
+  width: 200px;
+  height: 250px;
+  border-radius: 0 200px 0 0;
+  -moz-border-radius: 0 200px 0 0;
+  -webkit-border-radius: 0 200px 0 0;
+  transform: rotate(-5.19deg);
 `;
+
+export const AboutImage1Container = styled.div`
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2px;
+`;
+
+export const AboutImage2 = styled.img`
+  width: 200px;
+  height: 250px;
+  border-radius: 80px;
+  border: 4px;
+`;
+
+export const AboutImage2Container = styled.div`
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2px;
+`;
+
 export const AboutContainer = styled.div`
   background-color: white;
   display: flex;
@@ -28,7 +52,6 @@ export const AboutContent = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2px;
-  height: 100vh;
   max-width: 1230px;
   display: flex;
   flex-direction: row;
@@ -52,19 +75,21 @@ export const AboutSection = styled.div`
   overflow: hidden;
   flex-direction: row;
   flex-wrap: wrap;
+  height: 100vh;
 `;
 
 export const AboutSectionPart = styled.div`
   width: 100%;
   overflow: hidden;
   margin: 0;
+  height: 50vh;
 `;
 
 export const AboutSectionPartHalf = styled.div`
   width: 50%;
   display: flex;
   float: left;
-  align-content: center;
+  height: 50vh;
 `;
 
 export const AboutHeader = styled.header`
