@@ -33,13 +33,18 @@ export const AboutImage2Container = styled.div`
 `;
 
 export const AboutContainer = styled.div`
-  background-color: white;
+  background-color: #ffffff;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(119.38, 47%, 59%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 82% 65%, hsl(17.89, 89%, 52%) 0, transparent 55%);
   display: flex;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2px;
-  height: 100vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -83,13 +88,38 @@ export const AboutSectionPart = styled.div`
   overflow: hidden;
   margin: 0;
   height: 50vh;
+  padding-top: 2px;
+  padding-left: 2px;
+`;
+
+export const AboutSectionPartColumn = styled.div`
+  width: 70%;
 `;
 
 export const AboutSectionPartHalf = styled.div`
-  width: 50%;
+  width: 48%;
   display: flex;
   float: left;
   height: 50vh;
+`;
+export const AboutSectionPartHalfHeader = styled.div`
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 39px;
+  // top: 50%;
+  // left: 50%;
+  margin: 0 auto;
+`;
+
+export const AboutSectionPartHalfText = styled.div`
+Font family: Metropolis
+Font style: Regular
+Font size: 16px
+Align: Justified
+// top: 50%;
+//   left: 50%;
 `;
 
 export const AboutHeader = styled.header`

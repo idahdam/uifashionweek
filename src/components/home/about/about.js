@@ -13,8 +13,15 @@ import {
   AboutImage1Container,
   AboutImage2,
   AboutImage2Container,
+  AboutSectionPartHalfHeader,
+  AboutSectionPartHalfText,
+  AboutSectionPartColumn,
 } from "./about.element";
-import image_test from "../../../assets/image/about/img_tester.jpg";
+import image_test from "../../../assets/image/landing-page/LandingPage-bg.png";
+import image_2 from "../../../assets/image/about/Lookbook 1.png";
+import image_3 from "../../../assets/image/about/Lookbook 2.png";
+
+
 const about = () => {
   return (
     <>
@@ -31,12 +38,40 @@ const about = () => {
                 </AboutImage1Container>
               </AboutSectionPartHalf>
               <AboutSectionPartHalf>
-                ini section pertama part 1_2
+                <AboutSectionPartColumn>
+                  <AboutSectionPartHalfHeader>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing eli
+                  </AboutSectionPartHalfHeader>
+                  <AboutSectionPartHalfText>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea ommodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum."
+                  </AboutSectionPartHalfText>
+                </AboutSectionPartColumn>
               </AboutSectionPartHalf>
             </AboutSectionPart>
             <AboutSectionPart>
               <AboutSectionPartHalf>
-                ini section pertama part 2
+                <AboutSectionPartColumn>
+                  <AboutSectionPartHalfHeader>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing eli
+                  </AboutSectionPartHalfHeader>
+                  <AboutSectionPartHalfText>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea ommodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum."
+                  </AboutSectionPartHalfText>
+                </AboutSectionPartColumn>
               </AboutSectionPartHalf>
               <AboutSectionPartHalf>
                 <AboutImage1Container>
@@ -45,8 +80,8 @@ const about = () => {
               </AboutSectionPartHalf>
             </AboutSectionPart>
           </AboutSection>
-          <AboutSection>ini section kedua</AboutSection>
-          <AboutSection>ini section ketiga</AboutSection>
+          <AboutSection><img src={image_2} /></AboutSection>
+          <AboutSection><img src={image_3} /></AboutSection>
         </AboutContent>
       </AboutContainer>
     </>
