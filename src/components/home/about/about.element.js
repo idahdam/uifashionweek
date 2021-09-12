@@ -48,7 +48,7 @@ export const AboutSection = styled.div`
   overflow: hidden;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 10%;
+  margin-top: 8%;
 `;
 
 export const AboutSectionPart = styled.div`
@@ -72,6 +72,7 @@ export const AboutSectionPartHalf = styled.div`
   width: 48%;
   display: flex;
   float: left;
+  margin-top:5%;
   // background-color: red;
 `;
 export const AboutSectionPartHalfHeader = styled.div`
