@@ -7,7 +7,7 @@ export const AboutContainer = styled.div`
       hsl(119.38, 47%, 59%) 0,
       transparent 59%
     ),
-    radial-gradient(at 82% 65%, hsl(17.89, 89%, 52%) 0, transparent 55%);
+    radial-gradient(at 90% 90%, hsl(17.89, 89%, 52%) 0, transparent 55%);
   display: flex;
   width: 100%;
   margin-left: auto;

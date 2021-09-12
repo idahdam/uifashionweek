@@ -11,8 +11,8 @@ const home = () => {
       <LandingPage />
       <About />
       <Blog />
-      <Contact />
       <Sponsor />
+      <Contact />
     </>
   );
 };
