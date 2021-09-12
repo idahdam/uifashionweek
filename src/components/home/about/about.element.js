@@ -1,37 +1,5 @@
 import styled from "styled-components";
 
-export const AboutImage1 = styled.img`
-  width: 200px;
-  height: 250px;
-  border-radius: 0 200px 0 0;
-  -moz-border-radius: 0 200px 0 0;
-  -webkit-border-radius: 0 200px 0 0;
-  transform: rotate(-5.19deg);
-`;
-
-export const AboutImage1Container = styled.div`
-  width: 50%;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 2px;
-`;
-
-export const AboutImage2 = styled.img`
-  width: 200px;
-  height: 250px;
-  border-radius: 80px;
-  border: 4px;
-`;
-
-export const AboutImage2Container = styled.div`
-  width: 50%;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 2px;
-`;
-
 export const AboutContainer = styled.div`
   background-color: #ffffff;
   background-image: radial-gradient(
@@ -80,34 +48,37 @@ export const AboutSection = styled.div`
   overflow: hidden;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 100vh;
+  margin-top: 10%;
 `;
 
 export const AboutSectionPart = styled.div`
   width: 100%;
   overflow: hidden;
   margin: 0;
-  height: 50vh;
   padding-top: 2px;
   padding-left: 2px;
 `;
 
 export const AboutSectionPartColumn = styled.div`
   width: 70%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2px;
+  margin-top:15%;
 `;
 
 export const AboutSectionPartHalf = styled.div`
   width: 48%;
   display: flex;
   float: left;
-  height: 50vh;
+  // background-color: red;
 `;
 export const AboutSectionPartHalfHeader = styled.div`
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
-  line-height: 39px;
   // top: 50%;
   // left: 50%;
   margin: 0 auto;
@@ -117,7 +88,8 @@ export const AboutSectionPartHalfText = styled.div`
 Font family: Metropolis
 Font style: Regular
 Font size: 16px
-Align: Justified
+Align: Justified;
+margin-top:10%;
 // top: 50%;
 //   left: 50%;
 `;
@@ -148,4 +120,36 @@ export const ElipsBG2 = styled.div`
   filter: blur(500px);
   broder-radius: 50%;
   opacity: 0.7;
+`;
+
+export const AboutImage1 = styled.img`
+  width: 200px;
+  height: 250px;
+  border-radius: 0 200px 0 0;
+  -moz-border-radius: 0 200px 0 0;
+  -webkit-border-radius: 0 200px 0 0;
+  transform: rotate(-5.19deg);
+`;
+
+export const AboutImage1Container = styled.div`
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2px;
+`;
+
+export const AboutImage2 = styled.img`
+  width: 200px;
+  height: 250px;
+  border-radius: 80px;
+  border: 4px;
+`;
+
+export const AboutImage2Container = styled.div`
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2px;
 `;

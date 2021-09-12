@@ -20,7 +20,8 @@ import {
 import image_test from "../../../assets/image/landing-page/LandingPage-bg.png";
 import image_2 from "../../../assets/image/about/Lookbook 1.png";
 import image_3 from "../../../assets/image/about/Lookbook 2.png";
-
+import image_about1 from "../../../assets/image/about/About Us Photo 1.png";
+import image_about2 from "../../../assets/image/about/About Us Photo 2.png";
 
 const about = () => {
   return (
@@ -34,7 +35,8 @@ const about = () => {
             <AboutSectionPart>
               <AboutSectionPartHalf>
                 <AboutImage1Container>
-                  <AboutImage1 src={image_test} alt="vision" loading="Lazy" />
+                  {/* <AboutImage1 src={image_test} alt="vision" loading="Lazy" /> */}
+                  <img src={image_about1} />
                 </AboutImage1Container>
               </AboutSectionPartHalf>
               <AboutSectionPartHalf>
@@ -75,13 +77,18 @@ const about = () => {
               </AboutSectionPartHalf>
               <AboutSectionPartHalf>
                 <AboutImage1Container>
-                  <AboutImage2 src={image_test} alt="vision" loading="Lazy" />
+                  {/* <AboutImage2 src={image_test} alt="vision" loading="Lazy" /> */}
+                  <img src={image_about2} />
                 </AboutImage1Container>
               </AboutSectionPartHalf>
             </AboutSectionPart>
           </AboutSection>
-          <AboutSection><img src={image_2} /></AboutSection>
-          <AboutSection><img src={image_3} /></AboutSection>
+          <AboutSection>
+            <img src={image_2} />
+          </AboutSection>
+          <AboutSection>
+            <img src={image_3} />
+          </AboutSection>
         </AboutContent>
       </AboutContainer>
     </>

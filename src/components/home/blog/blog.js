@@ -1,11 +1,11 @@
-import React from "react";
-import { BlogContainer } from "./blog.element";
-const Blog = () => {
-  return (
-    <>
-      <BlogContainer>blog</BlogContainer>
-    </>
-  );
-};
+import React from 'react'
 
-export default Blog;
+const blog = () => {
+    return (
+        <>
+            blog
+        </>
+    )
+}
+
+export default blog
