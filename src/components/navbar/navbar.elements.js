@@ -75,9 +75,6 @@ export const NavText = styled.div`
   }
 `;
 
-// export const NavIcon = styled(FaMagento)`
-//   margin-right: 0.5rem;
-// `;
 export const NavCloseIcon = styled(FaTimes)`
   stroke-width="1";
 `;
@@ -124,15 +121,11 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 60px;
-  padding: 0 3.5%;
+  padding: 0%;
+  margin-top: 3.75rem;
   margin-bottom: 0.5rem;
-  width:100%;
+  width: 100%;
   border-bottom: 2px solid transparent;
-  &:hover {
-    border-bottom: 2px solid #101522;
-    transition: all 1s ease;
-    border-bottom: 2px solid #8B4D20;
-  }
   @media screen and (max-width: 960px) {
     width: 50%;
     &:hover {
@@ -147,7 +140,7 @@ export const NavItem2 = styled.li`
   height: 60px;
   padding: 0 3.5%;
   margin-bottom: 0.5rem;
-  width:100%;
+  width: 100%;
   border-bottom: 2px solid transparent;
   &:hover {
     border-bottom: 2px solid #101522;
@@ -186,10 +179,9 @@ export const NavItemDropdown = styled.li`
 
 export const NavLinks = styled(Link)`
   color: #000000;
-  display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0.5rem;
+  margin-top: 5rem;
   height: 100%;
   @media screen and (max-width: 960px) {
     text-align: center;
