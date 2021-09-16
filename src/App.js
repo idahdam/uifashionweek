@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Blogs, Navbar } from "./components";
+import { Blogs, Navbar, Register } from "./components";
 import home from "./pages/home/home";
+import notFound from "./pages/notFound/notFound.js";
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={home} />
+          <Route exact path="/register" compnent={Register} />
           <Route exact path="/blogs/:title" component={Blogs} />
+          <Route exact component={notFound} />
         </Switch>
       </Router>
     </>

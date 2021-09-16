@@ -102,7 +102,7 @@ const Navbar = () => {
                     handleClick() && setNavbar(false);
                   }}
                   click={click}
-                  to="/portfolio"
+                  to="/register"
                 >
                   Register
                 </NavLinks2>
