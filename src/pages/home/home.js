@@ -5,7 +5,7 @@ import Blog from "../../components/home/blog/blog";
 import Contact from "../../components/home/contact/contact";
 import Sponsor from "../../components/home/sponsor/sponsor";
 
-const home = () => {
+const Home = () => {
   return (
     <>
       <LandingPage />
@@ -17,4 +17,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;

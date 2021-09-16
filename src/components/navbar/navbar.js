@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import logo from "../../assets/image/navbar/Logo-UIFW.png";
 import {
   Nav,
@@ -10,7 +10,7 @@ import {
   NavItem2,
   NavLinks,
   NavLinks2,
-  NavImg
+  NavImg,
   // NavText,
   // NavHref,
   // NavHrefDropdown,
@@ -26,7 +26,7 @@ const Navbar = () => {
   const [click, setClick] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [button, setButton] = useState(true);
-   // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line no-unused-vars
   const [navbar, setNavbar] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -71,7 +71,7 @@ const Navbar = () => {
                   click={click}
                   to="/product"
                 >
-                  LookBook
+                  Gallery
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -102,7 +102,7 @@ const Navbar = () => {
                     handleClick() && setNavbar(false);
                   }}
                   click={click}
-                  to="/portfolio"
+                  to="/register"
                 >
                   Register
                 </NavLinks2>
