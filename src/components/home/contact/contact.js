@@ -4,11 +4,13 @@ import {
   ContactContent,
   ContactSectionHeader,
   ContactHeader,
+  Circle
 } from "./contact.element";
 const Contact = () => {
   return (
     <>
       <ContactContainer>
+        <Circle />
         <ContactContent>
           <ContactSectionHeader>
             <ContactHeader>Contact</ContactHeader>

@@ -2,12 +2,6 @@ import styled from "styled-components";
 
 export const ContactContainer = styled.div`
   background-color: #ffffff;
-  background-image: radial-gradient(
-      at -10% 160%,
-      hsl(119.38, 47%, 59%) 0,
-      transparent 59%
-    ),
-    radial-gradient(at 70% -30%, hsl(17.89, 89%, 52%) 0, transparent 55%);
   z-index: 1;
   width: 100%;
   height: 100vh;
@@ -20,6 +14,13 @@ export const ContactContainer = styled.div`
   @media screen and (max-width: 960px) {
     padding-top: 5%;
   }
+`;
+
+export const Circle = styled.div`
+Fill Color Style: Secondary/50;
+Fill: Solid #497099;
+Effect: Layer blur
+Radius: 700px
 `;
 
 export const ContactContent = styled.div`

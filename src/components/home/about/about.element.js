@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const AboutContainer = styled.div`
-  background-color: #ffffff;
-  background-image: radial-gradient(
-      at 47% 33%,
-      hsl(119.38, 47%, 59%) 0,
-      transparent 59%
-    ),
-    radial-gradient(at 90% 90%, hsl(17.89, 89%, 52%) 0, transparent 55%);
-  display: flex;
+background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(132,195,207,0.7346288857339811) 100%);
+// background-image: radial-gradient(
+//       at 47% 33%,
+//       hsl(119.38, 47%, 59%) 0,
+//       transparent 59%
+//     );
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -39,6 +38,7 @@ export const AboutSectionHeader = styled.div`
   overflow: hidden;
   padding: 1%;
   margin: 0;
+  padding-top:5%;
 `;
 
 export const AboutSection = styled.div`
@@ -48,7 +48,7 @@ export const AboutSection = styled.div`
   overflow: hidden;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 8%;
+  margin-top: 2%;
 `;
 
 export const AboutSectionPart = styled.div`

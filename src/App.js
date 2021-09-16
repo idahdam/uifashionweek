@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Blogs, Navbar } from "./components";
+import { Blogs, Navbar, Footer} from "./components";
 import home from "./pages/home/home";
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
           <Route exact path="/" component={home} />
           <Route exact path="/blogs/:title" component={Blogs} />
         </Switch>
+        <Footer />
       </Router>
     </>
   );
