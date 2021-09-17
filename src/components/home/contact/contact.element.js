@@ -63,7 +63,6 @@ export const ContactSection = styled.div`
   margin-right: auto;
   width: 100%;
   overflow: hidden;
-  margin-top: 8%;
 `;
 
 export const ContactSectionLeft = styled.div`

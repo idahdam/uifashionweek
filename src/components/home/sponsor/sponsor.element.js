@@ -17,6 +17,7 @@ export const SponsorContainer = styled.div`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin-top: 7%;
   @media screen and (max-width: 960px) {
     padding-top: 5%;
   }
