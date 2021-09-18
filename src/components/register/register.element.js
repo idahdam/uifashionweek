@@ -4,6 +4,8 @@ export const RegisterContainer = styled.div``;
 
 export const RegisterContainerRow = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const RegisterContainerCol = styled.div`

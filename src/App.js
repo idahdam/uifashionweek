@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Blogs, Navbar, Footer,Register} from "./components";
-import home from "./pages/home/home";
-import notFound from "./pages/notFound/notFound.js";
+import { Blogs, Navbar, Footer } from "./components";
+import Home from "./pages/home/home";
+import NotFound from "./pages/notFound/notFound.js";
+import Register from "./pages/register/register.js";
 
 function App() {
   return (
@@ -9,10 +10,10 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={home} />
-          <Route exact path="/register" compnent={Register} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/register" component={Register} />
           <Route exact path="/blogs/:title" component={Blogs} />
-          <Route exact component={notFound} />
+          <Route exact component={NotFound} />
         </Switch>
         <Footer />
       </Router>

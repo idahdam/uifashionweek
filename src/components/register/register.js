@@ -14,10 +14,10 @@ const Register = () => {
         <RegisterContainerRow>
           <RegisterContainerCol>
             <RegisterImage src={image} alt="image" />
-            <RegisterImage src={image} alt="image" />
+          </RegisterContainerCol>
+          <RegisterContainerCol>
             <RegisterImage src={image} alt="image" />
           </RegisterContainerCol>
-          <RegisterContainerCol>asdasds</RegisterContainerCol>
         </RegisterContainerRow>
       </RegisterContainer>
     </>

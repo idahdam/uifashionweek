@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BlogContainer,
   BlogContent,
@@ -15,24 +15,12 @@ import {
   BlogCardImg,
   BlogCardLink,
   BlogCardLinkContainer,
+  BlogButtonContainer,
+  BlogButton,
 } from "./blog.element";
 import image_1 from "../../../assets/image/blog/card_photo.png";
-const blog = () => {
-  function ViewMore() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("myBtn");
-  
-    if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Read more"; 
-      moreText.style.display = "none";
-    } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Read less"; 
-      moreText.style.display = "inline";
-    }
-  };
+const Blog = () => {
+  const [show, setShow] = useState(false);
   return (
     <>
       <BlogContainer>
@@ -55,7 +43,7 @@ const blog = () => {
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                   </BlogCardText>
                   <BlogCardLinkContainer>
-                    <BlogCardLink>Read More</BlogCardLink>
+                    <BlogCardLink href="/blogs/test">Read More</BlogCardLink>
                   </BlogCardLinkContainer>
                 </BlogCardContentContainer>
               </BlogCard>
@@ -72,7 +60,7 @@ const blog = () => {
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                   </BlogCardText>
                   <BlogCardLinkContainer>
-                    <BlogCardLink>Read More</BlogCardLink>
+                    <BlogCardLink href="/blogs/test">Read More</BlogCardLink>
                   </BlogCardLinkContainer>
                 </BlogCardContentContainer>
               </BlogCard>
@@ -89,72 +77,88 @@ const blog = () => {
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                   </BlogCardText>
                   <BlogCardLinkContainer>
-                    <BlogCardLink>Read More</BlogCardLink>
+                    <BlogCardLink href="/blogs/test">Read More</BlogCardLink>
                   </BlogCardLinkContainer>
                 </BlogCardContentContainer>
               </BlogCard>
+              {/* </BlogCardContainer>
+            <BlogCardContainer> */}
+              {show ? (
+                <>
+                  <BlogCard>
+                    <BlogCardContentContainer>
+                      <BlogCardImageContainer>
+                        <BlogCardImg src={image_1} />
+                      </BlogCardImageContainer>
+                      <BlogCardTitleType>Tipe BLOG</BlogCardTitleType>
+                      <BlogCardTitle>Judul Blog</BlogCardTitle>
+                      <BlogCardText>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation
+                      </BlogCardText>
+                      <BlogCardLinkContainer>
+                        <BlogCardLink href="/blogs/test">
+                          Read More
+                        </BlogCardLink>
+                      </BlogCardLinkContainer>
+                    </BlogCardContentContainer>
+                  </BlogCard>
+                  <BlogCard>
+                    <BlogCardContentContainer>
+                      <BlogCardImageContainer>
+                        <BlogCardImg src={image_1} />
+                      </BlogCardImageContainer>
+                      <BlogCardTitleType>Tipe BLOG</BlogCardTitleType>
+                      <BlogCardTitle>Judul Blog</BlogCardTitle>
+                      <BlogCardText>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation
+                      </BlogCardText>
+                      <BlogCardLinkContainer>
+                        <BlogCardLink href="/blogs/test">
+                          Read More
+                        </BlogCardLink>
+                      </BlogCardLinkContainer>
+                    </BlogCardContentContainer>
+                  </BlogCard>
+                  <BlogCard>
+                    <BlogCardContentContainer>
+                      <BlogCardImageContainer>
+                        <BlogCardImg src={image_1} />
+                      </BlogCardImageContainer>
+                      <BlogCardTitleType>Tipe BLOG</BlogCardTitleType>
+                      <BlogCardTitle>Judul Blog</BlogCardTitle>
+                      <BlogCardText>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation
+                      </BlogCardText>
+                      <BlogCardLinkContainer>
+                        <BlogCardLink href="/blogs/test">
+                          Read More
+                        </BlogCardLink>
+                      </BlogCardLinkContainer>
+                    </BlogCardContentContainer>
+                  </BlogCard>
+                  <br />
+                </>
+              ) : null}
             </BlogCardContainer>
-            <span id="dots"></span><span id="more">
-            <BlogCardContainer>
-              <BlogCard>
-                <BlogCardContentContainer>
-                  <BlogCardImageContainer>
-                    <BlogCardImg src={image_1} />
-                  </BlogCardImageContainer>
-                  <BlogCardTitleType>Tipe BLOG</BlogCardTitleType>
-                  <BlogCardTitle>Judul Blog</BlogCardTitle>
-                  <BlogCardText>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  </BlogCardText>
-                  <BlogCardLinkContainer>
-                    <BlogCardLink>Read More</BlogCardLink>
-                  </BlogCardLinkContainer>
-                </BlogCardContentContainer>
-              </BlogCard>
-              <BlogCard>
-                <BlogCardContentContainer>
-                  <BlogCardImageContainer>
-                    <BlogCardImg src={image_1} />
-                  </BlogCardImageContainer>
-                  <BlogCardTitleType>Tipe BLOG</BlogCardTitleType>
-                  <BlogCardTitle>Judul Blog</BlogCardTitle>
-                  <BlogCardText>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  </BlogCardText>
-                  <BlogCardLinkContainer>
-                    <BlogCardLink>Read More</BlogCardLink>
-                  </BlogCardLinkContainer>
-                </BlogCardContentContainer>
-              </BlogCard>
-              <BlogCard>
-                <BlogCardContentContainer>
-                  <BlogCardImageContainer>
-                    <BlogCardImg src={image_1} />
-                  </BlogCardImageContainer>
-                  <BlogCardTitleType>Tipe BLOG</BlogCardTitleType>
-                  <BlogCardTitle>Judul Blog</BlogCardTitle>
-                  <BlogCardText>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  </BlogCardText>
-                  <BlogCardLinkContainer>
-                    <BlogCardLink>Read More</BlogCardLink>
-                  </BlogCardLinkContainer>
-                </BlogCardContentContainer>
-              </BlogCard>
-            </BlogCardContainer>
-            </span>
-            <button onclick="ViewMore()" id="myBtn">Read more</button>
           </BlogSection>
         </BlogContent>
+        <BlogButtonContainer>
+          <BlogButton onClick={() => setShow(!show)}>
+            {show ? "Show Less" : "View All"}
+          </BlogButton>
+        </BlogButtonContainer>
       </BlogContainer>
     </>
   );
 };
 
-export default blog;
+export default Blog;

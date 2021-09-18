@@ -3,9 +3,9 @@ import { Blogs } from "../../components";
 
 const BlogPage = () => {
   return (
-    <div>
+    <>
       <Blogs />
-    </div>
+    </>
   );
 };
 

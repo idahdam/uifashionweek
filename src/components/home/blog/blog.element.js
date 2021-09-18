@@ -68,6 +68,7 @@ export const BlogCard = styled.div`
   height: 469px;
   margin: auto;
   margin-left: 4%;
+  margin-bottom: 5%;
   padding: 0.5%;
   float: left;
   background: rgba(255, 255, 255, 0.21);
@@ -120,7 +121,7 @@ export const BlogCardContainer = styled.div`
   width: 90%;
   height: 500px;
   margin: 0 auto;
-  margin-bottom:2%;
+  margin-bottom: 2%;
   // background: yellow;
 `;
 
@@ -147,4 +148,14 @@ export const BlogCardLink = styled.a`
   font-size: 16px;
   text-align: justify;
   color: #91350e;
+  text-decoration: none;
+`;
+
+export const BlogButton = styled.button`
+  margin: 0 auto;
+  display: block;
+`;
+
+export const BlogButtonContainer = styled.div`
+  align-items: center;
 `;
