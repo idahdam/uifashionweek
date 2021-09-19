@@ -1,7 +1,14 @@
 import styled from "styled-components";
 
 export const SponsorContainer = styled.div`
-  background-color: #ffffff;
+  background-image: linear-gradient(
+    to top,
+    #dae2eb,
+    #e5e9f0,
+    #eef0f5,
+    #f7f7fa,
+    #ffffff
+  );
   // background-image: radial-gradient(
   //     at 10% -10%,
   //     hsl(119.38, 47%, 59%) 0,
@@ -10,7 +17,7 @@ export const SponsorContainer = styled.div`
   //   radial-gradient(at 70% 130%, hsl(17.89, 89%, 52%) 0, transparent 55%);
   z-index: 1;
   width: 100%;
-  height: 100vh;
+  height: 1080px;
   margin-left: auto;
   margin-right: auto;
   -webkit-background-size: cover;

@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 export const BlogContainer = styled.div`
   background-color: #ffffff;
-  // background-image: radial-gradient(
-  //     at 10% 90%,
-  //     hsl(119.38, 47%, 59%) 0,
-  //     transparent 59%
-  //   ),
-  //   radial-gradient(at 90% -12%, hsl(17.89, 89%, 52%) 0, transparent 55%);
+  background-image: radial-gradient(
+    at 200% 50%,
+    hsl(210.75, 35%, 44%) 0,
+    transparent 60%
+  );
   z-index: 1;
   width: 100%;
   margin-left: auto;

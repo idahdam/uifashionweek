@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
-export const AboutContainer = styled.div`
-background: rgb(255,255,255);
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(132,195,207,0.7346288857339811) 100%);
-// background-image: radial-gradient(
-//       at 47% 33%,
-//       hsl(119.38, 47%, 59%) 0,
-//       transparent 59%
-//     );
+export const AboutContainerBg = styled.div`
+  background-image: linear-gradient(
+    to bottom,
+    #84c3cf,
+    #a9d0e2,
+    #ccdeef,
+    #e9edf7,
+    #ffffff
+  );
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -18,6 +19,24 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(132,195,207,0.734
   align: center;
 `;
 
+export const AboutContainer = styled.div`
+  background-image: radial-gradient(
+      at 2% 50%,
+      hsl(119.26, 99%, 32%) 0,
+      transparent 20%
+    ),
+    radial-gradient(at 96% 30%, hsl(119.26, 99%, 32%) 0, transparent 20%),
+    radial-gradient(at 96% 70%, hsl(119.26, 99%, 32%) 0, transparent 20%);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align: center;
+  position: relative;
+`;
 export const AboutContent = styled.div`
   display: flex;
   width: 100%;
@@ -38,7 +57,7 @@ export const AboutSectionHeader = styled.div`
   overflow: hidden;
   padding: 1%;
   margin: 0;
-  padding-top:5%;
+  padding-top: 5%;
 `;
 
 export const AboutSection = styled.div`
@@ -65,14 +84,14 @@ export const AboutSectionPartColumn = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2px;
-  margin-top:15%;
+  margin-top: 15%;
 `;
 
 export const AboutSectionPartHalf = styled.div`
   width: 48%;
   display: flex;
   float: left;
-  margin-top:5%;
+  margin-top: 5%;
   // background-color: red;
 `;
 export const AboutSectionPartHalfHeader = styled.div`

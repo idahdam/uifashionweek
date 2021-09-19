@@ -191,7 +191,7 @@ export const NavLinks = styled(Link)`
 `;
 
 export const NavLinks2 = styled(Link)`
-  color: #028201;
+  color: #F25918;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -317,3 +317,4 @@ export const NavbarDropdownData = styled.div`
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 `;
+
