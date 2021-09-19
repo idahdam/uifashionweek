@@ -33,13 +33,19 @@ const Blogs = () => {
   const createMarkup = (data) => {
     return { __html: data };
   };
+  const style = {
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  };
   return (
     <>
       <BlogsContainer>
         {loading ? (
-          <>
+          <div style={style}>
             <FadeLoader />
-          </>
+          </div>
         ) : (
           <>
             <BlogsHero>
