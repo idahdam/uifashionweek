@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const AboutContainerBg = styled.div`
   background-image: linear-gradient(
     to bottom,
-    #84c3cf,
-    #a9d0e2,
-    #ccdeef,
-    #e9edf7,
+    #e2f1f4,
+    #eaf4f9,
+    #f3f7fc,
+    #fafbfd,
     #ffffff
   );
   width: 100%;
