@@ -4,10 +4,7 @@ Footer,
 FooterContainer,
 FooterLeft,
 FooterRight,
-FooterRow,
-FooterColumn,
 FooterLink,
-FooterHeading,
 } from "./footer.elements";
 
 const footer = () => {
@@ -17,9 +14,9 @@ return (
 		<FooterLeft>
 		Copyright @UI Fashion Week
 		</FooterLeft>
-		<FooterRight>
+		<FooterLeft>
 			buat logo 
-		</FooterRight>
+			</FooterLeft>
 	</FooterContainer>
 	</Footer>
 );

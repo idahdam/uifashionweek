@@ -88,24 +88,29 @@ const Register = () => {
     card = (
       <>
         <RegisterCardTitle>Model Hunt Registration</RegisterCardTitle>
-        <RegisterCardDescription>Personal Data</RegisterCardDescription>
+        <RegisterCardDescription>
+          Body Measurement & Sizing
+        </RegisterCardDescription>
         <RegisterFormContainer>
-          <RegisterInput placeholder="Full Name" type="text" />
-          <RegisterInput placeholder="Nickname" type="text" />
+          <RegisterInput placeholder="Height (cm)" type="text" />
+          <RegisterInput placeholder="Weight (kg)" type="text" />
           <RegisterSelect>
             <RegisterOptionDefault value="" disabled selected hidden>
-              Gender
+              Top
             </RegisterOptionDefault>
             <RegisterOption value="0">Male</RegisterOption>
             <RegisterOption value="1">Female</RegisterOption>
             <RegisterOption value="2">Rather Not To Say</RegisterOption>
           </RegisterSelect>
-          <RegisterInput placeholder="Birthday..." type="text" />
-          <RegisterInput placeholder="ID Number" type="text" />
-          <RegisterInput placeholder="Profession" type="text" />
-          <RegisterInput placeholder="Address" type="text" />
-          <RegisterInput placeholder="Contact WA / LINE" type="text" />
-          <RegisterInput placeholder="Instagram" type="text" />
+          <RegisterSelect>
+            <RegisterOptionDefault value="" disabled selected hidden>
+              Bottom
+            </RegisterOptionDefault>
+            <RegisterOption value="0">Male</RegisterOption>
+            <RegisterOption value="1">Female</RegisterOption>
+            <RegisterOption value="2">Rather Not To Say</RegisterOption>
+          </RegisterSelect>
+          <RegisterInput placeholder="Shoe (UK)" type="text" />
         </RegisterFormContainer>
         <RegisterPageCountContainer>(2/4)</RegisterPageCountContainer>
         <RegisterButtonContainer>
@@ -120,22 +125,38 @@ const Register = () => {
         <RegisterCardTitle>Model Hunt Registration</RegisterCardTitle>
         <RegisterCardDescription>Personal Data</RegisterCardDescription>
         <RegisterFormContainer>
-          <RegisterInput placeholder="Full Name" type="text" />
-          <RegisterInput placeholder="Nickname" type="text" />
           <RegisterSelect>
             <RegisterOptionDefault value="" disabled selected hidden>
-              Gender
+              Lagi kontrak sama Agency?
             </RegisterOptionDefault>
             <RegisterOption value="0">Male</RegisterOption>
             <RegisterOption value="1">Female</RegisterOption>
             <RegisterOption value="2">Rather Not To Say</RegisterOption>
           </RegisterSelect>
-          <RegisterInput placeholder="Birthday..." type="text" />
-          <RegisterInput placeholder="ID Number" type="text" />
-          <RegisterInput placeholder="Profession" type="text" />
-          <RegisterInput placeholder="Address" type="text" />
-          <RegisterInput placeholder="Contact WA / LINE" type="text" />
-          <RegisterInput placeholder="Instagram" type="text" />
+          <RegisterInput placeholder="Jika iya agency apa?" type="text" />
+          <RegisterSelect>
+            <RegisterOptionDefault value="" disabled selected hidden>
+              Jika tidak sedang dikontrak, pernah kontrak sama agency gak
+              sebelumnya?
+            </RegisterOptionDefault>
+            <RegisterOption value="0">Male</RegisterOption>
+            <RegisterOption value="1">Female</RegisterOption>
+            <RegisterOption value="2">Rather Not To Say</RegisterOption>
+          </RegisterSelect>
+          <RegisterInput
+            placeholder="Pernah kontak dengan agency apa sebelumnya?"
+            type="text"
+          />
+          <RegisterSelect>
+            <RegisterOptionDefault value="" disabled selected hidden>
+              Bergabung model karena direkomendasi panitia?
+            </RegisterOptionDefault>
+            <RegisterOption value="0">Male</RegisterOption>
+            <RegisterOption value="1">Female</RegisterOption>
+            <RegisterOption value="2">Rather Not To Say</RegisterOption>
+          </RegisterSelect>
+          <RegisterInput placeholder="Udah Vaksin atau belum?" type="text" />
+          <RegisterInput placeholder="Vaksin keberapa?" type="text" />
         </RegisterFormContainer>
         <RegisterPageCountContainer>(3/4)</RegisterPageCountContainer>
         <RegisterButtonContainer>

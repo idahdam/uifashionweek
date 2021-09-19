@@ -107,14 +107,14 @@ export const RegisterButton = styled.button`
   margin: 0 1.5%;
   color: white;
   font-size: 18px;
-  background: #C08D64;
+  background: #c08d64;
   border-radius: 15px;
   text-decoration: none;
   display: inline-block;
   border: none;
   border-radius: 15px;
-  width:165px;
-  Height: 47px;
+  width: 165px;
+  height: 47px;
 `;
 export const RegisterPageCountContainer = styled.div`
   padding: 2.5%;
