@@ -5,16 +5,16 @@ import Blog from "../../components/home/blog/blog";
 import Contact from "../../components/home/contact/contact";
 import Sponsor from "../../components/home/sponsor/sponsor";
 
-const home = () => {
+const Home = () => {
   return (
     <>
       <LandingPage />
       <About />
       <Blog />
-      <Contact />
       <Sponsor />
+      <Contact />
     </>
   );
 };
 
-export default home;
+export default Home;

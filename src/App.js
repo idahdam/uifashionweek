@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Navbar } from "./components";
-import home from "./pages/home/home";
+import { Blogs, Navbar, Footer } from "./components";
+import Home from "./pages/home/home";
+import NotFound from "./pages/notFound/notFound.js";
+import Register from "./pages/register/register.js";
 
 function App() {
   return (
@@ -8,8 +10,12 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={home} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/blogs/:id" component={Blogs} />
+          <Route exact component={NotFound} />
         </Switch>
+        <Footer />
       </Router>
     </>
   );
