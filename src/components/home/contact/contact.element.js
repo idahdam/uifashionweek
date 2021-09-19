@@ -2,16 +2,24 @@ import styled from "styled-components";
 
 export const ContactContainer = styled.div`
   background-color: #ffffff;
-  background-image: radial-gradient(
-    farthest-side at 20% 100%,
-    #ffffff 0%,
-    #497099 0%,
-    #ffffff,
-    transparent 100%
-  );
+  background-image: linear-gradient(
+      to top,
+      #497099,
+      #6584a8,
+      #7f99b7,
+      #9aaec6,
+      #b5c4d6,
+      #c1cedd,
+      #ced8e4,
+      #dae2eb,
+      #dae2eb,
+      #dae2eb,
+      #dae2eb,
+      #dae2eb
+    );
   z-index: 1;
   width: 100%;
-  height: 100vh;
+  max-height: 1080px;
   margin-left: auto;
   margin-right: auto;
   -webkit-background-size: cover;
