@@ -34,7 +34,16 @@ const Blog = () => {
     };
     fetchData();
   }, []);
+  const createMarkup = (data) => {
+    return { __html: data };
+  };
   const [show, setShow] = useState(false);
+  const style = {
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  };
   return (
     <>
       <BlogContainer>
@@ -45,9 +54,9 @@ const Blog = () => {
           <BlogSection>
             <BlogCardContainer>
               {loading ? (
-                <>
+                <div style={style}>
                   <FadeLoader />
-                </>
+                </div>
               ) : (
                 <>
                   {data.map((data, index) => {
@@ -61,9 +70,11 @@ const Blog = () => {
                               </BlogCardImageContainer>
                               {/* <BlogCardTitleType>Tipe BLOG</BlogCardTitleType> */}
                               <BlogCardTitle>{data.Title}</BlogCardTitle>
-                              <BlogCardText>
-                                {data.Content.slice(0, 50)}...
-                              </BlogCardText>
+                              <BlogCardText
+                                dangerouslySetInnerHTML={createMarkup(
+                                  data.Content.slice(0, 200) + "..."
+                                )}
+                              ></BlogCardText>
                               <BlogCardLinkContainer>
                                 <BlogCardLink to={`/blogs/${data.id}`}>
                                   Read More
@@ -80,9 +91,11 @@ const Blog = () => {
                               </BlogCardImageContainer>
                               {/* <BlogCardTitleType>Tipe BLOG</BlogCardTitleType> */}
                               <BlogCardTitle>{data.Title}</BlogCardTitle>
-                              <BlogCardText>
-                                {data.Content.slice(0, 50)}...
-                              </BlogCardText>
+                              <BlogCardText
+                                dangerouslySetInnerHTML={createMarkup(
+                                  data.Content.slice(0, 200) + "..."
+                                )}
+                              ></BlogCardText>
                               <BlogCardLinkContainer>
                                 <BlogCardLink to={`/blogs/${data.id}`}>
                                   Read More
@@ -107,9 +120,11 @@ const Blog = () => {
                                   </BlogCardImageContainer>
                                   {/* <BlogCardTitleType>Tipe BLOG</BlogCardTitleType> */}
                                   <BlogCardTitle>{data.Title}</BlogCardTitle>
-                                  <BlogCardText>
-                                    {data.Content.slice(0, 50)}...
-                                  </BlogCardText>
+                                  <BlogCardText
+                                    dangerouslySetInnerHTML={createMarkup(
+                                      data.Content.slice(0, 50)
+                                    )}
+                                  ></BlogCardText>
                                   <BlogCardLinkContainer>
                                     <BlogCardLink to={`/blogs/${data.id}`}>
                                       Read More
