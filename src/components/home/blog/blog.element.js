@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const BlogContainer = styled.div`
   background-color: #ffffff;
@@ -132,7 +133,9 @@ export const BlogCardContentContainer = styled.div`
 `;
 
 export const BlogCardImg = styled.img`
-  width: 100%;
+  width: 285px;
+  height: 225px;
+  object-fit: cover;
 `;
 
 export const BlogCardLinkContainer = styled.a`
@@ -140,7 +143,7 @@ export const BlogCardLinkContainer = styled.a`
   margin-top: 2%;
 `;
 
-export const BlogCardLink = styled.a`
+export const BlogCardLink = styled(Link)`
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
