@@ -17,6 +17,7 @@ export const AboutContainerBg = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   align: center;
+  font-family:Metropolis regular;
 `;
 
 export const AboutContainer = styled.div`

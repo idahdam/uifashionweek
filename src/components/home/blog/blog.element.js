@@ -79,19 +79,16 @@ export const BlogCard = styled.div`
 `;
 
 export const BlogCardTitle = styled.div`
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
+  margin-top: 2%;
+  font-family: Metropolis Regular;
   font-size: 24px;
-  line-height: 135%;
   /* or 32px */
+
   text-transform: capitalize;
-  color: #000000;
-  margin-top: 1%;
 `;
 
 export const BlogCardTitleType = styled.div`
-  font-family: Montserrat;
+  font-family: Metropolis Regular;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -158,13 +155,12 @@ export const BlogButton = styled.button`
   display: block;
   border: none;
   background: transparent;
-  font-family: Metropolis Bold; 
+  font-family: Metropolis Bold;
   font-size: 20px;
-  color: #91350E;
+  color: #91350e;
   text-decoration-line: underline;
 `;
 
 export const BlogButtonContainer = styled.div`
   align-items: center;
 `;
-
