@@ -53,10 +53,12 @@ export const RegisterInput = styled.input`
   margin: 8px 0;
   font-size: 1rem;
   display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  // border: 5px solid #C08D64;
+  // border-radius: 4px;
   box-sizing: border-box;
   border-radius: 10px;
+  border: none;
+  outline: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
