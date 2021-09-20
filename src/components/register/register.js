@@ -20,6 +20,7 @@ import image from "../../assets/image/register/left.png";
 
 const Register = () => {
   const [page, setPage] = useState(1);
+  const [upload, setUpload] = useState(false);
   let card;
 
   if (page === 0) {
@@ -170,8 +171,30 @@ const Register = () => {
       <>
         <RegisterCardTitle>Model Hunt Registration</RegisterCardTitle>
         <RegisterCardDescription>Personal Data</RegisterCardDescription>
+        <br />
         <RegisterFormContainer>
-          <RegisterInput placeholder="Full Name" type="text" />
+          <RegisterButtonContainer>
+            <RegisterButton onClick={() => setUpload(false)}>
+              {upload ? "left not clicked" : "left clicked"}
+            </RegisterButton>
+            <RegisterButton onClick={() => setUpload(true)}>
+              {upload ? "right clicked" : "right not clicked"}
+            </RegisterButton>
+          </RegisterButtonContainer>
+          {!upload ? (
+            <>
+              <br />
+              Penjelasan
+              <br />
+            </>
+          ) : (
+            <>
+              <br />
+              Upload
+              <br />
+            </>
+          )}
+          {/* <RegisterInput placeholder="Full Name" type="text" />
           <RegisterInput placeholder="Nickname" type="text" />
           <RegisterSelect>
             <RegisterOptionDefault value="" disabled selected hidden>
@@ -186,12 +209,12 @@ const Register = () => {
           <RegisterInput placeholder="Profession" type="text" />
           <RegisterInput placeholder="Address" type="text" />
           <RegisterInput placeholder="Contact WA / LINE" type="text" />
-          <RegisterInput placeholder="Instagram" type="text" />
+          <RegisterInput placeholder="Instagram" type="text" /> */}
         </RegisterFormContainer>
         <RegisterPageCountContainer>(4/4)</RegisterPageCountContainer>
         <RegisterButtonContainer>
           <RegisterButton onClick={() => setPage(3)}>Back</RegisterButton>
-          <RegisterButton onClick={() => console.log("last page")}>
+          <RegisterButton onClick={() => alert("belom diintegrasi.")}>
             Submit
           </RegisterButton>
         </RegisterButtonContainer>

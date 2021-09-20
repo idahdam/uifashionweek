@@ -87,13 +87,13 @@ export const RegisterOption = styled.option`
 
 export const RegisterOptionDefault = styled.option`
   width: 100%;
-  padding: 20px 20px;
+  padding: 30px 20px;
   margin: 8px 0;
   opacity: 0.5;
   -moz-opacity: 0.5;
   -webkit-opacity: 0.5;
   color: #999999;
-  font-size: 0.875rem;
+  font-size: 1rem;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
