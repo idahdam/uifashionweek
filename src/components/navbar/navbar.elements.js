@@ -16,6 +16,7 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
+  font-family:metropolis regular;
 `;
 
 export const NavbarContainer = styled(Container)`
@@ -195,6 +196,7 @@ export const NavLinks2 = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
+  font-family: metropolis bold;
   padding: 0.5rem;
   height: 100%;
   @media screen and (max-width: 960px) {

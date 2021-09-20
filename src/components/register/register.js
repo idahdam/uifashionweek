@@ -3,6 +3,7 @@ import {
   RegisterContainer,
   RegisterContainerRow,
   RegisterContainerCol,
+  RegisterContainerCol2,
   RegisterImage,
   RegisterCardContainer,
   RegisterCardTitle,
@@ -15,8 +16,10 @@ import {
   RegisterButtonContainer,
   RegisterButton,
   RegisterPageCountContainer,
+  RegisterPageFaq,
 } from "./register.element";
 import image from "../../assets/image/register/left.png";
+import Faq from "./faqcontent";
 
 const Register = () => {
   const [page, setPage] = useState(1);
@@ -28,22 +31,7 @@ const Register = () => {
         <RegisterCardTitle>FAQ</RegisterCardTitle>
         <RegisterCardDescription>Personal Data</RegisterCardDescription>
         <RegisterFormContainer>
-          <RegisterInput placeholder="Full Name" type="text" />
-          <RegisterInput placeholder="Nickname" type="text" />
-          <RegisterSelect>
-            <RegisterOptionDefault value="" disabled selected hidden>
-              Gender
-            </RegisterOptionDefault>
-            <RegisterOption value="0">Male</RegisterOption>
-            <RegisterOption value="1">Female</RegisterOption>
-            <RegisterOption value="2">Rather Not To Say</RegisterOption>
-          </RegisterSelect>
-          <RegisterInput placeholder="Birthday..." type="text" />
-          <RegisterInput placeholder="ID Number" type="text" />
-          <RegisterInput placeholder="Profession" type="text" />
-          <RegisterInput placeholder="Address" type="text" />
-          <RegisterInput placeholder="Contact WA / LINE" type="text" />
-          <RegisterInput placeholder="Instagram" type="text" />
+          <RegisterPageFaq><Faq/></RegisterPageFaq>
         </RegisterFormContainer>
         <RegisterPageCountContainer>(4/4)</RegisterPageCountContainer>
         <RegisterButtonContainer>
@@ -205,9 +193,9 @@ const Register = () => {
           <RegisterContainerCol>
             <RegisterImage src={image} alt="image" />
           </RegisterContainerCol>
-          <RegisterContainerCol>
+          <RegisterContainerCol2>
             <RegisterCardContainer>{card}</RegisterCardContainer>
-          </RegisterContainerCol>
+          </RegisterContainerCol2>
         </RegisterContainerRow>
       </RegisterContainer>
     </>

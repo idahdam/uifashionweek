@@ -20,7 +20,9 @@ export const RegisterContainerRow = styled.div`
 export const RegisterContainerCol = styled.div`
   flex: 50%;
 `;
-
+export const RegisterContainerCol2 = styled.div`
+  flex: 30%;
+`;
 export const RegisterImage = styled.img``;
 
 export const RegisterCardContainer = styled.div`
@@ -59,6 +61,7 @@ export const RegisterInput = styled.input`
 `;
 
 export const RegisterSelect = styled.select`
+  color: #939393;
   width: 100%;
   font-family: "Metropolis Regular";
   padding: 20px 20px;
@@ -115,7 +118,35 @@ export const RegisterButton = styled.button`
   border-radius: 15px;
   width: 165px;
   height: 47px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
+
 export const RegisterPageCountContainer = styled.div`
   padding: 2.5%;
+`;
+
+export const RegisterPageFaq = styled.div`
+  margin: 0 auto;
+  width: 400px;
+  height:450px;
+  overflow: auto;
+  margin-top:5%;
+  margin-bottom:2%;
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #C08D64;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #67452a; 
 `;
