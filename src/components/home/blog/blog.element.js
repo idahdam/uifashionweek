@@ -156,8 +156,15 @@ export const BlogCardLink = styled(Link)`
 export const BlogButton = styled.button`
   margin: 0 auto;
   display: block;
+  border: none;
+  background: transparent;
+  font-family: Metropolis Bold; 
+  font-size: 20px;
+  color: #91350E;
+  text-decoration-line: underline;
 `;
 
 export const BlogButtonContainer = styled.div`
   align-items: center;
 `;
+

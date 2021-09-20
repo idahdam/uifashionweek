@@ -3,22 +3,16 @@ import {
   AboutContainer,
   AboutSectionHeader,
   AboutHeader,
-  ElipsBG1,
-  ElipsBG2,
   AboutSection,
   AboutSectionPart,
   AboutSectionPartHalf,
   AboutContent,
-  AboutImage1,
   AboutImage1Container,
-  AboutImage2,
-  AboutImage2Container,
   AboutSectionPartHalfHeader,
   AboutSectionPartHalfText,
   AboutSectionPartColumn,
   AboutContainerBg,
 } from "./about.element";
-import image_test from "../../../assets/image/landing-page/LandingPage-bg.png";
 import image_2 from "../../../assets/image/about/Lookbook 1.png";
 import image_3 from "../../../assets/image/about/Lookbook 2.png";
 import image_about1 from "../../../assets/image/about/About Us Photo 1.png";

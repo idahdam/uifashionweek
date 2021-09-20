@@ -1,54 +1,42 @@
 import styled from "styled-components";
 
 export const Footer = styled.div`
-  bottom: 0;
-  width: 100%;
   background: rgba(253, 251, 250, 0.6);
   backdrop-filter: blur(20px);
-  radius: 20px;
-  @media (max-width: 1000px) {
-    padding: 70px 30px;
-  }
+  height: 100px;
+  display: flex;
+  padding: 0 5%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2 rem;
+  top: 0;
+  z-index: 999;
 `;
 
 export const FooterContainer = styled.div`
-  justify-content: center;
-  max-width: 1280px;
-  height: 60px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  width: 100%;
+  max-width: 1366px;
+  padding-left:5%;
+  padding-right:5%;
+  @media screen and (max-width: 960px) {
+    padding: 0;
+    width: 65%;
+  }
 `;
 export const FooterLeft = styled.div`
   float: left;
   width: 50%;
-  height: 60%;
-  margin-top:1%;
 `;
-export const FooterRight = styled.div`
+export const FooterLogoContainer = styled.div`
   float: right;
-  width: 50%;
-  height: 60%;
-  margin-top:1%;
-`;
-
-export const FooterColumn = styled.div`
+  width: 10%;
   display: flex;
-  flex-direction: column;
-  text-align: left;
-`;
-
-export const FooterRow = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
-  grid-gap: 20px;
-
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
 `;
 
 export const FooterLink = styled.a`
-  color: #fff;
-  margin-bottom: 20px;
   font-size: 18px;
   text-decoration: none;
 
@@ -58,9 +46,8 @@ export const FooterLink = styled.a`
   }
 `;
 
-export const FooterHeading = styled.p`
-  font-size: 24px;
-  color: #fff;
-  margin-bottom: 40px;
-  font-weight: bold;
-`;
+export const FooterText = styled.div`
+font-family :"Metropolis"
+font-szie :16px;
+margin-top: 2%;
+`

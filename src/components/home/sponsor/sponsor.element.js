@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SponsorContainer = styled.div`
-  background-image: linear-gradient(
+  background: linear-gradient(
     to top,
     #dae2eb,
     #e5e9f0,
@@ -9,12 +9,6 @@ export const SponsorContainer = styled.div`
     #f7f7fa,
     #ffffff
   );
-  // background-image: radial-gradient(
-  //     at 10% -10%,
-  //     hsl(119.38, 47%, 59%) 0,
-  //     transparent 59%
-  //   ),
-  //   radial-gradient(at 70% 130%, hsl(17.89, 89%, 52%) 0, transparent 55%);
   z-index: 1;
   width: 100%;
   height: 1080px;
@@ -29,6 +23,20 @@ export const SponsorContainer = styled.div`
     padding-top: 5%;
   }
 `;
+
+export const SponsorDeco = styled.div`
+background-image: radial-gradient(
+  at -10% 25%,
+  hsl(119.38, 47%, 59%) 0,
+  transparent 20%
+),radial-gradient(
+  at 110% 75%,
+  hsl(119.38, 47%, 59%) 0,
+  transparent 20%
+);
+width: 100%;
+height: 100%;
+`
 
 export const SponsorContent = styled.div`
   display: flex;
