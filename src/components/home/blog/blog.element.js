@@ -80,7 +80,7 @@ export const BlogCard = styled.div`
 
 export const BlogCardTitle = styled.div`
   margin-top: 2%;
-  font-family: Metropolis Regular;
+  font-family: "Metropolis Regular";
   font-size: 24px;
   /* or 32px */
 
@@ -88,7 +88,7 @@ export const BlogCardTitle = styled.div`
 `;
 
 export const BlogCardTitleType = styled.div`
-  font-family: Metropolis Regular;
+  font-family: "Metropolis Regular";
   font-style: normal;
   font-weight: bold;
   font-size: 14px;

@@ -105,7 +105,7 @@ export const ContacSectionHeader = styled.div`
 `;
 
 export const ContacSectionText = styled.div`
-Font family: "Metropolis";
+Font family: "Metropolis Regular";
 font-size: 16px;
 line-height: 152%;
 Align: Justified;
