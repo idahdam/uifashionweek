@@ -11,6 +11,8 @@ import {
   BlogsDetails,
   BlogsWriter,
   BlogsDate,
+  BlogsLinkHome,
+  BlogsLinkContainer,
 } from "./blogs.element";
 import hero from "../../assets/image/blogs/hero.png";
 import { blogService } from "../../services/blogService";
@@ -53,6 +55,9 @@ const Blogs = () => {
             </BlogsHero>
             <BlogsContent>
               <BlogsTitleContainer>
+                <BlogsLinkContainer>
+                <BlogsLinkHome Linkto="/"> Back to home</BlogsLinkHome>
+                </BlogsLinkContainer>
                 <BlogsTitle>{data.Title}</BlogsTitle>
               </BlogsTitleContainer>
               <BlogsDetails>

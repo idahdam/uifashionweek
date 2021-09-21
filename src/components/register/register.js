@@ -17,9 +17,13 @@ import {
   RegisterButton,
   RegisterPageCountContainer,
   RegisterPageFaq,
+  RegisterSlide4box,
+  RegisterUploadForm,
+  RegisterUploadZone,
 } from "./register.element";
 import image from "../../assets/image/register/left.png";
 import Faq from "./faqcontent";
+import "./slider.css";
 
 const Register = () => {
   const [page, setPage] = useState(1);
@@ -116,7 +120,9 @@ const Register = () => {
     card = (
       <>
         <RegisterCardTitle>Model Hunt Registration</RegisterCardTitle>
-        <RegisterCardDescription>Contract and Health Agreement</RegisterCardDescription>
+        <RegisterCardDescription>
+          Contract and Health Agreement
+        </RegisterCardDescription>
         <RegisterFormContainer>
           <RegisterSelect>
             <RegisterOptionDefault value="" disabled selected hidden>
@@ -163,24 +169,45 @@ const Register = () => {
         <br />
         <RegisterFormContainer>
           <RegisterButtonContainer>
-            <RegisterButton onClick={() => setUpload(false)}>
-              {upload ? "left not clicked" : "left clicked"}
-            </RegisterButton>
-            <RegisterButton onClick={() => setUpload(true)}>
-              {upload ? "right clicked" : "right not clicked"}
-            </RegisterButton>
+            <div class="switch-button">
+              <input
+                class="switch-button-checkbox"
+                type="checkbox"
+                onClick={() => setUpload(!upload)}
+              ></input>
+              <label class="switch-button-label" for="">
+                <span class="switch-button-label-span">
+                  <div class="text">Requitments</div>
+                </span>
+              </label>
+            </div>
           </RegisterButtonContainer>
-          {!upload ? (
+          {upload ? (
             <>
-              <br />
-              Penjelasan
-              <br />
+              <RegisterSlide4box>
+                <RegisterUploadZone>Drop Files Here</RegisterUploadZone>
+                <RegisterUploadForm>
+                  <input type="file" name="upfile" accept="image/*" required />
+                  <input type="submit" value="Upload File" />
+                </RegisterUploadForm>
+              </RegisterSlide4box>
             </>
           ) : (
             <>
-              <br />
-              Upload
-              <br />
+              <RegisterSlide4box>
+                Terms and Condition:
+                <br />
+                <br />
+                1. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                <br />
+                2. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                <br />
+                3. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                <br />
+                4. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                <br />
+                5. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              </RegisterSlide4box>
             </>
           )}
         </RegisterFormContainer>

@@ -152,3 +152,23 @@ export const RegisterPageFaq = styled.div`
   ::-webkit-scrollbar-thumb:hover {
     background: #67452a; 
 `;
+
+export const RegisterSlide4box = styled.div`
+  width: 90%;
+  height: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+`;
+
+export const RegisterUploadForm = styled.div`
+  display: none;
+`;
+
+export const RegisterUploadZone = styled.div`
+  margin: 0 auto;
+  width: 80%;
+  height: 258px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 30px;
+`;

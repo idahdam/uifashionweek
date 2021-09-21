@@ -39,7 +39,7 @@ const Contact = () => {
                     occaecat cupidatat non proident, sunt in culpa qui officia
                     deserunt mollit anim id est laborum"
               </ContacSectionText>
-              <ContactPageButton> contact </ContactPageButton>
+              <ContactPageButton>Contact Us</ContactPageButton>
               </ContactSectionColumn>
             </ContactSectionLeft>
             <ContactSectionRight>
