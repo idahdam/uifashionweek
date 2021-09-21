@@ -38,17 +38,16 @@ const about = () => {
                 <AboutSectionPartHalf>
                   <AboutSectionPartColumn>
                     <AboutSectionPartHalfHeader>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing eli
+                      UI Fashion Week History
                     </AboutSectionPartHalfHeader>
                     <AboutSectionPartHalfText>
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea ommodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum."
+                      Klub Mode UI, as the image of what fashion is in
+                      Universitas Indonesia, was founded in February 2018. UI
+                      Fashion Week as one of the program of Klub Mode UI
+                      presents as a place of expression for Universitas
+                      Indonesia students who have an interest and passion in
+                      fashion since 2012 throughout series of events like
+                      runway.
                     </AboutSectionPartHalfText>
                   </AboutSectionPartColumn>
                 </AboutSectionPartHalf>
@@ -57,17 +56,15 @@ const about = () => {
                 <AboutSectionPartHalf>
                   <AboutSectionPartColumn>
                     <AboutSectionPartHalfHeader>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing eli
+                      About UI Fashion Week
                     </AboutSectionPartHalfHeader>
                     <AboutSectionPartHalfText>
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea ommodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum."
+                      UI Fashion Week has a wide range of different people
+                      participated in such as models, fashion companies,
+                      influencers, designers, etc. Becaming hot topic in fashion
+                      industry from year to year, UI Fashion Week has been
+                      presenting several different themes that could bring a
+                      huge impact and awareness related to fashion.
                     </AboutSectionPartHalfText>
                   </AboutSectionPartColumn>
                 </AboutSectionPartHalf>

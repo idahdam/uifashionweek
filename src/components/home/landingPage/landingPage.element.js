@@ -51,8 +51,7 @@ export const LandingPageContent = styled.div`
 `;
 export const LandingPageHeader = styled.div`
   color: #f25918;
-  font-family: Montserrat;
-  font-weight: bold;
+  font-family:"Metropolis Bold";
   font-size: 79px;
   text-align: left;
 `;
@@ -82,6 +81,7 @@ export const LandingPageButton = styled.button`
   width: 203px;
   height: 47px;
   top: 100%;
+  font-family:"Metropolis Bold";
   font-size: 18px;
   text-align: center;
   text-decoration: none;

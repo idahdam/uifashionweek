@@ -108,7 +108,8 @@ export const AboutSectionPartHalfHeader = styled.div`
 export const AboutSectionPartHalfText = styled.div`
 Font family: Metropolis
 Font style: Regular
-Font size: 16px
+Font size: 16px;
+line-height: 152%;
 Align: Justified;
 margin-top:10%;
 // top: 50%;

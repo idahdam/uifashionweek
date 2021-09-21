@@ -183,22 +183,6 @@ const Register = () => {
               <br />
             </>
           )}
-          {/* <RegisterInput placeholder="Full Name" type="text" />
-          <RegisterInput placeholder="Nickname" type="text" />
-          <RegisterSelect>
-            <RegisterOptionDefault value="" disabled selected hidden>
-              Gender
-            </RegisterOptionDefault>
-            <RegisterOption value="0">Male</RegisterOption>
-            <RegisterOption value="1">Female</RegisterOption>
-            <RegisterOption value="2">Rather Not To Say</RegisterOption>
-          </RegisterSelect>
-          <RegisterInput placeholder="Birthday..." type="text" />
-          <RegisterInput placeholder="ID Number" type="text" />
-          <RegisterInput placeholder="Profession" type="text" />
-          <RegisterInput placeholder="Address" type="text" />
-          <RegisterInput placeholder="Contact WA / LINE" type="text" />
-          <RegisterInput placeholder="Instagram" type="text" /> */}
         </RegisterFormContainer>
         <RegisterPageCountContainer>(4/4)</RegisterPageCountContainer>
         <RegisterButtonContainer>
