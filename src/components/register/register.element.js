@@ -36,6 +36,7 @@ export const RegisterCardContainer = styled.div`
 `;
 
 export const RegisterCardTitle = styled.div`
+  font-family: "Metropolis Bold";
   font-size: 2rem;
   padding: 2% 0;
 `;
@@ -120,6 +121,7 @@ export const RegisterButton = styled.button`
   border-radius: 15px;
   width: 165px;
   height: 47px;
+  cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
@@ -171,4 +173,8 @@ export const RegisterUploadZone = styled.div`
   padding: 10px;
   background: #ffffff;
   border-radius: 30px;
+`;
+
+export const RegisterUploadInput = styled.input`
+  display: none;
 `;

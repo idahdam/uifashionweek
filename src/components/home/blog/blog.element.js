@@ -8,7 +8,7 @@ export const BlogContainer = styled.div`
     hsl(210.75, 35%, 44%) 0,
     transparent 60%
   );
-  z-index: 1;
+  z-index: -1;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -79,7 +79,7 @@ export const BlogCard = styled.div`
 `;
 
 export const BlogCardTitle = styled.div`
-  margin-top: 2%;
+  margin-top: 5%;
   font-family: "Metropolis Regular";
   font-size: 24px;
   /* or 32px */
@@ -95,10 +95,11 @@ export const BlogCardTitleType = styled.div`
   text-transform: uppercase;
   color: #91350e;
   margin-top: 1%;
+  padding-top: 5%;
 `;
 
 export const BlogCardText = styled.div`
-  font-family: montserrat;
+  font-family: "Metropolis Regular";
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -141,7 +142,7 @@ export const BlogCardLinkContainer = styled.a`
 `;
 
 export const BlogCardLink = styled(Link)`
-  font-family: Montserrat;
+  font-family: "Metropolis Bold";
   font-style: normal;
   font-weight: bold;
   font-size: 16px;

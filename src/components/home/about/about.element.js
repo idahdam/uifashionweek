@@ -17,7 +17,7 @@ export const AboutContainerBg = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   align: center;
-  font-family:Metropolis regular;
+  font-family: Metropolis regular;
 `;
 
 export const AboutContainer = styled.div`
@@ -96,7 +96,7 @@ export const AboutSectionPartHalf = styled.div`
   // background-color: red;
 `;
 export const AboutSectionPartHalfHeader = styled.div`
-  font-family: Montserrat;
+  font-family: "Metropolis Bold";
   font-style: normal;
   font-weight: bold;
   font-size: 32px;

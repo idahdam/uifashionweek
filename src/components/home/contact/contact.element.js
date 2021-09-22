@@ -52,7 +52,6 @@ export const ContactContent = styled.div`
 `;
 
 export const ContactSectionHeader = styled.div`
-  font-family: "Metropolis Bold";
   font-size: 32px;
   line-height: 40px;
   margin-left: auto;
@@ -63,7 +62,19 @@ export const ContactSectionHeader = styled.div`
   margin: 0;
 `;
 
+export const ContactSectionHeaderText = styled.div`
+  font-family: "Metropolis Bold";
+  font-size: 32px;
+  line-height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+`;
+
 export const ContactHeader = styled.header`
+  font-family: "Metropolis Regular";
   font-size: 48px;
   text-align: center;
   font-weight: bold;
@@ -109,7 +120,7 @@ Font family: "Metropolis Regular";
 font-size: 16px;
 line-height: 152%;
 Align: Justified;
-margin-top:10%;
+margin-top:5%;
 // top: 50%;
 //   left: 50%;
 width: 100%;
@@ -133,7 +144,7 @@ export const ContactPageButton = styled.button`
   color: white;
   width: 203px;
   height: 47px;
-  font-family: Montserrat;
+  font-family: "Metropolis Bold";
   font-weight: bold;
   font-size: 18px;
   text-align: center;

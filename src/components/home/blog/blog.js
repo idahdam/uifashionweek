@@ -10,7 +10,7 @@ import {
   BlogCardText,
   BlogCardTitle,
   BlogCardContainer,
-  BlogCardTitleType,
+  // BlogCardTitleType,
   BlogCardContentContainer,
   BlogCardImg,
   BlogCardLink,
@@ -18,7 +18,7 @@ import {
   BlogButtonContainer,
   BlogButton,
 } from "./blog.element";
-import image_1 from "../../../assets/image/blog/card_photo.png";
+// import image_1 from "../../../assets/image/blog/card_photo.png";
 import { blogService } from "../../../services/blogService";
 import FadeLoader from "react-spinners/FadeLoader";
 const Blog = () => {
@@ -93,7 +93,7 @@ const Blog = () => {
                               <BlogCardTitle>{data.Title}</BlogCardTitle>
                               <BlogCardText
                                 dangerouslySetInnerHTML={createMarkup(
-                                  data.Content.slice(0, 200) + "..."
+                                  data.Content.slice(0, 150) + "..."
                                 )}
                               ></BlogCardText>
                               <BlogCardLinkContainer>

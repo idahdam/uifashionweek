@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import bgimage from "../../../assets/image/landing-page/LandingPage-bg.png";
 
 export const LandingPageContainer = styled.div`
@@ -51,7 +52,7 @@ export const LandingPageContent = styled.div`
 `;
 export const LandingPageHeader = styled.div`
   color: #f25918;
-  font-family:"Metropolis Bold";
+  font-family: "Metropolis Bold";
   font-size: 79px;
   text-align: left;
 `;
@@ -81,7 +82,7 @@ export const LandingPageButton = styled.button`
   width: 203px;
   height: 47px;
   top: 100%;
-  font-family:"Metropolis Bold";
+  font-family: "Metropolis Bold";
   font-size: 18px;
   text-align: center;
   text-decoration: none;
@@ -93,3 +94,5 @@ export const LandingPageButton = styled.button`
     opacity: 0.6;
   }
 `;
+
+export const LandingPageLink = styled(Link)``;

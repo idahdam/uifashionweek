@@ -25,18 +25,15 @@ export const SponsorContainer = styled.div`
 `;
 
 export const SponsorDeco = styled.div`
-background-image: radial-gradient(
-  at -10% 25%,
-  hsl(119.38, 47%, 59%) 0,
-  transparent 20%
-),radial-gradient(
-  at 110% 75%,
-  hsl(119.38, 47%, 59%) 0,
-  transparent 20%
-);
-width: 100%;
-height: 100%;
-`
+  background-image: radial-gradient(
+      at -10% 25%,
+      hsl(119.38, 47%, 59%) 0,
+      transparent 20%
+    ),
+    radial-gradient(at 110% 75%, hsl(119.38, 47%, 59%) 0, transparent 20%);
+  width: 100%;
+  height: 100%;
+`;
 
 export const SponsorContent = styled.div`
   display: flex;

@@ -14,7 +14,7 @@ import {
   BlogsLinkHome,
   BlogsLinkContainer,
 } from "./blogs.element";
-import hero from "../../assets/image/blogs/hero.png";
+// import hero from "../../assets/image/blogs/hero.png";
 import { blogService } from "../../services/blogService";
 import FadeLoader from "react-spinners/FadeLoader";
 const Blogs = () => {
@@ -56,7 +56,10 @@ const Blogs = () => {
             <BlogsContent>
               <BlogsTitleContainer>
                 <BlogsLinkContainer>
-                <BlogsLinkHome Linkto="/"> Back to home</BlogsLinkHome>
+                  <BlogsLinkHome Link to="/">
+                    {" "}
+                    {`< Back to home`}
+                  </BlogsLinkHome>
                 </BlogsLinkContainer>
                 <BlogsTitle>{data.Title}</BlogsTitle>
               </BlogsTitleContainer>

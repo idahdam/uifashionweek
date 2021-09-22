@@ -21,18 +21,18 @@ const footer = () => {
         </FooterLeft>
         <FooterLeft>
           <FooterLogoContainer>
-            <FooterLink href="#">
-              <img src={Linkedin_logo} />{" "}
+            <FooterLink href="li">
+              <img src={Linkedin_logo} alt="uifw" />{" "}
             </FooterLink>
           </FooterLogoContainer>
           <FooterLogoContainer>
-            <FooterLink href="#">
-              <img src={Insta_logo} />
+            <FooterLink href="ig">
+              <img src={Insta_logo} alt="uifw" />
             </FooterLink>
           </FooterLogoContainer>
           <FooterLogoContainer>
-            <FooterLink href="#">
-              <img src={Youtube_logo} />
+            <FooterLink href="yt">
+              <img src={Youtube_logo} alt="uifw" />
             </FooterLink>
           </FooterLogoContainer>
         </FooterLeft>
