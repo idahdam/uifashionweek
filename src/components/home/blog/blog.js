@@ -72,7 +72,7 @@ const Blog = () => {
                               <BlogCardTitle>{data.Title}</BlogCardTitle>
                               <BlogCardText
                                 dangerouslySetInnerHTML={createMarkup(
-                                  data.Content.slice(0, 200) + "..."
+                                  data.Content.slice(0, 150) + "..."
                                 )}
                               ></BlogCardText>
                               <BlogCardLinkContainer>

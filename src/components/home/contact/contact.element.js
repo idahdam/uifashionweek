@@ -3,20 +3,20 @@ import styled from "styled-components";
 export const ContactContainer = styled.div`
   background-color: #ffffff;
   background-image: linear-gradient(
-      to top,
-      #497099,
-      #6584a8,
-      #7f99b7,
-      #9aaec6,
-      #b5c4d6,
-      #c1cedd,
-      #ced8e4,
-      #dae2eb,
-      #dae2eb,
-      #dae2eb,
-      #dae2eb,
-      #dae2eb
-    );
+    to top,
+    #497099,
+    #6584a8,
+    #7f99b7,
+    #9aaec6,
+    #b5c4d6,
+    #c1cedd,
+    #ced8e4,
+    #dae2eb,
+    #dae2eb,
+    #dae2eb,
+    #dae2eb,
+    #dae2eb
+  );
   z-index: 1;
   width: 100%;
   max-height: 1080px;
@@ -52,6 +52,9 @@ export const ContactContent = styled.div`
 `;
 
 export const ContactSectionHeader = styled.div`
+  font-family: "Metropolis Bold";
+  font-size: 32px;
+  line-height: 40px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -102,9 +105,9 @@ export const ContacSectionHeader = styled.div`
 `;
 
 export const ContacSectionText = styled.div`
-Font family: Metropolis
-Font style: Regular
-Font size: 16px
+Font family: "Metropolis Regular";
+font-size: 16px;
+line-height: 152%;
 Align: Justified;
 margin-top:10%;
 // top: 50%;

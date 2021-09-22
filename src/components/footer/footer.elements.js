@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Footer = styled.div`
   background: rgba(253, 251, 250, 0.6);
   backdrop-filter: blur(20px);
-  height: 60px;
+  height: 100px;
   display: flex;
   padding: 0 5%;
   justify-content: center;
@@ -16,11 +16,11 @@ export const Footer = styled.div`
 export const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 60px;
   z-index: 1;
   width: 100%;
-  padding: 0 24px;
   max-width: 1366px;
+  padding-left:5%;
+  padding-right:5%;
   @media screen and (max-width: 960px) {
     padding: 0;
     width: 65%;
@@ -28,20 +28,15 @@ export const FooterContainer = styled.div`
 `;
 export const FooterLeft = styled.div`
   float: left;
-  width: 40%;
-  height: 60%;
-  margin-top: 1%;
+  width: 50%;
 `;
-export const FooterRight = styled.div`
-  float: left;
-  width: 40%;
-  height: 60%;
-  margin-top: 1%;
+export const FooterLogoContainer = styled.div`
+  float: right;
+  width: 10%;
+  display: flex;
 `;
 
 export const FooterLink = styled.a`
-  color: #fff;
-  margin-bottom: 20px;
   font-size: 18px;
   text-decoration: none;
 
@@ -50,3 +45,9 @@ export const FooterLink = styled.a`
     transition: 200ms ease-in;
   }
 `;
+
+export const FooterText = styled.div`
+font-family :"Metropolis"
+font-szie :16px;
+margin-top: 2%;
+`

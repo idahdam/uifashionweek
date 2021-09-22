@@ -14,7 +14,7 @@ export const BlogsContent = styled.div`
   padding-top: 2.5rem;
 `;
 export const BlogsTitleContainer = styled.div`
-  text-align: center;
+  text-align: left;
   padding: 0 20%;
 `;
 
@@ -38,3 +38,15 @@ export const BlogsWriter = styled.span`
 `;
 
 export const BlogsDate = styled.span``;
+
+export const BlogsLinkHome = styled.a`
+font-family: "Metropolis Bold";
+font-size: 16px;
+line-height: 152%;
+color: #91350E;
+text-align: left;
+`
+
+export const BlogsLinkContainer = styled.a`
+width:100%;
+`

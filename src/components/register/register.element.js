@@ -20,7 +20,9 @@ export const RegisterContainerRow = styled.div`
 export const RegisterContainerCol = styled.div`
   flex: 50%;
 `;
-
+export const RegisterContainerCol2 = styled.div`
+  flex: 30%;
+`;
 export const RegisterImage = styled.img``;
 
 export const RegisterCardContainer = styled.div`
@@ -51,14 +53,17 @@ export const RegisterInput = styled.input`
   margin: 8px 0;
   font-size: 1rem;
   display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  // border: 5px solid #C08D64;
+  // border-radius: 4px;
   box-sizing: border-box;
   border-radius: 10px;
+  border: none;
+  outline: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
 export const RegisterSelect = styled.select`
+  color: #939393;
   width: 100%;
   font-family: "Metropolis Regular";
   padding: 20px 20px;
@@ -87,13 +92,13 @@ export const RegisterOption = styled.option`
 
 export const RegisterOptionDefault = styled.option`
   width: 100%;
-  padding: 20px 20px;
+  padding: 30px 20px;
   margin: 8px 0;
   opacity: 0.5;
   -moz-opacity: 0.5;
   -webkit-opacity: 0.5;
   color: #999999;
-  font-size: 0.875rem;
+  font-size: 1rem;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -115,7 +120,55 @@ export const RegisterButton = styled.button`
   border-radius: 15px;
   width: 165px;
   height: 47px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
+
 export const RegisterPageCountContainer = styled.div`
   padding: 2.5%;
+`;
+
+export const RegisterPageFaq = styled.div`
+  margin: 0 auto;
+  width: 400px;
+  height:450px;
+  overflow: auto;
+  margin-top:5%;
+  margin-bottom:2%;
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #C08D64;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #67452a; 
+`;
+
+export const RegisterSlide4box = styled.div`
+  width: 90%;
+  height: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+`;
+
+export const RegisterUploadForm = styled.div`
+  display: none;
+`;
+
+export const RegisterUploadZone = styled.div`
+  margin: 0 auto;
+  width: 80%;
+  height: 258px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 30px;
 `;
