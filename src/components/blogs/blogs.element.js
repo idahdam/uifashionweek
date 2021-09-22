@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const BlogsContainer = styled.div``;
 
@@ -21,6 +22,7 @@ export const BlogsTitleContainer = styled.div`
 export const BlogsTitle = styled.div`
   font-size: 4rem;
   text-align: left;
+  margin-top: 2.5%;
 `;
 
 export const BlogsBody = styled.div`
@@ -39,14 +41,18 @@ export const BlogsWriter = styled.span`
 
 export const BlogsDate = styled.span``;
 
-export const BlogsLinkHome = styled.a`
-font-family: "Metropolis Bold";
-font-size: 16px;
-line-height: 152%;
-color: #91350E;
-text-align: left;
-`
+export const BlogsLinkHome = styled(Link)`
+  font-family: "Metropolis Bold";
+  font-size: 16px;
+  line-height: 152%;
+  color: #91350e;
+  padding: 2% 0%;
+  margin-bottom: 2%;
+  text-align: left;
+  text-decoration: none;
+`;
 
 export const BlogsLinkContainer = styled.a`
-width:100%;
-`
+  width: 100%;
+  margin: 5% 0%;
+`;

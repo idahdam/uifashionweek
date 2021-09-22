@@ -1,33 +1,36 @@
 import React from "react";
 import {
-  LandingPageInside,
+  // LandingPageInside,
   LandingPageContainer,
   LandingPageContent,
-  LandingPageBg,
+  // LandingPageBg,
   LandingPageHeader,
   LandingPageImage,
   LandingPageCaption,
   LandingPageButton,
+  LandingPageLink,
 } from "./landingPage.element";
 import CircleText from "../../../assets/image/landing-page/AssetCircle.png";
-import bgimage from "../../../assets/image/landing-page/LandingPage-bg.png";
+// import bgimage from "../../../assets/image/landing-page/LandingPage-bg.png";
 
 const landingPage = () => {
   return (
     <>
       <LandingPageContainer>
         {/* <LandingPageInside> */}
-          {/* <LandingPageBg src={bgimage} alt="vision" loading="lazy"/> */}
-          <LandingPageContent>
-            <LandingPageImage src={CircleText} />
-            <LandingPageCaption>
-              <LandingPageHeader>
-                UI FASHION <br />
-                WEEK
-              </LandingPageHeader>
-            </LandingPageCaption>
+        {/* <LandingPageBg src={bgimage} alt="vision" loading="lazy"/> */}
+        <LandingPageContent>
+          <LandingPageImage src={CircleText} />
+          <LandingPageCaption>
+            <LandingPageHeader>
+              UI FASHION <br />
+              WEEK
+            </LandingPageHeader>
+          </LandingPageCaption>
+          <LandingPageLink to="/register">
             <LandingPageButton>Register</LandingPageButton>
-          </LandingPageContent>
+          </LandingPageLink>
+        </LandingPageContent>
         {/* </LandingPageInside> */}
       </LandingPageContainer>
     </>

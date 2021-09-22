@@ -32,7 +32,7 @@ const about = () => {
                 <AboutSectionPartHalf>
                   <AboutImage1Container>
                     {/* <AboutImage1 src={image_test} alt="vision" loading="Lazy" /> */}
-                    <img src={image_about1} />
+                    <img src={image_about1} alt="uifw" />
                   </AboutImage1Container>
                 </AboutSectionPartHalf>
                 <AboutSectionPartHalf>
@@ -71,16 +71,16 @@ const about = () => {
                 <AboutSectionPartHalf>
                   <AboutImage1Container>
                     {/* <AboutImage2 src={image_test} alt="vision" loading="Lazy" /> */}
-                    <img src={image_about2} />
+                    <img src={image_about2} alt="uifw" />
                   </AboutImage1Container>
                 </AboutSectionPartHalf>
               </AboutSectionPart>
             </AboutSection>
             <AboutSection>
-              <img src={image_2} />
+              <img src={image_2} alt="uifw" />
             </AboutSection>
             <AboutSection>
-              <img src={image_3} />
+              <img src={image_3} alt="uifw" />
             </AboutSection>
           </AboutContent>
         </AboutContainer>
