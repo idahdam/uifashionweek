@@ -453,7 +453,7 @@ const Register = () => {
                         <RegisterOption value="twice">
                           Second dose
                         </RegisterOption>
-                        <RegisterOption value="none">Not yet</RegisterOption>
+                        <RegisterOption value="not_yet">Not yet</RegisterOption>
                       </RegisterSelect>
                       <RegisterInput
                         placeholder="If you haven’t, could you tell us why and when will you get vaccinated?"
