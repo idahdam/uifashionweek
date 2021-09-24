@@ -7,16 +7,13 @@ import Register from "./pages/register/register.js";
 function App() {
   return (
     <>
-      <Router>
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/blogs/:id" component={Blogs} />
-          <Route exact component={NotFound} />
-        </Switch>
-        <Footer />
-      </Router>
+      <div>
+        <br />
+        <center>
+          <h1>COMING SOON</h1>
+        </center>
+        <br />
+      </div>
     </>
   );
 }
