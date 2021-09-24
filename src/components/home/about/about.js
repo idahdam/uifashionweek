@@ -13,6 +13,8 @@ import {
   AboutSectionPartColumn,
   AboutContainerBg,
   About3ImageContainer,
+  About3ImageLeft,
+  About3ImageRight,
 } from "./about.element";
 import image_3_1 from "../../../assets/image/about/photo 1.png";
 import image_3_2 from "../../../assets/image/about/photo 2.png";
@@ -84,13 +86,13 @@ const about = () => {
             </AboutSection>
             <AboutSection>
               <About3ImageContainer>
-                <img src={image_3_1} alt="uifw" />
+                <About3ImageLeft src={image_3_1} alt="uifw" />
               </About3ImageContainer>
               <About3ImageContainer>
                 <img src={image_3_2} alt="uifw" />
               </About3ImageContainer>
               <About3ImageContainer>
-                <img src={image_3_3} alt="uifw" />
+                <About3ImageRight src={image_3_3} alt="uifw" />
               </About3ImageContainer>
             </AboutSection>
           </AboutContent>

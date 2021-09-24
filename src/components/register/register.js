@@ -25,6 +25,7 @@ import {
 } from "./register.element";
 import leftModel from "../../assets/image/register/left.png";
 import Faq from "./faqcontent";
+import Terms from "./termcontent";
 import "./slider.css";
 import Swal from "sweetalert2";
 import axios from "axios";
@@ -629,37 +630,7 @@ const Register = () => {
                       ) : (
                         <>
                           <RegisterSlide4box>
-                            Requirements:
-                            <br />
-                            <br />
-                            1. No make up
-                            <br />
-                            2. No photoshop, grains, filters, or any distracting
-                            and unnecessary features.
-                            <br />
-                            3. Using white background.
-                            <br />
-                            4. Clothing:
-                            <br />
-                            Female:
-                            <ul>
-                              <li>
-                                Non hijab: tank top, short pants / legging (all
-                                in black)
-                              </li>
-                              <li>
-                                Hijab: manset, skinny jeans / legging, turban
-                                (all in black)
-                              </li>
-                              <li>High heels</li>
-                            </ul>
-                            <br />
-                            Male:
-                            <ul>
-                              <li>T-shirt / tank top</li>
-                              <li>Skinny jeans</li>
-                              <li>Boots / sneakers (All in black)</li>
-                            </ul>
+                          <Terms />
                           </RegisterSlide4box>
                         </>
                       )}

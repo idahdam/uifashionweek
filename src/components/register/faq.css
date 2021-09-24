@@ -1,9 +1,13 @@
-p{
-    text-align: left;
-    line-height: 152%;
-    font-size: 16px;
+p {
+  text-align: left;
+  line-height: 152%;
+  font-size: 16px;
 }
 
-b{
-    font-family: "Metropolis Bold";
+b {
+  font-family: "Metropolis Bold";
+}
+
+.tab {
+  margin-left: 5%;
 }

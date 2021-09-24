@@ -178,4 +178,13 @@ export const AboutImage2Container = styled.div`
 
 export const About3ImageContainer = styled.div`
 width:33.3%;
-float :left;`
+float :left;
+display: grid;`
+
+export const About3ImageLeft = styled.img`
+margin-top:-5%
+width: 100%;;
+`
+
+export const About3ImageRight = styled.img`
+margin-top:40%;`
