@@ -18,7 +18,7 @@ import image_1 from "../../../assets/image/contact/Contact_pic.png";
 const Contact = () => {
   return (
     <>
-      <ContactContainer>
+      <ContactContainer id="contactus">
         <ContactContent>
           <ContactSectionHeader>
             <ContactHeader>Contact</ContactHeader>

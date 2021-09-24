@@ -21,7 +21,7 @@ import image_about2 from "../../../assets/image/about/About Us Photo 2.png";
 const about = () => {
   return (
     <>
-      <AboutContainerBg>
+      <AboutContainerBg id="about" name="about">
         <AboutContainer>
           <AboutContent>
             <AboutSectionHeader>
@@ -76,7 +76,7 @@ const about = () => {
                 </AboutSectionPartHalf>
               </AboutSectionPart>
             </AboutSection>
-            <AboutSection>
+            <AboutSection id="gallery">
               <img src={image_2} alt="uifw" />
             </AboutSection>
             <AboutSection>

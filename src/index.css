@@ -54,6 +54,10 @@
   font-weight: bold;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Metropolis Regular", -apple-system, BlinkMacSystemFont,

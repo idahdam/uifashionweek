@@ -46,7 +46,7 @@ const Blog = () => {
   };
   return (
     <>
-      <BlogContainer>
+      <BlogContainer id="blog">
         <BlogContent>
           <BlogSectionHeader>
             <BlogHeader>Blog</BlogHeader>

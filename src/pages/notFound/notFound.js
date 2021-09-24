@@ -1,7 +1,19 @@
 import React from "react";
-
-const NotFound = () => {
-  return <div>404 Not Found</div>;
+import {
+  NotFoundContainer,
+  NotFoundText,
+  NotFoundTextContainer,
+  NotFoundTitle,
+} from "./notFound.element";
+const NotFoundComp = () => {
+  return (
+    <NotFoundContainer>
+      <NotFoundTextContainer>
+        <NotFoundTitle>404</NotFoundTitle>
+        <NotFoundText>Page Not Found</NotFoundText>
+      </NotFoundTextContainer>
+    </NotFoundContainer>
+  );
 };
 
-export default NotFound;
+export default NotFoundComp;

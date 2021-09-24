@@ -16,7 +16,7 @@ import CircleText from "../../../assets/image/landing-page/AssetCircle.png";
 const landingPage = () => {
   return (
     <>
-      <LandingPageContainer>
+      <LandingPageContainer id="hero">
         {/* <LandingPageInside> */}
         {/* <LandingPageBg src={bgimage} alt="vision" loading="lazy"/> */}
         <LandingPageContent>

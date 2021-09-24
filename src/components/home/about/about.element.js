@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-export const AboutContainerBg = styled.div`
+import { Element } from "react-scroll";
+export const AboutContainerBg = styled(Element)`
   background-image: linear-gradient(
     to bottom,
     #e2f1f4,
