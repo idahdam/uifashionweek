@@ -8,22 +8,26 @@ const faqcontent = () => {
         <b>1. Can I join if my height is below the requirements? </b>
         <br />
         Yes! It is very negotiable since we’re seeking the uniqueness from each
-        participant. Can I join if I wear a hijab? Yes, everyone with various
-        backgrounds is welcomed to participate.
+        participant.
       </p>
       <p>
-        <b>2. Can I join if I wear glasses? </b>
+        <b>2. Can I join if I wear a hijab? </b>
+        <br />
+        Yes, everyone with various backgrounds is welcomed to participate.
+      </p>
+      <p>
+        <b>3. Can I join if I wear glasses? </b>
         <br />
         Yes. But you have to take off your glasses in your shots.
       </p>
       <p>
-        <b>3. I am not an UI student, can I still join? </b>
+        <b>4. I am not an UI student, can I still join? </b>
         <br />
         Yes, you don’t have to be an UI student to join the Model Hunt.
       </p>
       <p>
         <b>
-          4. I don’t have any experience in the modelling industry, can I still
+          5. I don’t have any experience in the modelling industry, can I still
           join?{" "}
         </b>
         <br />
@@ -32,7 +36,7 @@ const faqcontent = () => {
       </p>
       <p>
         <b>
-          5. Why do I have to be vaccinated to participate in the model hunt?{" "}
+          6. Why do I have to be vaccinated to participate in the model hunt?{" "}
         </b>
         <br />
         Since we are all still in the middle of the pandemic and some of the pre
@@ -40,7 +44,7 @@ const faqcontent = () => {
       </p>
       <p>
         <b>
-          6. I can’t be vaccinated for some reason, does that mean I can’t join
+          7. I can’t be vaccinated for some reason, does that mean I can’t join
           the Model Hunt?{" "}
         </b>
         <br />
@@ -48,14 +52,14 @@ const faqcontent = () => {
         it.
       </p>
       <p>
-        <b>7. What will be evaluated? Is there any evaluation standard? </b>
+        <b>8. What will be evaluated? Is there any evaluation standard? </b>
         <br />
         We can’t set a standard to judge someone’s looks since it is very
         subjective. However we are looking for each person’s unique colors.
       </p>
 
       <p>
-        <b>8. Does the photoshoot must be photographed in the studio? </b>
+        <b>9. Does the photoshoot must be photographed in the studio? </b>
         <br />
         No. As long as the judges can see it clearly, then it is totally fine!
       </p>

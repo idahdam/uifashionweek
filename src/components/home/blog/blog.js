@@ -107,37 +107,6 @@ const Blog = () => {
                       </>
                     );
                   })}
-                  {show ? (
-                    <>
-                      {data.map((data, index) => {
-                        return (
-                          <>
-                            {index > 3 ? (
-                              <BlogCard>
-                                <BlogCardContentContainer>
-                                  <BlogCardImageContainer>
-                                    <BlogCardImg src={data.Hero.url} />
-                                  </BlogCardImageContainer>
-                                  {/* <BlogCardTitleType>Tipe BLOG</BlogCardTitleType> */}
-                                  <BlogCardTitle>{data.Title}</BlogCardTitle>
-                                  <BlogCardText
-                                    dangerouslySetInnerHTML={createMarkup(
-                                      data.Content.slice(0, 50)
-                                    )}
-                                  ></BlogCardText>
-                                  <BlogCardLinkContainer>
-                                    <BlogCardLink to={`/blogs/${data.id}`}>
-                                      Read More
-                                    </BlogCardLink>
-                                  </BlogCardLinkContainer>
-                                </BlogCardContentContainer>
-                              </BlogCard>
-                            ) : null}
-                          </>
-                        );
-                      })}
-                    </>
-                  ) : null}
                 </>
               )}
             </BlogCardContainer>

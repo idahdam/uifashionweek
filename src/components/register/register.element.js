@@ -63,6 +63,22 @@ export const RegisterInput = styled.input`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
+export const RegisterInputLarge = styled.textarea`
+  width: 100%;
+  resize: none;
+  vertical-align: top;
+  font-family: "Metropolis Regular";
+  padding: 50px 20px;
+  margin: 8px 0;
+  font-size: 1rem;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+`;
+
 export const RegisterSelect = styled.select`
   color: #939393;
   width: 100%;

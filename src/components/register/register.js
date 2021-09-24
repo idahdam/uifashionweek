@@ -10,6 +10,7 @@ import {
   RegisterCardDescription,
   RegisterFormContainer,
   RegisterInput,
+  RegisterInputLarge,
   RegisterSelect,
   RegisterOptionDefault,
   RegisterOption,
@@ -34,39 +35,74 @@ const Register = () => {
   const [upload, setUpload] = useState(false);
 
   // input and files area
-  const [image, setImage] = useState(null);
+  const [image1, setImage1] = useState(null);
+  const [image2, setImage2] = useState(null);
+  const [image3, setImage3] = useState(null);
+  const [image4, setImage4] = useState(null);
+  const [image5, setImage5] = useState(null);
+  const [image6, setImage6] = useState(null);
 
-  const [fullName, setFullName] = useState("");
-  const [nickname, setNickname] = useState("");
-  const [gender, setGender] = useState("");
-  const [birthday, setBirthday] = useState("");
-  const [idNumber, setIdNumber] = useState(0);
-  const [profession, setProfession] = useState("");
-  const [address, setAddress] = useState("");
-  const [contact, setContact] = useState("");
-  const [instagram, setInstagram] = useState("");
+  const [fullName, setFullName] = useState(null);
+  const [gender, setGender] = useState(null);
+  const [birthday, setBirthday] = useState(null);
+  const [idNumber, setIdNumber] = useState(null);
+  const [profession, setProfession] = useState(null);
+  const [address, setAddress] = useState(null);
+  const [aboutMe, setAboutMe] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [whatsapp, setWhatsapp] = useState(null);
+  const [lineId, setLineId] = useState(null);
+  const [instagram, setInstagram] = useState(null);
 
-  const [height, setHeight] = useState(0);
-  const [weight, setWeight] = useState(0);
-  const [top, setTop] = useState(0);
-  const [bottom, setBottom] = useState(0);
-  const [shoe, setShoe] = useState(0);
+  const [height, setHeight] = useState(null);
+  const [weight, setWeight] = useState(null);
+  const [waist, setWaist] = useState(null);
+  const [bust, setBust] = useState(null);
+  const [hip, setHip] = useState(null);
+  const [top, setTop] = useState(null);
+  const [bottom, setBottom] = useState(null);
+  const [shoe, setShoe] = useState(null);
 
-  const [contactAgency, setContactAgency] = useState(0);
-  const [agencyName, setAgencyName] = useState("");
-  const [contracted, setContracted] = useState(0);
-  const [agencyName2, setAgencyName2] = useState("");
-  const [recommendation, setRecommandation] = useState(false);
-  const [vaccinated, setVaccinated] = useState("");
-  const [amountVaccine, setAmounVaccine] = useState("");
+  const [vaccinated, setVaccinated] = useState(null);
+  const [vaccineReason, setVaccineReason] = useState(null);
+  const [currentlyUnderContract, setCurrentlyUnderContract] = useState(null);
+  const [currentAgencyName, setCurrentAgencyName] = useState(null);
+  const [everBeenUnderContract, setEverBeenUnderContract] = useState(null);
+  const [exAgencyName, setExAgencyname] = useState(null);
+  const [findOutSource, setFindOutSource] = useState(null);
+  const [foundFromUIFW, setFoundFromUIFW] = useState(null);
 
   const history = useHistory();
-  let card;
+
+  const areYouSure = () => {
+    if (fullName === null) {
+      Swal.fire("Hold up!", "Make sure to fill all the fields.", "warning");
+    } else {
+      Swal.fire({
+        title: "Submit all of the data?",
+        text: "Make sure you have checked all of the data!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Submit",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          onSubmit();
+        }
+      });
+    }
+  };
 
   const onSubmit = async () => {
     const formData = new FormData();
     // const formsApplicant = new FormData();
-    formData.append("files", image);
+    formData.append("files", image1);
+    formData.append("files", image2);
+    formData.append("files", image3);
+    formData.append("files", image4);
+    formData.append("files", image5);
+    formData.append("files", image6);
     try {
       await axios
         .post("https://api.uifashionweek.com/upload", formData)
@@ -75,36 +111,45 @@ const Register = () => {
           // console.log(res.data[0]);
           await axios
             .post("https://api.uifashionweek.com/forms", {
+              paymentStatus: "unpaid",
+              status: "unchecked",
               full_name: fullName,
-              nickname: nickname,
               sex: gender,
               dob: birthday,
               id_number: idNumber,
-              profession: profession,
+              occupation: profession,
               address: address,
-              email: "",
-              phone: "",
-              line_id: contact,
+              about: aboutMe,
+              email: email,
+              wa_number: whatsapp,
+              line_id: lineId,
               instagram: instagram,
               height: height,
               weight: weight,
+              bust: bust,
+              hip: hip,
+              waist: waist,
               top: top,
               bottom: bottom,
               shoes: shoe,
-              vaccinated: amountVaccine,
-              vaccine_why_when: "",
+              vaccinated: vaccinated,
+              vaccinated_reason: vaccineReason,
               in_contact_agency: true,
-              agency_name: agencyName,
-              found_source: "",
-              name_and_division: "",
-              photos: res.data[0],
+              currently_under_contract_with_agency: currentlyUnderContract,
+              current_agency_name: currentAgencyName,
+              ever_been_under_contract: everBeenUnderContract,
+              ex_agency_name: exAgencyName,
+              find_out_source: findOutSource,
+              found_from_uifw_committee: foundFromUIFW,
+              photos: res.data,
             })
             // .then((res) => console.log(res))
             .then((res) => {
               console.log(res);
               Swal.fire({
                 icon: "success",
-                title: "File sudah ter-upload!",
+                title: "File is submitted!",
+                html: "Thank you for your submission.' +  '<br/>Your data has been recorded. Please check your email regularly. We will send you the payment details and further notice regarding the selection process.",
                 showConfirmButton: false,
                 timer: 1500,
               });
@@ -117,7 +162,7 @@ const Register = () => {
       Swal.fire({
         icon: "error",
         title: err,
-        text: "Apa kamu sudah memilih file gambar? (.png/.jpg)?",
+        text: "Have you chosen any images?? (.png/.jpg)?",
         footer: '<a href="https://google.com">Why do I have this issue?</a>',
       });
     }
@@ -166,22 +211,12 @@ const Register = () => {
                         onChange={(event) => setFullName(event.target.value)}
                         value={fullName}
                       />
-                      <RegisterInput
-                        placeholder="Nickname"
-                        type="text"
-                        onChange={(event) => setNickname(event.target.value)}
-                        value={nickname}
-                      />
                       <RegisterSelect
+                        value={gender}
                         onChange={(event) => setGender(event.target.value)}
                       >
-                        <RegisterOptionDefault
-                          value={gender}
-                          disabled
-                          selected
-                          hidden
-                        >
-                          Gender
+                        <RegisterOptionDefault disabled selected hidden>
+                          Sex
                         </RegisterOptionDefault>
                         <RegisterOption value="male">Male</RegisterOption>
                         <RegisterOption value="female">Female</RegisterOption>
@@ -190,22 +225,17 @@ const Register = () => {
                         </RegisterOption>
                       </RegisterSelect>
                       <RegisterInput
-                        placeholder="Birthday..."
+                        placeholder="Place, Date of Birth"
                         type="text"
                         onChange={(event) => setBirthday(event.target.value)}
                         value={birthday}
                       />
                       <RegisterInput
                         placeholder="ID Number"
-                        type="text"
+                        type="number"
+                        maxLength="16"
                         onChange={(event) => setIdNumber(event.target.value)}
                         value={idNumber}
-                      />
-                      <RegisterInput
-                        placeholder="Profession"
-                        type="text"
-                        onChange={(event) => setProfession(event.target.value)}
-                        value={profession}
                       />
                       <RegisterInput
                         placeholder="Address"
@@ -214,10 +244,34 @@ const Register = () => {
                         value={address}
                       />
                       <RegisterInput
-                        placeholder="Contact WA / LINE"
+                        placeholder="Profession"
                         type="text"
-                        onChange={(event) => setContact(event.target.value)}
-                        value={contact}
+                        onChange={(event) => setProfession(event.target.value)}
+                        value={profession}
+                      />
+                      <RegisterInputLarge
+                        placeholder="About Me"
+                        type="text"
+                        onChange={(event) => setAboutMe(event.target.value)}
+                        value={aboutMe}
+                      />
+                      <RegisterInput
+                        placeholder="Email"
+                        type="text"
+                        onChange={(event) => setEmail(event.target.value)}
+                        value={email}
+                      />
+                      <RegisterInput
+                        placeholder="Whatsapp Number"
+                        type="text"
+                        onChange={(event) => setWhatsapp(event.target.value)}
+                        value={whatsapp}
+                      />
+                      <RegisterInput
+                        placeholder="Line Id"
+                        type="text"
+                        onChange={(event) => setLineId(event.target.value)}
+                        value={lineId}
                       />
                       <RegisterInput
                         placeholder="Instagram"
@@ -252,17 +306,36 @@ const Register = () => {
                     <RegisterFormContainer>
                       <RegisterInput
                         placeholder="Height (cm)"
-                        type="text"
+                        type="number"
                         onChange={(event) => setHeight(event.target.value)}
                         value={height}
                       />
                       <RegisterInput
                         placeholder="Weight (kg)"
-                        type="text"
+                        type="number"
                         onChange={(event) => setWeight(event.target.value)}
                         value={weight}
                       />
+                      <RegisterInput
+                        placeholder="Waist (cm)"
+                        type="number"
+                        onChange={(event) => setWaist(event.target.value)}
+                        value={waist}
+                      />
+                      <RegisterInput
+                        placeholder="Bust (cm)"
+                        type="text"
+                        onChange={(event) => setBust(event.target.value)}
+                        value={bust}
+                      />
+                      <RegisterInput
+                        placeholder="Hip (cm)"
+                        type="text"
+                        onChange={(event) => setHip(event.target.value)}
+                        value={hip}
+                      />
                       <RegisterSelect
+                        value={top}
                         onChange={(event) => setTop(event.target.value)}
                       >
                         <RegisterOptionDefault
@@ -279,6 +352,7 @@ const Register = () => {
                         <RegisterOption value="xxl">XXL</RegisterOption>
                       </RegisterSelect>
                       <RegisterSelect
+                        value={bottom}
                         onChange={(event) => setBottom(event.target.value)}
                       >
                         <RegisterOptionDefault
@@ -326,86 +400,113 @@ const Register = () => {
                     </RegisterCardDescription>
                     <RegisterFormContainer>
                       <RegisterSelect
-                        onChange={(event) =>
-                          setContactAgency(event.target.value)
-                        }
-                      >
-                        <RegisterOptionDefault
-                          value=""
-                          disabled
-                          selected
-                          hidden
-                        >
-                          Lagi kontrak sama Agency?
-                        </RegisterOptionDefault>
-                        <RegisterOption value="true">Yes</RegisterOption>
-                        <RegisterOption value="false">No</RegisterOption>
-                      </RegisterSelect>
-                      <RegisterInput
-                        placeholder="Jika iya agency apa?"
-                        type="text"
-                        onChange={(event) => setAgencyName(event.target.value)}
-                        value={agencyName}
-                      />
-                      <RegisterSelect
-                        onChange={(event) => setContracted(event.target.value)}
-                      >
-                        <RegisterOptionDefault
-                          value=""
-                          disabled
-                          selected
-                          hidden
-                        >
-                          Jika tidak sedang dikontrak, pernah kontrak sama
-                          agency gak sebelumnya?
-                        </RegisterOptionDefault>
-                        <RegisterOption value="0">Yes</RegisterOption>
-                        <RegisterOption value="1">No</RegisterOption>
-                      </RegisterSelect>
-                      <RegisterInput
-                        placeholder="Pernah kontak dengan agency apa sebelumnya?"
-                        type="text"
-                        onChange={(event) => setAgencyName2(event.target.value)}
-                        value={agencyName2}
-                      />
-                      <RegisterSelect
-                        onChange={(event) =>
-                          setRecommandation(event.target.value)
-                        }
-                      >
-                        <RegisterOptionDefault
-                          value=""
-                          disabled
-                          selected
-                          hidden
-                        >
-                          Bergabung model karena direkomendasi panitia?
-                        </RegisterOptionDefault>
-                        <RegisterOption value="0">Yes</RegisterOption>
-                        <RegisterOption value="1">No</RegisterOption>
-                      </RegisterSelect>
-                      <RegisterSelect
-                        onChange={(event) =>
-                          setAmounVaccine(event.target.value)
-                        }
-                      >
-                        <RegisterOptionDefault
-                          value=""
-                          disabled
-                          selected
-                          hidden
-                        >
-                          How many times have you had your vaccine(s)?
-                        </RegisterOptionDefault>
-                        <RegisterOption value="once">Once</RegisterOption>
-                        <RegisterOption value="twice">Twice</RegisterOption>
-                        <RegisterOption value="none">None</RegisterOption>
-                      </RegisterSelect>
-                      <RegisterInput
-                        placeholder="Kenapa dan kapan akan vaksin?"
-                        type="text"
-                        onChange={(event) => setVaccinated(event.target.value)}
                         value={vaccinated}
+                        onChange={(event) => setVaccinated(event.target.value)}
+                      >
+                        <RegisterOptionDefault
+                          value=""
+                          disabled
+                          selected
+                          hidden
+                        >
+                          Have you been vaccinated?
+                        </RegisterOptionDefault>
+                        <RegisterOption value="once">First dose</RegisterOption>
+                        <RegisterOption value="twice">
+                          Second dose
+                        </RegisterOption>
+                        <RegisterOption value="none">Not yet</RegisterOption>
+                      </RegisterSelect>
+                      <RegisterInput
+                        placeholder="If you haven’t, could you tell us why and when will you get vaccinated?"
+                        type="text"
+                        onChange={(event) =>
+                          setVaccineReason(event.target.value)
+                        }
+                        value={vaccineReason}
+                      />
+                      <RegisterSelect
+                        value={currentlyUnderContract}
+                        onChange={(event) =>
+                          setCurrentlyUnderContract(event.target.value)
+                        }
+                      >
+                        <RegisterOptionDefault
+                          value=""
+                          disabled
+                          selected
+                          hidden
+                        >
+                          Are you currently under contract with a modelling
+                          agency?
+                        </RegisterOptionDefault>
+                        <RegisterOption value="yes">Yes</RegisterOption>
+                        <RegisterOption value="no">No</RegisterOption>
+                      </RegisterSelect>
+                      <RegisterInput
+                        placeholder="If so, what modelling agency?"
+                        type="text"
+                        onChange={(event) =>
+                          setCurrentAgencyName(event.target.value)
+                        }
+                        value={currentAgencyName}
+                      />
+                      <RegisterSelect
+                        value={everBeenUnderContract}
+                        onChange={(event) =>
+                          setEverBeenUnderContract(event.target.value)
+                        }
+                      >
+                        <RegisterOptionDefault
+                          value=""
+                          disabled
+                          selected
+                          hidden
+                        >
+                          If not, have you ever been under contract with a
+                          modelling agency?
+                        </RegisterOptionDefault>
+                        <RegisterOption value="yes">Yes</RegisterOption>
+                        <RegisterOption value="no">No</RegisterOption>
+                      </RegisterSelect>
+                      <RegisterInput
+                        placeholder="If so, what modelling agency?"
+                        type="text"
+                        onChange={(event) =>
+                          setExAgencyname(event.target.value)
+                        }
+                        value={exAgencyName}
+                      />
+                      <RegisterSelect
+                        value={findOutSource}
+                        onChange={(event) =>
+                          setFindOutSource(event.target.value)
+                        }
+                      >
+                        <RegisterOptionDefault
+                          value=""
+                          disabled
+                          selected
+                          hidden
+                        >
+                          Where did you find out about UI FW 2022 Model Hunt?
+                        </RegisterOptionDefault>
+                        <RegisterOption value="instagram">
+                          Instagram
+                        </RegisterOption>
+                        <RegisterOption value="tiktok">Tiktok</RegisterOption>
+                        <RegisterOption value="twitter">Twitter</RegisterOption>
+                        <RegisterOption value="uifwcommitte">
+                          UIFW Committee
+                        </RegisterOption>
+                      </RegisterSelect>
+                      <RegisterInput
+                        placeholder="If you found out from the UI FW Committee, could you tell us the name and from what division?"
+                        type="text"
+                        onChange={(event) =>
+                          setFoundFromUIFW(event.target.value)
+                        }
+                        value={foundFromUIFW}
                       />
                     </RegisterFormContainer>
                     <RegisterPageCountContainer>
@@ -450,35 +551,77 @@ const Register = () => {
                       {upload ? (
                         <>
                           <RegisterSlide4box>
-                            {/* <RegisterUploadZone>Drop Files Here</RegisterUploadZone>
-                <RegisterUploadForm></RegisterUploadForm> */}
+                            All file format should be .jpg or .png with maximum
+                            file size of 5MB.
+                            <br />
+                            <br />
+                            <br />
                             <input
                               type="file"
                               accept="image/*"
-                              onChange={(e) => setImage(e.target.files[0])}
+                              onChange={(e) => setImage1(e.target.files[0])}
+                            />
+                            <input
+                              type="file"
+                              accept="image/*"
+                              onChange={(e) => setImage2(e.target.files[0])}
+                            />
+                            <input
+                              type="file"
+                              accept="image/*"
+                              onChange={(e) => setImage3(e.target.files[0])}
+                            />
+                            <input
+                              type="file"
+                              accept="image/*"
+                              onChange={(e) => setImage4(e.target.files[0])}
+                            />
+                            <input
+                              type="file"
+                              accept="image/*"
+                              onChange={(e) => setImage5(e.target.files[0])}
+                            />
+                            <input
+                              type="file"
+                              accept="image/*"
+                              onChange={(e) => setImage6(e.target.files[0])}
                             />
                           </RegisterSlide4box>
                         </>
                       ) : (
                         <>
                           <RegisterSlide4box>
-                            Terms and Condition:
+                            Requirements:
                             <br />
                             <br />
-                            1. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit
+                            1. No make up
                             <br />
-                            2. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit
+                            2. No photoshop, grains, filters, or any distracting
+                            and unnecessary features.
                             <br />
-                            3. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit
+                            3. Using white background.
                             <br />
-                            4. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit
+                            4. Clothing:
                             <br />
-                            5. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit
+                            Female:
+                            <ul>
+                              <li>
+                                Non hijab: tank top, short pants / legging (all
+                                in black)
+                              </li>
+                              <li>
+                                Hijab: manset, skinny jeans / legging, turban
+                                (all in black)
+                              </li>
+                              <li>High heels</li>
+                            </ul>
+                            <br />
+                            Male:
+                            <ul>
+                              <li>T-shirt / tank top</li>
+                              <li>Skinny jeans</li>
+                              <li>Boots / sneakers (All in black)</li>
+                            </ul>
                           </RegisterSlide4box>
                         </>
                       )}
@@ -490,7 +633,7 @@ const Register = () => {
                       <RegisterButton onClick={() => setPage(3)}>
                         Back
                       </RegisterButton>
-                      <RegisterButton onClick={() => onSubmit()}>
+                      <RegisterButton onClick={() => areYouSure()}>
                         Submit
                       </RegisterButton>
                     </RegisterButtonContainer>
