@@ -175,3 +175,7 @@ export const AboutImage2Container = styled.div`
   margin-right: auto;
   padding-bottom: 2px;
 `;
+
+export const About3ImageContainer = styled.div`
+width:33.3%;
+float :left;`

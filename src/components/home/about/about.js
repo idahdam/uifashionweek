@@ -12,9 +12,12 @@ import {
   AboutSectionPartHalfText,
   AboutSectionPartColumn,
   AboutContainerBg,
+  About3ImageContainer,
 } from "./about.element";
+import image_3_1 from "../../../assets/image/about/photo 1.png";
+import image_3_2 from "../../../assets/image/about/photo 2.png";
+import image_3_3 from "../../../assets/image/about/photo 3.png";
 import image_2 from "../../../assets/image/about/Lookbook 1.png";
-import image_3 from "../../../assets/image/about/Lookbook 2.png";
 import image_about1 from "../../../assets/image/about/About Us Photo 1.png";
 import image_about2 from "../../../assets/image/about/About Us Photo 2.png";
 
@@ -80,7 +83,15 @@ const about = () => {
               <img src={image_2} alt="uifw" />
             </AboutSection>
             <AboutSection>
-              <img src={image_3} alt="uifw" />
+              <About3ImageContainer>
+                <img src={image_3_1} alt="uifw" />
+              </About3ImageContainer>
+              <About3ImageContainer>
+                <img src={image_3_2} alt="uifw" />
+              </About3ImageContainer>
+              <About3ImageContainer>
+                <img src={image_3_3} alt="uifw" />
+              </About3ImageContainer>
             </AboutSection>
           </AboutContent>
         </AboutContainer>
