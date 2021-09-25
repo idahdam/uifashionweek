@@ -23,7 +23,7 @@ const Navbar = () => {
   console.log(location.pathname === "/");
   const [click, setClick] = useState(false);
   // eslint-disable-next-line no-unused-vars
-  const [button, setButton] = useState(true);
+  const [button, setButton] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [navbar, setNavbar] = useState(false);
 

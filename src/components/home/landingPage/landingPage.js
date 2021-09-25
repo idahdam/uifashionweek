@@ -17,8 +17,6 @@ const landingPage = () => {
   return (
     <>
       <LandingPageContainer id="hero">
-        {/* <LandingPageInside> */}
-        {/* <LandingPageBg src={bgimage} alt="vision" loading="lazy"/> */}
         <LandingPageContent>
           <LandingPageImage src={CircleText} />
           <LandingPageCaption>

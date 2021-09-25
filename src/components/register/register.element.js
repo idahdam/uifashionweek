@@ -43,6 +43,7 @@ export const RegisterCardTitle = styled.div`
 
 export const RegisterCardDescription = styled.div`
   font-size: 1rem;
+  padding-bottom: 1rem;
 `;
 
 export const RegisterFormContainer = styled.div``;
@@ -193,4 +194,43 @@ export const RegisterUploadZone = styled.div`
 
 export const RegisterUploadInput = styled.input`
   display: none;
+`;
+
+export const RegisterUploadSliderInput = styled.input`
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+`;
+export const RegisterUploadSlider = styled.div`
+  background: #ece3df;
+  border-radius: 30px;
+  overflow: hidden;
+  text-align: left;
+  margin-left: 10%;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  padding-right: 25%;
+  position: relative;
+  margin: 0 auto;
+
+  :before {
+    content: "Upload Photos";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none;
+  }
 `;

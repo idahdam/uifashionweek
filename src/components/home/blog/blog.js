@@ -18,7 +18,7 @@ import {
   BlogButtonContainer,
   BlogButton,
 } from "./blog.element";
-// import image_1 from "../../../assets/image/blog/card_photo.png";
+import defaultImage from "../../../assets/image/landing-page/LandingPage-bg.png";
 import { blogService } from "../../../services/blogService";
 import FadeLoader from "react-spinners/FadeLoader";
 const Blog = () => {
@@ -66,7 +66,13 @@ const Blog = () => {
                           <BlogCard>
                             <BlogCardContentContainer>
                               <BlogCardImageContainer>
-                                <BlogCardImg src={data.Hero.url} />
+                                <BlogCardImg
+                                  src={
+                                    data.Hero === null
+                                      ? defaultImage
+                                      : data.Hero.url
+                                  }
+                                />
                               </BlogCardImageContainer>
                               {/* <BlogCardTitleType>Tipe BLOG</BlogCardTitleType> */}
                               <BlogCardTitle>{data.Title}</BlogCardTitle>
@@ -87,7 +93,13 @@ const Blog = () => {
                           <BlogCard>
                             <BlogCardContentContainer>
                               <BlogCardImageContainer>
-                                <BlogCardImg src={data.Hero.url} />
+                                <BlogCardImg
+                                  src={
+                                    data.Hero === null
+                                      ? defaultImage
+                                      : data.Hero.url
+                                  }
+                                />
                               </BlogCardImageContainer>
                               {/* <BlogCardTitleType>Tipe BLOG</BlogCardTitleType> */}
                               <BlogCardTitle>{data.Title}</BlogCardTitle>

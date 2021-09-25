@@ -19,9 +19,7 @@ import {
   RegisterPageCountContainer,
   RegisterPageFaq,
   RegisterSlide4box,
-  // RegisterUploadForm,
-  // RegisterUploadZone,
-  // RegisterUploadInput,
+  RegisterUploadSlider,
 } from "./register.element";
 import leftModel from "../../assets/image/register/left.png";
 import Faq from "./faqcontent";
@@ -30,10 +28,12 @@ import "./slider.css";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { useHistory } from "react-router";
+import FadeLoader from "react-spinners/FadeLoader";
 
 const Register = () => {
   const [page, setPage] = useState(1);
   const [upload, setUpload] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   // input and files area
   const [image1, setImage1] = useState(null);
@@ -73,8 +73,14 @@ const Register = () => {
   const [findOutSource, setFindOutSource] = useState(null);
   const [foundFromUIFW, setFoundFromUIFW] = useState(null);
 
-  const history = useHistory();
+  const style = {
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  };
 
+  const history = useHistory();
   const areYouSure = () => {
     if (
       fullName === null ||
@@ -132,7 +138,6 @@ const Register = () => {
 
   const onSubmit = async () => {
     const formData = new FormData();
-    // const formsApplicant = new FormData();
     formData.append("files", image1);
     formData.append("files", image2);
     formData.append("files", image3);
@@ -140,64 +145,69 @@ const Register = () => {
     formData.append("files", image5);
     formData.append("files", image6);
     try {
+      Swal.fire({
+        icon: "info",
+        title: "Uploading...",
+        showConfirmButton: false,
+        allowOutsideClick: false,
+      });
       await axios
         .post("https://api.uifashionweek.com/upload", formData)
-        // .then((res) => console.log(res))
         .then(async (res) => {
-          // console.log(res.data[0]);
-          await axios
-            .post("https://api.uifashionweek.com/forms", {
-              paymentStatus: "unpaid",
-              status: "unchecked",
-              full_name: fullName,
-              sex: gender,
-              dob: birthday,
-              id_number: idNumber,
-              occupation: profession,
-              address: address,
-              about: aboutMe,
-              email: email,
-              wa_number: whatsapp,
-              line_id: lineId,
-              instagram: instagram,
-              height: height,
-              weight: weight,
-              bust: bust,
-              hip: hip,
-              waist: waist,
-              top: top,
-              bottom: bottom,
-              shoes: shoe,
-              vaccinated: vaccinated,
-              vaccinated_reason: vaccineReason,
-              in_contact_agency: true,
-              currently_under_contract_with_agency: currentlyUnderContract,
-              current_agency_name: currentAgencyName,
-              ever_been_under_contract: everBeenUnderContract,
-              ex_agency_name: exAgencyName,
-              find_out_source: findOutSource,
-              found_from_uifw_committee: foundFromUIFW,
-              photos: res.data,
-            })
-            // .then((res) => console.log(res))
-            .then((res) => {
-              console.log(res);
-              Swal.fire({
-                icon: "success",
-                title: "File is submitted!",
-                html: "Thank you for your submission.' +  '<br>Your data has been recorded. Please check your email regularly. We will send you the payment details and further notice regarding the selection process.",
-                showConfirmButton: true,
-                timer: 1500,
-              }).then((result) => {
-                if (result.isConfirmed) {
-                  history.push("/");
-                }
-              });
-            });
+          await axios.post("https://api.uifashionweek.com/forms", {
+            paymentStatus: "unpaid",
+            status: "unchecked",
+            full_name: fullName,
+            sex: gender,
+            dob: birthday,
+            id_number: idNumber,
+            occupation: profession,
+            address: address,
+            about: aboutMe,
+            email: email,
+            wa_number: whatsapp,
+            line_id: lineId,
+            instagram: instagram,
+            height: height,
+            weight: weight,
+            bust: bust,
+            hip: hip,
+            waist: waist,
+            top: top,
+            bottom: bottom,
+            shoes: shoe,
+            vaccinated: vaccinated,
+            vaccinated_reason: vaccineReason,
+            in_contact_agency: true,
+            currently_under_contract_with_agency: currentlyUnderContract,
+            current_agency_name: currentAgencyName,
+            ever_been_under_contract: everBeenUnderContract,
+            ex_agency_name: exAgencyName,
+            find_out_source: findOutSource,
+            found_from_uifw_committee: foundFromUIFW,
+            photos: res.data,
+          });
           console.log(res);
+        })
+        .then((res) => {
+          // setLoading(false);
+          console.log(res);
+          Swal.fire({
+            icon: "success",
+            title: "File is submitted!",
+            html:
+              "Thank you for your submission. " +
+              "Your data has been recorded. Please check your email regularly. " +
+              "We will send you the payment details and further notice regarding the selection process.",
+            showConfirmButton: true,
+          }).then((result) => {
+            if (result.isConfirmed || result.isDismissed) {
+              history.push("/");
+              console.log("asd");
+            }
+          });
         });
     } catch (err) {
-      // console.log(err);
       Swal.fire({
         icon: "error",
         title: err,
@@ -242,6 +252,9 @@ const Register = () => {
                     </RegisterCardTitle>
                     <RegisterCardDescription>
                       Personal Data
+                    </RegisterCardDescription>
+                    <RegisterCardDescription>
+                      Please fill empty space with "-"
                     </RegisterCardDescription>
                     <RegisterFormContainer>
                       <RegisterInput
@@ -342,6 +355,9 @@ const Register = () => {
                     <RegisterCardDescription>
                       Body Measurement & Sizing
                     </RegisterCardDescription>
+                    <RegisterCardDescription>
+                      Please fill empty space with "-"
+                    </RegisterCardDescription>
                     <RegisterFormContainer>
                       <RegisterInput
                         placeholder="Height (cm)"
@@ -436,6 +452,9 @@ const Register = () => {
                     </RegisterCardTitle>
                     <RegisterCardDescription>
                       Contract and Health Agreement
+                    </RegisterCardDescription>
+                    <RegisterCardDescription>
+                      Please fill empty space with "-"
                     </RegisterCardDescription>
                     <RegisterFormContainer>
                       <RegisterSelect
@@ -571,10 +590,13 @@ const Register = () => {
                     <RegisterCardDescription>
                       Personal Data
                     </RegisterCardDescription>
+                    <RegisterCardDescription>
+                      Please fill empty space with "-"
+                    </RegisterCardDescription>
                     <br />
                     <RegisterFormContainer>
                       <RegisterButtonContainer>
-                        <div class="switch-button">
+                        <RegisterUploadSlider>
                           <input
                             class="switch-button-checkbox"
                             type="checkbox"
@@ -585,7 +607,7 @@ const Register = () => {
                               <div class="text">Requirements</div>
                             </span>
                           </label>
-                        </div>
+                        </RegisterUploadSlider>
                       </RegisterButtonContainer>
                       {upload ? (
                         <>
@@ -630,7 +652,7 @@ const Register = () => {
                       ) : (
                         <>
                           <RegisterSlide4box>
-                          <Terms />
+                            <Terms />
                           </RegisterSlide4box>
                         </>
                       )}
@@ -639,7 +661,12 @@ const Register = () => {
                       (4/4)
                     </RegisterPageCountContainer>
                     <RegisterButtonContainer>
-                      <RegisterButton onClick={() => setPage(3)}>
+                      <RegisterButton
+                        onClick={() => {
+                          setPage(3);
+                          setUpload(false);
+                        }}
+                      >
                         Back
                       </RegisterButton>
                       <RegisterButton onClick={() => areYouSure()}>
@@ -648,6 +675,11 @@ const Register = () => {
                     </RegisterButtonContainer>
                   </>
                 </>
+              ) : null}
+              {loading ? (
+                <div style={style}>
+                  <FadeLoader />
+                </div>
               ) : null}
             </RegisterCardContainer>
           </RegisterContainerCol2>
