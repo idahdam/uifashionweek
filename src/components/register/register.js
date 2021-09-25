@@ -34,6 +34,7 @@ const Register = () => {
   const [page, setPage] = useState(1);
   const [upload, setUpload] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [button, setButton] = useState(false);
 
   // input and files area
   const [image1, setImage1] = useState(null);
@@ -72,6 +73,15 @@ const Register = () => {
   const [exAgencyName, setExAgencyname] = useState(null);
   const [findOutSource, setFindOutSource] = useState(null);
   const [foundFromUIFW, setFoundFromUIFW] = useState(null);
+
+  // mobile photo
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
 
   const style = {
     position: "fixed",
@@ -220,9 +230,13 @@ const Register = () => {
     <>
       <RegisterContainer>
         <RegisterContainerRow>
-          <RegisterContainerCol>
-            <RegisterImage src={leftModel} alt="image" />
-          </RegisterContainerCol>
+          {button ? (
+            <>
+              <RegisterContainerCol>
+                <RegisterImage src={leftModel} alt="image" />
+              </RegisterContainerCol>
+            </>
+          ) : null}
           <RegisterContainerCol2>
             <RegisterCardContainer>
               {page === 0 ? (
