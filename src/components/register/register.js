@@ -90,6 +90,7 @@ const Register = () => {
     transform: "translate(-50%, -50%)",
   };
 
+  window.addEventListener("resize", showButton);
   const history = useHistory();
   const areYouSure = () => {
     if (
