@@ -6,6 +6,7 @@ import {
   FooterLogoContainer,
   FooterLink,
   FooterText,
+  FooterImgLogo,
 } from "./footer.elements";
 
 import Linkedin_logo from "../../assets/image/footer/Group 111.png";
@@ -22,17 +23,17 @@ const footer = () => {
         <FooterLeft>
           <FooterLogoContainer>
             <FooterLink href="li">
-              <img src={Linkedin_logo} alt="uifw" />{" "}
+              <FooterImgLogo src={Linkedin_logo} alt="uifw" />{" "}
             </FooterLink>
           </FooterLogoContainer>
           <FooterLogoContainer>
             <FooterLink href="ig">
-              <img src={Insta_logo} alt="uifw" />
+              <FooterImgLogo src={Insta_logo} alt="uifw" />
             </FooterLink>
           </FooterLogoContainer>
           <FooterLogoContainer>
             <FooterLink href="yt">
-              <img src={Youtube_logo} alt="uifw" />
+              <FooterImgLogo src={Youtube_logo} alt="uifw" />
             </FooterLink>
           </FooterLogoContainer>
         </FooterLeft>

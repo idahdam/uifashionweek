@@ -61,9 +61,9 @@ const Navbar = () => {
               </NavLogo>
             )}
 
-            <MobileIcon onClick={handleClick}>
+            {/* <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
-            </MobileIcon>
+            </MobileIcon> */}
             <NavMenu click={click}>
               <NavItem>
                 {location.pathname === "/" ? (

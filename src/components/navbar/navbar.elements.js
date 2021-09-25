@@ -38,7 +38,7 @@ export const NavImg = styled.img`
   padding-top: 2.5%;
   padding-right: 2.5%;
   @media screen and (max-width: 960px) {
-    transform: translate(-70%, 0);
+    transform: translate(200%, 0);
   }
 `;
 
@@ -126,13 +126,13 @@ export const NavMenu = styled.ul`
     text-align: center;
     flex-direction: column;
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     position: absolute;
-    top: 100%;
+    top: 90%;
     left: ${({ click }) => (click ? "0%" : "-100%")};
     opacity: 1;
     transition: all 0.5s ease-in-out;
-    background-color: #101010;
+    background-color: #ffffff;
   }
 `;
 

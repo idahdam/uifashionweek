@@ -5,6 +5,7 @@ import {
   AboutHeader,
   AboutSection,
   AboutSectionPart,
+  AboutSectionPart2,
   AboutSectionPartHalf,
   AboutContent,
   AboutImage1Container,
@@ -15,6 +16,9 @@ import {
   About3ImageContainer,
   About3ImageLeft,
   About3ImageRight,
+  AboutContainerimg,
+  AboutContainerimg2,
+  AboutContainerimg3,
 } from "./about.element";
 import image_3_1 from "../../../assets/image/about/photo 1.png";
 import image_3_2 from "../../../assets/image/about/photo 2.png";
@@ -37,7 +41,7 @@ const about = () => {
                 <AboutSectionPartHalf>
                   <AboutImage1Container>
                     {/* <AboutImage1 src={image_test} alt="vision" loading="Lazy" /> */}
-                    <img src={image_about1} alt="uifw" />
+                    <AboutContainerimg src={image_about1} alt="uifw" />
                   </AboutImage1Container>
                 </AboutSectionPartHalf>
                 <AboutSectionPartHalf>
@@ -57,7 +61,7 @@ const about = () => {
                   </AboutSectionPartColumn>
                 </AboutSectionPartHalf>
               </AboutSectionPart>
-              <AboutSectionPart>
+              <AboutSectionPart2>
                 <AboutSectionPartHalf>
                   <AboutSectionPartColumn>
                     <AboutSectionPartHalfHeader>
@@ -76,20 +80,20 @@ const about = () => {
                 <AboutSectionPartHalf>
                   <AboutImage1Container>
                     {/* <AboutImage2 src={image_test} alt="vision" loading="Lazy" /> */}
-                    <img src={image_about2} alt="uifw" />
+                    <AboutContainerimg src={image_about2} alt="uifw" />
                   </AboutImage1Container>
                 </AboutSectionPartHalf>
-              </AboutSectionPart>
+              </AboutSectionPart2>
             </AboutSection>
             <AboutSection id="gallery">
-              <img src={image_2} alt="uifw" />
+              <AboutContainerimg2 src={image_2} alt="uifw" />
             </AboutSection>
             <AboutSection>
               <About3ImageContainer>
                 <About3ImageLeft src={image_3_1} alt="uifw" />
               </About3ImageContainer>
               <About3ImageContainer>
-                <img src={image_3_2} alt="uifw" />
+                <AboutContainerimg3 src={image_3_2} alt="uifw" />
               </About3ImageContainer>
               <About3ImageContainer>
                 <About3ImageRight src={image_3_3} alt="uifw" />

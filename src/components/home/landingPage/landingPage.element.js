@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import bgimage from "../../../assets/image/landing-page/LandingPage-bg.png";
+import bgimage_mob from "../../../assets/image/landing-page/LandingPage-bg-mobile.png";
 
 export const LandingPageContainer = styled.div`
   background-image: url(${bgimage});
@@ -14,8 +15,10 @@ export const LandingPageContainer = styled.div`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 800px) {
     padding-top: 5%;
+    background-image: url(${bgimage_mob});
+    
   }
 `;
 
@@ -49,12 +52,20 @@ export const LandingPageContent = styled.div`
   transform: translate(-50%, -50%);
   text-align: left;
   color: white;
+  @media screen and (max-width: 960px) {
+    bottom:0;
+    margin-left:7%;
+    margin-top:40%;
+  }
 `;
 export const LandingPageHeader = styled.div`
   color: #f25918;
   font-family: "Metropolis Bold";
   font-size: 79px;
   text-align: left;
+  @media screen and (max-width: 960px) {
+    font-size: 40px;
+  }
 `;
 export const LandingPageImage = styled.img`
   display: block;
@@ -62,6 +73,11 @@ export const LandingPageImage = styled.img`
   floating: left;
   margin-left: 18%;
   margin-bottom: 10%;
+  @media screen and (max-width: 960px) {
+    width:30%;
+    margin-left: 40%;
+    margin-top: -8%;
+  }
 `;
 export const LandingPageCaption = styled.div`
   position: absolute;
@@ -92,6 +108,14 @@ export const LandingPageButton = styled.button`
   cursor: pointer;
   &:hover {
     opacity: 0.6;
+  }
+  @media screen and (max-width: 960px) {
+    padding-left: 5%;
+    background: #f25918;
+    border-radius: 15px;
+    width: 151px;
+    height: 33px;
+    font-size: 14px;
   }
 `;
 

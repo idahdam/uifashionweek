@@ -21,19 +21,33 @@ export const FooterContainer = styled.div`
   max-width: 1366px;
   padding-left:5%;
   padding-right:5%;
-  @media screen and (max-width: 960px) {
-    padding: 0;
-    width: 65%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  @media (max-width:960px) {
+    width: 100%;
+    flex-direction: column;
   }
 `;
 export const FooterLeft = styled.div`
   float: left;
-  width: 50%;
+  width: 40%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  @media (max-width:960px) {
+    margin-bottom:5%;
+    top:0;
+    width: 100%;
+  }
 `;
 export const FooterLogoContainer = styled.div`
   float: right;
   width: 10%;
   display: flex;
+  @media (max-width:960px) {
+    width: 30%;
+    margin-right:2%;
+  }
 `;
 
 export const FooterLink = styled.a`
@@ -50,4 +64,16 @@ export const FooterText = styled.div`
 font-family :"Metropolis"
 font-szie :16px;
 margin-top: 2%;
+@media (max-width:960px) {
+  text-align:center;
+}
+`
+
+export const FooterImgLogo  = styled.img`
+width:100%;
+margin:0 auto;
+@media (max-width:960px) {
+  margin-left:55%;
+  width:75%;
+}
 `

@@ -42,9 +42,9 @@ const Contact = () => {
                 <ContactPageButton>Contact Us</ContactPageButton>
               </ContactSectionColumn>
             </ContactSectionLeft>
-            <ContactSectionRight>
+            <ContactSectionLeft>
               <ContactImage src={image_1} />
-            </ContactSectionRight>
+            </ContactSectionLeft>
           </ContactSection>
         </ContactContent>
       </ContactContainer>

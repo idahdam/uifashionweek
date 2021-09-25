@@ -26,9 +26,6 @@ export const ContactContainer = styled.div`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  @media screen and (max-width: 960px) {
-    padding-top: 5%;
-  }
 `;
 
 export const Circle = styled.div`
@@ -85,6 +82,12 @@ export const ContactSection = styled.div`
   margin-right: auto;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media (max-width: 930px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const ContactSectionLeft = styled.div`
@@ -92,17 +95,29 @@ export const ContactSectionLeft = styled.div`
   display: flex;
   float: left;
   margin-top: 5%;
-  height: 100%;
+  @media (max-width: 930px) {
+    width: 100%;
+    padding-left: 5%;
+  }
 `;
 export const ContactSectionRight = styled.div`
   width: 48%;
   display: flex;
   float: right;
   margin-top: 5%;
+  background: blue;
+  @media (max-width: 930px) {
+    width: 100%;
+  }
 `;
 
 export const ContactImage = styled.img`
   margin: 0 auto;
+  margin-left:30%;
+  @media (max-width: 930px) {
+    width: 70%;
+    margin-left:10%;
+  }
 `;
 export const ContacSectionHeader = styled.div`
   font-family: Montserrat;
@@ -111,8 +126,7 @@ export const ContacSectionHeader = styled.div`
   font-size: 32px;
   // top: 50%;
   // left: 50%;
-  width: 70%;
-  display: flex;
+  width: 100%;
 `;
 
 export const ContacSectionText = styled.div`
@@ -123,12 +137,14 @@ Align: Justified;
 margin-top:5%;
 // top: 50%;
 //   left: 50%;
-width: 100%;
-display: flex;
+
+@media (max-width:930px) {
+  font-size: 14px;
+  padding-right:10%;
+}
 `;
 
 export const ContactSectionColumn = styled.div`
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2px;
@@ -140,7 +156,6 @@ export const ContactPageButton = styled.button`
   left: 0;
   border: none;
   border-radius: 15px;
-  position: absolute;
   color: white;
   width: 203px;
   height: 47px;
@@ -156,5 +171,13 @@ export const ContactPageButton = styled.button`
   margin-top: 5%;
   &:hover {
     opacity: 0.6;
+  }
+
+  @media (max-width: 930px) {
+    width: 151px;
+    height: 33px;
+    font-size: 14px;
+    margin-left: 25%;
+    margin-bottom: 10%;
   }
 `;
