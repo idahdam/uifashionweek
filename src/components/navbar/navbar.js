@@ -5,7 +5,7 @@ import {
   Nav,
   NavbarContainer,
   NavLogo,
-  MobileIcon,
+  // MobileIcon,
   NavMenu,
   NavItem,
   NavItem2,
@@ -15,7 +15,7 @@ import {
   NavLogoScroll,
   NavLinksScroll,
 } from "./navbar.elements";
-import { FaBars, FaTimes } from "react-icons/fa";
+// import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 
 const Navbar = () => {

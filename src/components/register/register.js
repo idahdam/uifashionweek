@@ -34,7 +34,7 @@ const Register = () => {
   const [page, setPage] = useState(1);
   const [upload, setUpload] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [button, setButton] = useState(false);
+  const [button, setButton] = useState(true);
 
   // input and files area
   const [image1, setImage1] = useState(null);
@@ -189,7 +189,6 @@ const Register = () => {
             shoes: shoe,
             vaccinated: vaccinated,
             vaccinated_reason: vaccineReason,
-            in_contact_agency: true,
             currently_under_contract_with_agency: currentlyUnderContract,
             current_agency_name: currentAgencyName,
             ever_been_under_contract: everBeenUnderContract,
@@ -222,7 +221,7 @@ const Register = () => {
       Swal.fire({
         icon: "error",
         title: err,
-        text: "Have you chosen any images?? (.png/.jpg)?",
+        text: "Something bad happened.",
         footer: '<a href="https://google.com">Why do I have this issue?</a>',
       });
     }
