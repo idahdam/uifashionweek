@@ -18,7 +18,6 @@ export const LandingPageContainer = styled.div`
   @media screen and (max-width: 960px) {
     padding-top: 5%;
     background-image: url(${bgimage_mob});
-    
   }
 `;
 
@@ -53,8 +52,8 @@ export const LandingPageContent = styled.div`
   text-align: left;
   color: white;
   @media screen and (max-width: 960px) {
-    bottom:0;
-    margin-top:40%;
+    bottom: 0;
+    margin-top: 40%;
   }
 `;
 export const LandingPageHeader = styled.div`
@@ -64,7 +63,7 @@ export const LandingPageHeader = styled.div`
   text-align: left;
   @media screen and (max-width: 960px) {
     font-size: 40px;
-    margin-left:10%;
+    margin-left: 10%;
   }
 `;
 export const LandingPageImage = styled.img`
@@ -74,7 +73,7 @@ export const LandingPageImage = styled.img`
   margin-left: 18%;
   margin-bottom: 10%;
   @media screen and (max-width: 960px) {
-    width:30%;
+    width: 30%;
     margin-left: 55%;
     margin-top: -8%;
   }
@@ -110,14 +109,14 @@ export const LandingPageButton = styled.button`
     opacity: 0.6;
   }
   @media screen and (max-width: 960px) {
-    padding-left: 5%;
+    padding-left: 0%;
     background: #f25918;
     border-radius: 15px;
     width: 151px;
     height: 33px;
     font-size: 14px;
-    margin-left:10%;
-    margin-top:5%;
+    margin-left: 10%;
+    margin-top: 5%;
   }
 `;
 
