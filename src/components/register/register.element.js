@@ -4,7 +4,7 @@ export const RegisterContainer = styled.div`
   background-color: #daf1da;
   background-image: radial-gradient(
     at 100% 50%,
-    hsl(18.14, 81%, 90%) 0,
+    hsl(18.14, 81%, 80%) 0,
     transparent 70%
   );
   text-align: center;

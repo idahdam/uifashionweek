@@ -70,8 +70,8 @@ const about = () => {
                     <AboutSectionPartHalfText>
                       UI Fashion Week has a wide range of different people
                       participated in such as models, fashion companies,
-                      influencers, designers, etc. Becaming hot topic in fashion
-                      industry from year to year, UI Fashion Week has been
+                      influencers, designers, etc. Becoming the hot topic in
+                      fashion industry every year, UI Fashion Week has been
                       presenting several different themes that could bring a
                       huge impact and awareness related to fashion.
                     </AboutSectionPartHalfText>

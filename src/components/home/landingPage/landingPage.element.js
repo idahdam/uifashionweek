@@ -15,7 +15,7 @@ export const LandingPageContainer = styled.div`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 960px) {
     padding-top: 5%;
     background-image: url(${bgimage_mob});
     
@@ -54,7 +54,6 @@ export const LandingPageContent = styled.div`
   color: white;
   @media screen and (max-width: 960px) {
     bottom:0;
-    margin-left:7%;
     margin-top:40%;
   }
 `;
@@ -65,6 +64,7 @@ export const LandingPageHeader = styled.div`
   text-align: left;
   @media screen and (max-width: 960px) {
     font-size: 40px;
+    margin-left:10%;
   }
 `;
 export const LandingPageImage = styled.img`
@@ -75,7 +75,7 @@ export const LandingPageImage = styled.img`
   margin-bottom: 10%;
   @media screen and (max-width: 960px) {
     width:30%;
-    margin-left: 40%;
+    margin-left: 55%;
     margin-top: -8%;
   }
 `;
@@ -116,6 +116,7 @@ export const LandingPageButton = styled.button`
     width: 151px;
     height: 33px;
     font-size: 14px;
+    margin-left:10%;
   }
 `;
 

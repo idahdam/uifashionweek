@@ -20,7 +20,7 @@ const footer = () => {
         <FooterLeft>
           <FooterText>Copyright @UI Fashion Week</FooterText>
         </FooterLeft>
-        <FooterLeft>
+        {/* <FooterLeft>
           <FooterLogoContainer>
             <FooterLink href="li">
               <FooterImgLogo src={Linkedin_logo} alt="uifw" />{" "}
@@ -36,7 +36,7 @@ const footer = () => {
               <FooterImgLogo src={Youtube_logo} alt="uifw" />
             </FooterLink>
           </FooterLogoContainer>
-        </FooterLeft>
+        </FooterLeft> */}
       </FooterContainer>
     </Footer>
   );

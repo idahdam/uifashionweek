@@ -67,7 +67,7 @@ export const BlogCard = styled.div`
   width: 300px;
   height: 469px;
   margin: auto;
-  margin-left: 4%;
+  margin-left: 5%;
   margin-bottom: 5%;
   padding: 0.5%;
   float: left;

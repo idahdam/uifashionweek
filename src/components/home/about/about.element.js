@@ -18,6 +18,7 @@ export const AboutContainerBg = styled(Element)`
   flex-wrap: wrap;
   align: center;
   font-family: Metropolis regular;
+  overflow-x: hidden;
 `;
 
 export const AboutContainer = styled.div`
@@ -72,6 +73,7 @@ export const AboutSection = styled.div`
   margin-top: 2%;
   @media (max-width: 960px) {
     flex-direction: column;
+    overflow-x: hidden;
   }
 `;
 
@@ -86,6 +88,7 @@ export const AboutSectionPart = styled.div`
   flex-wrap: wrap;
   @media (max-width: 960px) {
     flex-direction: column;
+    overflow-x: hidden;
   }
 `;
 
@@ -100,6 +103,7 @@ export const AboutSectionPart2 = styled.div`
   flex-wrap: wrap;
   @media (max-width: 960px) {
     flex-direction: column-reverse;
+    overflow-x: hidden;
   }
 `;
 
