@@ -58,13 +58,13 @@ export const LandingPageContent = styled.div`
   }
 `;
 export const LandingPageHeader = styled.div`
-  color: #f25918;
+  color: #FFFFFF;
   font-family: "Metropolis Bold";
   font-size: 79px;
   text-align: left;
   @media screen and (max-width: 960px) {
     font-size: 40px;
-    margin-left:10%;
+    margin-left: 10%;
   }
 `;
 export const LandingPageImage = styled.img`
