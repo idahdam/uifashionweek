@@ -28,14 +28,15 @@ export const RegisterContainerCol2 = styled.div`
   flex: 30%;
   @media screen and (max-width: 960px) {
     flex: 100%;
-    width:100%;
+    width: 100%;
   }
 `;
 export const RegisterImage = styled.img`
-  width:80%; 
+  width: 80%;
   @media screen and (max-width: 960px) {
     display: none;
-  }`;
+  }
+`;
 
 export const RegisterCardContainer = styled.div`
   backdrop-filter: blur(16px) saturate(180%);
@@ -58,6 +59,12 @@ export const RegisterCardDescription = styled.div`
   padding-bottom: 1rem;
 `;
 
+export const RegisterCardDescription2 = styled.div`
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  font-family: "Metropolis Bold";
+`;
+
 export const RegisterFormContainer = styled.div``;
 
 export const RegisterInput = styled.input`
@@ -76,12 +83,34 @@ export const RegisterInput = styled.input`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
+export const RegisterInput2 = styled.textarea`
+  width: 100%;
+  resize: none;
+  font-family: "Metropolis Regular";
+  padding: 20px 20px;
+  padding-bottom: 20px;
+  margin: 8px 0;
+  font-size: 1rem;
+  display: inline-block;
+  // border: 5px solid #C08D64;
+  // border-radius: 4px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  @media screen and (max-width: 960px) {
+    padding-bottom: 30px;
+  }
+  `;
+
 export const RegisterInputLarge = styled.textarea`
   width: 100%;
   resize: none;
   vertical-align: top;
   font-family: "Metropolis Regular";
-  padding: 50px 20px;
+  padding: 20px 20px;
+  padding-bottom: 100px;
   margin: 8px 0;
   font-size: 1rem;
   display: inline-block;
@@ -134,6 +163,9 @@ export const RegisterOptionDefault = styled.option`
   border-radius: 4px;
   box-sizing: border-box;
   border-radius: 10px;
+  @media screen and (max-width: 960px) {
+    font-size: 0.4 rem;
+  }
 `;
 
 export const RegisterButtonContainer = styled.div``;
@@ -152,6 +184,11 @@ export const RegisterButton = styled.button`
   height: 47px;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  @media screen and (max-width: 960px) {
+    font-size: 16px;
+    width: 100px;
+    height: 47px;
+  }
 `;
 
 export const RegisterPageCountContainer = styled.div`
@@ -245,5 +282,8 @@ export const RegisterUploadSlider = styled.div`
     justify-content: center;
     z-index: 3;
     pointer-events: none;
+  }
+  @media screen and (max-width: 960px) {
+    font-size: 13px;
   }
 `;

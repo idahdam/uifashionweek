@@ -10,6 +10,7 @@
   padding-right: 25%;
   position: relative;
   margin: 0 auto;
+
 }
 .switch-button:before {
   content: "Upload Photos";
@@ -23,6 +24,10 @@
   justify-content: center;
   z-index: 3;
   pointer-events: none;
+  @media screen and (max-width: 960px) {
+    flex: 100%;
+    width: 100%;
+  }
 }
 .switch-button-checkbox {
   cursor: pointer;
@@ -66,4 +71,7 @@
 
 .text {
   margin-left: 20%;
+  @media screen and (max-width: 960px) {
+    margin-left: 5%;
+  }
 }

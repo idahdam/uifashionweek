@@ -8,8 +8,10 @@ import {
   RegisterCardContainer,
   RegisterCardTitle,
   RegisterCardDescription,
+  RegisterCardDescription2,
   RegisterFormContainer,
   RegisterInput,
+  RegisterInput2,
   RegisterInputLarge,
   RegisterSelect,
   RegisterOptionDefault,
@@ -267,9 +269,9 @@ const Register = () => {
                     <RegisterCardDescription>
                       Personal Data
                     </RegisterCardDescription>
-                    <RegisterCardDescription>
+                    <RegisterCardDescription2>
                       Please fill empty space with "-"
-                    </RegisterCardDescription>
+                    </RegisterCardDescription2>
                     <RegisterFormContainer>
                       <RegisterInput
                         placeholder="Full Name"
@@ -369,9 +371,9 @@ const Register = () => {
                     <RegisterCardDescription>
                       Body Measurement & Sizing
                     </RegisterCardDescription>
-                    <RegisterCardDescription>
+                    <RegisterCardDescription2>
                       Please fill empty space with "-"
-                    </RegisterCardDescription>
+                    </RegisterCardDescription2>
                     <RegisterFormContainer>
                       <RegisterInput
                         placeholder="Height (cm)"
@@ -467,9 +469,9 @@ const Register = () => {
                     <RegisterCardDescription>
                       Contract and Health Agreement
                     </RegisterCardDescription>
-                    <RegisterCardDescription>
+                    <RegisterCardDescription2>
                       Please fill empty space with "-"
-                    </RegisterCardDescription>
+                    </RegisterCardDescription2>
                     <RegisterFormContainer>
                       <RegisterSelect
                         value={vaccinated}
@@ -572,9 +574,13 @@ const Register = () => {
                           UIFW Committee
                         </RegisterOption>
                       </RegisterSelect>
-                      <RegisterInput
-                        placeholder="If you found out from the UI FW Committee, could you tell us the name and from what division?"
-                        type="text"
+                      <RegisterInput2
+                        placeholder={
+                          "If you found out from the UI FW Committee could you tell us the name and from what division?"
+                        }
+                        // placeholder="If you found out from the UI FW Committee
+                        // could you tell us the name and from what division?"
+                        // type="text"
                         onChange={(event) =>
                           setFoundFromUIFW(event.target.value)
                         }
@@ -604,9 +610,9 @@ const Register = () => {
                     <RegisterCardDescription>
                       Personal Data
                     </RegisterCardDescription>
-                    <RegisterCardDescription>
+                    <RegisterCardDescription2>
                       Please fill empty space with "-"
-                    </RegisterCardDescription>
+                    </RegisterCardDescription2>
                     <br />
                     <RegisterFormContainer>
                       <RegisterButtonContainer>
