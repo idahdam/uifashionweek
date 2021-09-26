@@ -17,7 +17,9 @@ export const LandingPageContainer = styled.div`
   background-size: cover;
   @media screen and (max-width: 960px) {
     padding-top: 5%;
-    background-image: url(${bgimage_mob});
+    background-image: url(${bgimage});
+    background-position: center;
+    background-repeat: no-repeat;
   }
 `;
 
