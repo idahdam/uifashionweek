@@ -22,7 +22,7 @@ const landingPage = () => {
           <LandingPageImage src={CircleText} />
           <LandingPageCaption>
             <LandingPageHeader>
-              UI FASHION <br />
+              UI FASHION<br />
               WEEK
             </LandingPageHeader>
           </LandingPageCaption>
