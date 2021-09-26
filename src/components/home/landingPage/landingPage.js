@@ -18,6 +18,7 @@ const landingPage = () => {
     <>
       <LandingPageContainer id="hero">
         <LandingPageContent>
+          {/* <LandingPageShadow> */}
           <LandingPageImage src={CircleText} />
           <LandingPageCaption>
             <LandingPageHeader>
@@ -28,6 +29,7 @@ const landingPage = () => {
           <LandingPageLink to="/register">
             <LandingPageButton>Register</LandingPageButton>
           </LandingPageLink>
+          {/* </LandingPageShadow> */}
         </LandingPageContent>
         {/* </LandingPageInside> */}
       </LandingPageContainer>

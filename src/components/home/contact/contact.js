@@ -39,7 +39,12 @@ const Contact = () => {
                   cupidatat non proident, sunt in culpa qui officia deserunt
                   mollit anim id est laborum"
                 </ContacSectionText>
-                <ContactPageButton>Contact Us</ContactPageButton>
+                <ContactPageButton
+                  href="https://linktr.ee/uifashionweek21"
+                  target="_blank"
+                >
+                  Contact Us
+                </ContactPageButton>
               </ContactSectionColumn>
             </ContactSectionLeft>
             <ContactSectionLeft>
