@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import bgimage from "../../../assets/image/landing-page/LandingPage-bg.png";
+import bgimage from "../../../assets/image/landing-page/landingPageFix.png";
 import bgimage_mob from "../../../assets/image/landing-page/LandingPage-bg-mobile.png";
 
 export const LandingPageContainer = styled.div`
