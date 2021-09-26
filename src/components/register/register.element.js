@@ -19,11 +19,23 @@ export const RegisterContainerRow = styled.div`
 
 export const RegisterContainerCol = styled.div`
   flex: 50%;
+  width: 50%;
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
 `;
 export const RegisterContainerCol2 = styled.div`
   flex: 30%;
+  @media screen and (max-width: 960px) {
+    flex: 100%;
+    width:100%;
+  }
 `;
-export const RegisterImage = styled.img``;
+export const RegisterImage = styled.img`
+  width:80%; 
+  @media screen and (max-width: 960px) {
+    display: none;
+  }`;
 
 export const RegisterCardContainer = styled.div`
   backdrop-filter: blur(16px) saturate(180%);
@@ -207,6 +219,7 @@ export const RegisterUploadSliderInput = styled.input`
   opacity: 0;
   z-index: 2;
 `;
+
 export const RegisterUploadSlider = styled.div`
   background: #ece3df;
   border-radius: 30px;

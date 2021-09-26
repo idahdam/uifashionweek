@@ -117,6 +117,7 @@ export const LandingPageButton = styled.button`
     height: 33px;
     font-size: 14px;
     margin-left:10%;
+    margin-top:5%;
   }
 `;
 
