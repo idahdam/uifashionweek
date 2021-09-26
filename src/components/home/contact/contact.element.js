@@ -113,10 +113,10 @@ export const ContactSectionRight = styled.div`
 
 export const ContactImage = styled.img`
   margin: 0 auto;
-  margin-left:30%;
+  margin-left: 30%;
   @media (max-width: 930px) {
     width: 70%;
-    margin-left:10%;
+    margin-left: 10%;
   }
 `;
 export const ContacSectionHeader = styled.div`
@@ -151,14 +151,15 @@ export const ContactSectionColumn = styled.div`
   margin-top: 15%;
 `;
 
-export const ContactPageButton = styled.button`
+export const ContactPageButton = styled.a`
   background: #03a301;
   left: 0;
   border: none;
   border-radius: 15px;
   color: white;
   width: 203px;
-  height: 47px;
+  height: 37px;
+  padding-top: 17px;
   font-family: "Metropolis Bold";
   font-weight: bold;
   font-size: 18px;
