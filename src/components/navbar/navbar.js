@@ -12,7 +12,7 @@ import {
   NavLinks,
   NavLinks2,
   NavImg,
-  NavLogoScroll,
+  // NavLogoScroll,
   NavLinksScroll,
 } from "./navbar.elements";
 // import { FaBars, FaTimes } from "react-icons/fa";
@@ -65,8 +65,8 @@ const Navbar = () => {
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon> */}
             <NavLogo to="/" onClick={closeMobileMenu}>
-                <NavImg src={logo} alt="bye" />
-              </NavLogo>
+              <NavImg src={logo} alt="bye" />
+            </NavLogo>
             <NavMenu click={click}>
               <NavItem>
                 {location.pathname === "/" ? (
