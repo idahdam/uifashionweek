@@ -180,14 +180,16 @@ export const ContactPageButton = styled.a`
   cursor: pointer;
   margin-top: 5%;
   cursor: pointer;
+
   &:hover {
     background: none;
-    color: #03a301;
+    color: #ffffff;
   }
 
   @media (max-width: 930px) {
-    width: 151px;
-    height: 33px;
+    padding-top: 8px;
+    width: 150px;
+    height: 20px;
     font-size: 14px;
     margin-left: 25%;
     margin-bottom: 10%;
