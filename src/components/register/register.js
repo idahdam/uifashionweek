@@ -478,7 +478,7 @@ const Register = () => {
                         <RegisterOption value="xxl">XXL</RegisterOption>
                       </RegisterSelect>
                       <RegisterInput
-                        placeholder="Shoe (UK)"
+                        placeholder="Shoes (UK, ex: 6.5)"
                         type="number"
                         onChange={(event) => setShoe(event.target.value)}
                         value={shoe}
@@ -648,9 +648,6 @@ const Register = () => {
                     <RegisterCardDescription>
                       Personal Data
                     </RegisterCardDescription>
-                    <RegisterCardDescription2>
-                      Please fill empty space with "-"
-                    </RegisterCardDescription2>
                     <br />
                     <RegisterFormContainer>
                       <RegisterButtonContainer>
