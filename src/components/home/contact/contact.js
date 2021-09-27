@@ -6,7 +6,7 @@ import {
   ContactHeader,
   ContactSection,
   ContactSectionLeft,
-  ContactSectionRight,
+  // ContactSectionRight,
   ContactImage,
   ContacSectionText,
   ContactSectionHeaderText,

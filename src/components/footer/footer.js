@@ -3,15 +3,15 @@ import {
   Footer,
   FooterContainer,
   FooterLeft,
-  FooterLogoContainer,
-  FooterLink,
+  // FooterLogoContainer,
+  // FooterLink,
   FooterText,
-  FooterImgLogo,
+  // FooterImgLogo,
 } from "./footer.elements";
 
-import Linkedin_logo from "../../assets/image/footer/Group 111.png";
-import Insta_logo from "../../assets/image/footer/Group 112.png";
-import Youtube_logo from "../../assets/image/footer/Group 113.png";
+// import Linkedin_logo from "../../assets/image/footer/Group 111.png";
+// import Insta_logo from "../../assets/image/footer/Group 112.png";
+// import Youtube_logo from "../../assets/image/footer/Group 113.png";
 
 const footer = () => {
   return (
