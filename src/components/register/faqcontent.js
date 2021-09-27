@@ -70,7 +70,8 @@ const faqcontent = () => {
           fee?
         </b>
         <br />
-        What do I have to do after submitting and paying the registration fee?
+        You have to check your email regularly because we will send the next
+        information through email.
       </p>
 
       <p>
@@ -93,7 +94,7 @@ const faqcontent = () => {
           13. I still have questions regarding the Model Hunt, who do I contact?
         </b>
         <br />
-        Salma: 085890066100 / LINE: almashakina
+        Salma: 085890066100 / LINE: salmashakina
         <br />
         Dhea: 081294762686 / LINE: dheaakhafifa
       </p>

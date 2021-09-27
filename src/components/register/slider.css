@@ -10,7 +10,6 @@
   padding-right: 25%;
   position: relative;
   margin: 0 auto;
-
 }
 .switch-button:before {
   content: "Upload Photos";
@@ -53,7 +52,7 @@
 }
 .switch-button-checkbox + .switch-button-label:before {
   content: "";
-  background: #c08d64;
+  background: #03a301;
   height: 100%;
   width: 70%;
   position: absolute;

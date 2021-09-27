@@ -248,7 +248,7 @@ export const NavLinksScroll = styled(RouterLink)`
 `;
 
 export const NavLinks2 = styled(RouterLink)`
-  color: #f25918;
+  color: #03a301;
   display: flex;
   align-items: center;
   text-decoration: none;

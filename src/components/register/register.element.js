@@ -102,7 +102,7 @@ export const RegisterInput2 = styled.textarea`
   @media screen and (max-width: 960px) {
     padding-bottom: 30px;
   }
-  `;
+`;
 
 export const RegisterInputLarge = styled.textarea`
   width: 100%;
@@ -174,7 +174,7 @@ export const RegisterButton = styled.button`
   margin: 0 1.5%;
   color: white;
   font-size: 18px;
-  background: #c08d64;
+  background: #03a301;
   border-radius: 15px;
   text-decoration: none;
   display: inline-block;

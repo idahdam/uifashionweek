@@ -269,9 +269,7 @@ const Register = () => {
                     <RegisterCardDescription>
                       Personal Data
                     </RegisterCardDescription>
-                    <RegisterCardDescription2>
-                      Please fill empty space with "-"
-                    </RegisterCardDescription2>
+                    <RegisterCardDescription2></RegisterCardDescription2>
                     <RegisterFormContainer>
                       <RegisterInput
                         placeholder="Full Name"
@@ -371,37 +369,77 @@ const Register = () => {
                     <RegisterCardDescription>
                       Body Measurement & Sizing
                     </RegisterCardDescription>
-                    <RegisterCardDescription2>
-                      Please fill empty space with "-"
-                    </RegisterCardDescription2>
+                    <RegisterCardDescription2></RegisterCardDescription2>
                     <RegisterFormContainer>
                       <RegisterInput
                         placeholder="Height (cm)"
                         type="number"
-                        onChange={(event) => setHeight(event.target.value)}
+                        // onChange={(event) => setHeight(event.target.value)}
+                        onChange={(e) => {
+                          let val = parseFloat(e.target.value);
+                          if (isNaN(val)) {
+                            setHeight(null);
+                          } else {
+                            // is A Number
+                            val = val >= 0 ? val : Math.abs(val);
+                            setHeight(val);
+                          }
+                        }}
                         value={height}
                       />
                       <RegisterInput
                         placeholder="Weight (kg)"
                         type="number"
-                        onChange={(event) => setWeight(event.target.value)}
+                        // onChange={(event) => setWeight(event.target.value)}
+                        onChange={(e) => {
+                          let val = parseFloat(e.target.value);
+                          if (isNaN(val)) {
+                            setWeight(null);
+                          } else {
+                            // is A Number
+                            val = val >= 0 ? val : Math.abs(val);
+                            setWeight(val);
+                          }
+                        }}
                         value={weight}
                       />
                       <RegisterInput
                         placeholder="Waist (cm)"
                         type="number"
-                        onChange={(event) => setWaist(event.target.value)}
+                        // onChange={(event) => setWaist(event.target.value)}
+                        onChange={(e) => {
+                          let val = parseFloat(e.target.value);
+                          if (isNaN(val)) {
+                            setWaist(null);
+                          } else {
+                            // is A Number
+                            val = val >= 0 ? val : Math.abs(val);
+                            setWaist(val);
+                          }
+                        }}
                         value={waist}
                       />
                       <RegisterInput
                         placeholder="Bust (cm)"
-                        type="text"
-                        onChange={(event) => setBust(event.target.value)}
+                        type="number"
+                        min="0"
+                        step="1"
+                        onChange={(e) => {
+                          let val = parseFloat(e.target.value);
+                          if (isNaN(val)) {
+                            setBust(null);
+                          } else {
+                            // is A Number
+                            val = val >= 0 ? val : Math.abs(val);
+                            setBust(val);
+                          }
+                        }}
+                        // onChange={(event) => setBust(event.target.value)}
                         value={bust}
                       />
                       <RegisterInput
                         placeholder="Hip (cm)"
-                        type="text"
+                        type="number"
                         onChange={(event) => setHip(event.target.value)}
                         value={hip}
                       />

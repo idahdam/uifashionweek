@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import bgimage from "../../../assets/image/landing-page/landingPageFix.png";
-import bgimage_mob from "../../../assets/image/landing-page/LandingPage-bg-mobile.png";
+// import bgimage_mob from "../../../assets/image/landing-page/LandingPage-bg-mobile.png";
 
 export const LandingPageContainer = styled.div`
   background-image: url(${bgimage});
@@ -59,7 +59,7 @@ export const LandingPageContent = styled.div`
   }
 `;
 export const LandingPageHeader = styled.div`
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "Metropolis Bold";
   font-size: 79px;
   text-align: left;
