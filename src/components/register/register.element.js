@@ -4,7 +4,7 @@ export const RegisterContainer = styled.div`
   background-color: #daf1da;
   background-image: radial-gradient(
     at 100% 50%,
-    hsl(18.14, 81%, 90%) 0,
+    hsl(18.14, 81%, 80%) 0,
     transparent 70%
   );
   text-align: center;
@@ -19,11 +19,24 @@ export const RegisterContainerRow = styled.div`
 
 export const RegisterContainerCol = styled.div`
   flex: 50%;
+  width: 50%;
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
 `;
 export const RegisterContainerCol2 = styled.div`
   flex: 30%;
+  @media screen and (max-width: 960px) {
+    flex: 100%;
+    width: 100%;
+  }
 `;
-export const RegisterImage = styled.img``;
+export const RegisterImage = styled.img`
+  width: 80%;
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+`;
 
 export const RegisterCardContainer = styled.div`
   backdrop-filter: blur(16px) saturate(180%);
@@ -43,6 +56,13 @@ export const RegisterCardTitle = styled.div`
 
 export const RegisterCardDescription = styled.div`
   font-size: 1rem;
+  padding-bottom: 1rem;
+`;
+
+export const RegisterCardDescription2 = styled.div`
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  font-family: "Metropolis Bold";
 `;
 
 export const RegisterFormContainer = styled.div``;
@@ -56,6 +76,44 @@ export const RegisterInput = styled.input`
   display: inline-block;
   // border: 5px solid #C08D64;
   // border-radius: 4px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+`;
+
+export const RegisterInput2 = styled.textarea`
+  width: 100%;
+  resize: none;
+  font-family: "Metropolis Regular";
+  padding: 20px 20px;
+  padding-bottom: 20px;
+  margin: 8px 0;
+  font-size: 1rem;
+  display: inline-block;
+  // border: 5px solid #C08D64;
+  // border-radius: 4px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  @media screen and (max-width: 960px) {
+    padding-bottom: 30px;
+  }
+`;
+
+export const RegisterInputLarge = styled.textarea`
+  width: 100%;
+  resize: none;
+  vertical-align: top;
+  font-family: "Metropolis Regular";
+  padding: 20px 20px;
+  padding-bottom: 100px;
+  margin: 8px 0;
+  font-size: 1rem;
+  display: inline-block;
   box-sizing: border-box;
   border-radius: 10px;
   border: none;
@@ -105,6 +163,9 @@ export const RegisterOptionDefault = styled.option`
   border-radius: 4px;
   box-sizing: border-box;
   border-radius: 10px;
+  @media screen and (max-width: 960px) {
+    font-size: 0.4 rem;
+  }
 `;
 
 export const RegisterButtonContainer = styled.div``;
@@ -113,7 +174,7 @@ export const RegisterButton = styled.button`
   margin: 0 1.5%;
   color: white;
   font-size: 18px;
-  background: #c08d64;
+  background: #03a301;
   border-radius: 15px;
   text-decoration: none;
   display: inline-block;
@@ -123,6 +184,11 @@ export const RegisterButton = styled.button`
   height: 47px;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  @media screen and (max-width: 960px) {
+    font-size: 16px;
+    width: 100px;
+    height: 47px;
+  }
 `;
 
 export const RegisterPageCountContainer = styled.div`
@@ -177,4 +243,47 @@ export const RegisterUploadZone = styled.div`
 
 export const RegisterUploadInput = styled.input`
   display: none;
+`;
+
+export const RegisterUploadSliderInput = styled.input`
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+`;
+
+export const RegisterUploadSlider = styled.div`
+  background: #ece3df;
+  border-radius: 30px;
+  overflow: hidden;
+  text-align: left;
+  margin-left: 10%;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  padding-right: 25%;
+  position: relative;
+  margin: 0 auto;
+
+  :before {
+    content: "Upload Photos";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none;
+  }
+  @media screen and (max-width: 960px) {
+    font-size: 13px;
+  }
 `;

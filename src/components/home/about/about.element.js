@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-export const AboutContainerBg = styled.div`
+import { Element } from "react-scroll";
+export const AboutContainerBg = styled(Element)`
   background-image: linear-gradient(
     to bottom,
     #e2f1f4,
@@ -18,6 +18,7 @@ export const AboutContainerBg = styled.div`
   flex-wrap: wrap;
   align: center;
   font-family: Metropolis regular;
+  overflow-x: hidden;
 `;
 
 export const AboutContainer = styled.div`
@@ -63,12 +64,17 @@ export const AboutSectionHeader = styled.div`
 
 export const AboutSection = styled.div`
   margin-left: auto;
+  display: flex;
   margin-right: auto;
   width: 100%;
   overflow: hidden;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 2%;
+  @media (max-width: 960px) {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
 `;
 
 export const AboutSectionPart = styled.div`
@@ -77,6 +83,28 @@ export const AboutSectionPart = styled.div`
   margin: 0;
   padding-top: 2px;
   padding-left: 2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media (max-width: 960px) {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+`;
+
+export const AboutSectionPart2 = styled.div`
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding-top: 2px;
+  padding-left: 2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media (max-width: 960px) {
+    flex-direction: column-reverse;
+    overflow-x: hidden;
+  }
 `;
 
 export const AboutSectionPartColumn = styled.div`
@@ -94,6 +122,9 @@ export const AboutSectionPartHalf = styled.div`
   float: left;
   margin-top: 5%;
   // background-color: red;
+  @media (max-width: 960px) {
+    width: 100%;
+  }
 `;
 export const AboutSectionPartHalfHeader = styled.div`
   font-family: "Metropolis Bold";
@@ -159,6 +190,9 @@ export const AboutImage1Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2px;
+  @media (max-width: 960px) {
+    margin-left: 20%;
+  }
 `;
 
 export const AboutImage2 = styled.img`
@@ -174,4 +208,57 @@ export const AboutImage2Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2px;
+`;
+
+export const About3ImageContainer = styled.div`
+  width: 33.3%;
+  float: left;
+  display: grid;
+  @media (max-width: 960px) {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 20%;
+    margin-top: 20%;
+  }
+`;
+
+export const About3ImageLeft = styled.img`
+margin-top:-5%
+width: 100%;
+@media (max-width:960px) {
+  margin-top:0%;
+  width: 70%;
+ }
+`;
+
+export const About3ImageRight = styled.img`
+  margin-top: 40%;
+  @media (max-width: 960px) {
+    margin-top: 0%;
+    width: 70%;
+  }
+`;
+
+export const AboutContainerimg = styled.img`
+  width: 100%;
+  @media (max-width: 960px) {
+    width: 140%;
+  }
+`;
+export const AboutContainerimg2 = styled.img`
+  width: 100%;
+  padding-top: 5%;
+  @media (max-width: 960px) {
+    padding-top: 20%;
+    width: 100%;
+  }
+`;
+
+export const AboutContainerimg3 = styled.img`
+  width: 100%;
+  padding-left: 10%;
+  @media (max-width: 960px) {
+    padding-left: 0%;
+    width: 70%;
+  }
 `;

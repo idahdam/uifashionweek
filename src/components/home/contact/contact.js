@@ -6,7 +6,7 @@ import {
   ContactHeader,
   ContactSection,
   ContactSectionLeft,
-  ContactSectionRight,
+  // ContactSectionRight,
   ContactImage,
   ContacSectionText,
   ContactSectionHeaderText,
@@ -18,7 +18,7 @@ import image_1 from "../../../assets/image/contact/Contact_pic.png";
 const Contact = () => {
   return (
     <>
-      <ContactContainer>
+      <ContactContainer id="contactus">
         <ContactContent>
           <ContactSectionHeader>
             <ContactHeader>Contact</ContactHeader>
@@ -27,24 +27,22 @@ const Contact = () => {
             <ContactSectionLeft>
               <ContactSectionColumn>
                 <ContactSectionHeaderText>
-                  Lorem ipsum dolor sit amet
+                  Get in touch with us!
                 </ContactSectionHeaderText>
                 <ContacSectionText>
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea ommodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum"
+                  Got any questions? Kindly click the button below!
                 </ContacSectionText>
-                <ContactPageButton>Contact Us</ContactPageButton>
+                <ContactPageButton
+                  href="https://linktr.ee/uifashionweek21"
+                  target="_blank"
+                >
+                  Contact Us
+                </ContactPageButton>
               </ContactSectionColumn>
             </ContactSectionLeft>
-            <ContactSectionRight>
+            <ContactSectionLeft>
               <ContactImage src={image_1} />
-            </ContactSectionRight>
+            </ContactSectionLeft>
           </ContactSection>
         </ContactContent>
       </ContactContainer>

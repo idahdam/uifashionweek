@@ -5,6 +5,7 @@ import {
   AboutHeader,
   AboutSection,
   AboutSectionPart,
+  AboutSectionPart2,
   AboutSectionPartHalf,
   AboutContent,
   AboutImage1Container,
@@ -12,16 +13,24 @@ import {
   AboutSectionPartHalfText,
   AboutSectionPartColumn,
   AboutContainerBg,
+  About3ImageContainer,
+  About3ImageLeft,
+  About3ImageRight,
+  AboutContainerimg,
+  AboutContainerimg2,
+  AboutContainerimg3,
 } from "./about.element";
+import image_3_1 from "../../../assets/image/about/photo 1.png";
+import image_3_2 from "../../../assets/image/about/photo 2.png";
+import image_3_3 from "../../../assets/image/about/photo 3.png";
 import image_2 from "../../../assets/image/about/Lookbook 1.png";
-import image_3 from "../../../assets/image/about/Lookbook 2.png";
 import image_about1 from "../../../assets/image/about/About Us Photo 1.png";
 import image_about2 from "../../../assets/image/about/About Us Photo 2.png";
 
 const about = () => {
   return (
     <>
-      <AboutContainerBg>
+      <AboutContainerBg id="about" name="about">
         <AboutContainer>
           <AboutContent>
             <AboutSectionHeader>
@@ -32,7 +41,7 @@ const about = () => {
                 <AboutSectionPartHalf>
                   <AboutImage1Container>
                     {/* <AboutImage1 src={image_test} alt="vision" loading="Lazy" /> */}
-                    <img src={image_about1} alt="uifw" />
+                    <AboutContainerimg src={image_about1} alt="uifw" />
                   </AboutImage1Container>
                 </AboutSectionPartHalf>
                 <AboutSectionPartHalf>
@@ -52,7 +61,7 @@ const about = () => {
                   </AboutSectionPartColumn>
                 </AboutSectionPartHalf>
               </AboutSectionPart>
-              <AboutSectionPart>
+              <AboutSectionPart2>
                 <AboutSectionPartHalf>
                   <AboutSectionPartColumn>
                     <AboutSectionPartHalfHeader>
@@ -61,8 +70,8 @@ const about = () => {
                     <AboutSectionPartHalfText>
                       UI Fashion Week has a wide range of different people
                       participated in such as models, fashion companies,
-                      influencers, designers, etc. Becaming hot topic in fashion
-                      industry from year to year, UI Fashion Week has been
+                      influencers, designers, etc. Becoming the hot topic in
+                      fashion industry every year, UI Fashion Week has been
                       presenting several different themes that could bring a
                       huge impact and awareness related to fashion.
                     </AboutSectionPartHalfText>
@@ -71,16 +80,24 @@ const about = () => {
                 <AboutSectionPartHalf>
                   <AboutImage1Container>
                     {/* <AboutImage2 src={image_test} alt="vision" loading="Lazy" /> */}
-                    <img src={image_about2} alt="uifw" />
+                    <AboutContainerimg src={image_about2} alt="uifw" />
                   </AboutImage1Container>
                 </AboutSectionPartHalf>
-              </AboutSectionPart>
+              </AboutSectionPart2>
+            </AboutSection>
+            <AboutSection id="gallery">
+              <AboutContainerimg2 src={image_2} alt="uifw" />
             </AboutSection>
             <AboutSection>
-              <img src={image_2} alt="uifw" />
-            </AboutSection>
-            <AboutSection>
-              <img src={image_3} alt="uifw" />
+              <About3ImageContainer>
+                <About3ImageLeft src={image_3_1} alt="uifw" />
+              </About3ImageContainer>
+              <About3ImageContainer>
+                <AboutContainerimg3 src={image_3_2} alt="uifw" />
+              </About3ImageContainer>
+              <About3ImageContainer>
+                <About3ImageRight src={image_3_3} alt="uifw" />
+              </About3ImageContainer>
             </AboutSection>
           </AboutContent>
         </AboutContainer>

@@ -3,9 +3,8 @@ import styled from "styled-components";
 export const Footer = styled.div`
   background: rgba(253, 251, 250, 0.6);
   backdrop-filter: blur(20px);
-  height: 100px;
+  height: 50px;
   display: flex;
-  padding: 0 5%;
   justify-content: center;
   align-items: center;
   font-size: 1.2 rem;
@@ -21,19 +20,32 @@ export const FooterContainer = styled.div`
   max-width: 1366px;
   padding-left:5%;
   padding-right:5%;
-  @media screen and (max-width: 960px) {
-    padding: 0;
-    width: 65%;
+  @media (max-width:960px) {
+    width: 100%;
   }
 `;
 export const FooterLeft = styled.div`
   float: left;
-  width: 50%;
+  width: 100%;
+  text-align:center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  @media (max-width:960px) {
+    top:0;
+    width: 100%;
+    overflow-x: hidden;
+  }
 `;
+
 export const FooterLogoContainer = styled.div`
   float: right;
   width: 10%;
   display: flex;
+  @media (max-width:960px) {
+    width: 30%;
+    margin-right:2%;
+    overflow-x: hidden;
+  }
 `;
 
 export const FooterLink = styled.a`
@@ -49,5 +61,17 @@ export const FooterLink = styled.a`
 export const FooterText = styled.div`
 font-family :"Metropolis"
 font-szie :16px;
-margin-top: 2%;
+@media (max-width:960px) {
+  text-align:center;
+  font-size :14px;
+}
+`
+
+export const FooterImgLogo  = styled.img`
+width:100%;
+margin:0 auto;
+@media (max-width:960px) {
+  margin-left:55%;
+  width:75%;
+}
 `

@@ -3,12 +3,14 @@ import { Blogs, Navbar, Footer } from "./components";
 import Home from "./pages/home/home";
 import NotFound from "./pages/notFound/notFound.js";
 import Register from "./pages/register/register.js";
+import ScrollToTop from "./components/scrollToTop";
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
+        <ScrollToTop />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/register" component={Register} />

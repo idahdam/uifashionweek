@@ -1,69 +1,76 @@
 .switch-button {
-    background:#ECE3DF;
-    border-radius: 30px;
-    overflow: hidden;
-    text-align: left;
-    margin-left:10%;
-    font-size: 18px;
-    letter-spacing: 1px;
-    color: #ffffff;
-    padding-right: 25%;
-    position: relative;
-    margin: 0 auto;
+  background: #ece3df;
+  border-radius: 30px;
+  overflow: hidden;
+  text-align: left;
+  margin-left: 10%;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  padding-right: 25%;
+  position: relative;
+  margin: 0 auto;
 }
 .switch-button:before {
-    content: "upload photo";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 55%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-    pointer-events: none;
+  content: "Upload Photos";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+  @media screen and (max-width: 960px) {
+    flex: 100%;
+    width: 100%;
+  }
 }
 .switch-button-checkbox {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 2;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
 }
 .switch-button-checkbox:checked + .switch-button-label:before {
-    transform: translateX(90%);
-    transition: transform 300ms linear;
+  transform: translateX(90%);
+  transition: transform 300ms linear;
 }
 .switch-button-checkbox + .switch-button-label {
-    position: relative;
-    padding: 19px 0;
-    display: block;
-    user-select: none;
-    pointer-events: none;
+  position: relative;
+  padding: 19px 0;
+  display: block;
+  user-select: none;
+  pointer-events: none;
 }
 .switch-button-checkbox + .switch-button-label:before {
-    content: "";
-    background: #C08D64;
-    height: 100%;
-    width: 70%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-radius: 30px;
-    transform: translateX(0);
-    transition: transform 300ms;
+  content: "";
+  background: #03a301;
+  height: 100%;
+  width: 70%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  transform: translateX(0);
+  transition: transform 300ms;
 }
 
 .switch-button-checkbox + .switch-button-label .switch-button-label-span {
-    position: relative;
-    text-align: left;
+  position: relative;
+  text-align: left;
 }
 
-.text{
-    margin-left:20%;
+.text {
+  margin-left: 20%;
+  @media screen and (max-width: 960px) {
+    margin-left: 5%;
+  }
 }

@@ -14,9 +14,9 @@ import {
   BlogsLinkHome,
   BlogsLinkContainer,
 } from "./blogs.element";
-// import hero from "../../assets/image/blogs/hero.png";
 import { blogService } from "../../services/blogService";
 import FadeLoader from "react-spinners/FadeLoader";
+import defaultImage from "../../assets/image/landing-page/LandingPage-bg.png";
 const Blogs = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
@@ -51,7 +51,9 @@ const Blogs = () => {
         ) : (
           <>
             <BlogsHero>
-              <BlogsHeroImage src={data.Hero.url} />
+              <BlogsHeroImage
+                src={data.Hero === null ? defaultImage : data.Hero.url}
+              />
             </BlogsHero>
             <BlogsContent>
               <BlogsTitleContainer>

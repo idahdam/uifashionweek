@@ -16,20 +16,20 @@ import CircleText from "../../../assets/image/landing-page/AssetCircle.png";
 const landingPage = () => {
   return (
     <>
-      <LandingPageContainer>
-        {/* <LandingPageInside> */}
-        {/* <LandingPageBg src={bgimage} alt="vision" loading="lazy"/> */}
+      <LandingPageContainer id="hero">
         <LandingPageContent>
+          {/* <LandingPageShadow> */}
           <LandingPageImage src={CircleText} />
           <LandingPageCaption>
             <LandingPageHeader>
-              UI FASHION <br />
+              UI FASHION<br />
               WEEK
             </LandingPageHeader>
           </LandingPageCaption>
           <LandingPageLink to="/register">
             <LandingPageButton>Register</LandingPageButton>
           </LandingPageLink>
+          {/* </LandingPageShadow> */}
         </LandingPageContent>
         {/* </LandingPageInside> */}
       </LandingPageContainer>

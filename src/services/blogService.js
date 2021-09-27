@@ -2,7 +2,11 @@ import { gatewayHelper } from "../utils";
 
 const getAllBlog = async () => {
   const body = {};
-  const response = await gatewayHelper.http("GET", "blogs", body);
+  const response = await gatewayHelper.http(
+    "GET",
+    "blogs?_sort=createdAt:DESC",
+    body
+  );
   return response;
 };
 

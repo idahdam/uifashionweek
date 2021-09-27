@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import { Container } from "../../globalStyles";
 import { FaTimes } from "react-icons/fa";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
@@ -16,11 +17,11 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
-  font-family:metropolis regular;
+  font-family: metropolis regular;
 `;
 
 export const NavbarContainer = styled(Container)`
-  display: flex;
+  display: flex;const ScrollLink = Scroll.ScrollLink;
   justify-content: space-between;
   height: 60px;
   z-index: 1;
@@ -37,11 +38,26 @@ export const NavImg = styled.img`
   padding-top: 2.5%;
   padding-right: 2.5%;
   @media screen and (max-width: 960px) {
-    transform: translate(-70%, 0);
+    transform: translate(200%, 0);
   }
 `;
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled(RouterLink)`
+  color: #fff;
+  width: 10%;
+  margin-left: 3%;
+  margin-bottom: 0rem;
+  justify-self: flex-start;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 960px) {
+    margin-left: 0%;
+  }
+`;
+
+export const NavLogoScroll = styled(Link)`
   color: #fff;
   width: 10%;
   margin-left: 3%;
@@ -110,13 +126,13 @@ export const NavMenu = styled.ul`
     text-align: center;
     flex-direction: column;
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     position: absolute;
-    top: 100%;
+    top: 90%;
     left: ${({ click }) => (click ? "0%" : "-100%")};
     opacity: 1;
     transition: all 0.5s ease-in-out;
-    background-color: #101010;
+    background-color: #ffffff;
   }
 `;
 
@@ -173,11 +189,13 @@ export const NavItemDropdown = styled.li`
   }
 `;
 
-export const NavLinks = styled(Link)`
-  color: #000000;
+export const NavLinksLogo = styled(RouterLink)`
+  color: #f25918;
+  display: flex;
   align-items: center;
   text-decoration: none;
-  margin-top: 5rem;
+  font-family: metropolis bold;
+  padding: 0.5rem;
   height: 100%;
   @media screen and (max-width: 960px) {
     text-align: center;
@@ -191,8 +209,46 @@ export const NavLinks = styled(Link)`
   }
 `;
 
-export const NavLinks2 = styled(Link)`
-  color: #F25918;
+export const NavLinks = styled(Link)`
+  color: #000000;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 5rem;
+  height: 100%;
+  cursor: pointer;
+  @media screen and (max-width: 960px) {
+    text-align: center;
+    padding: 2rem 0rem 0rem 0;
+    width: 100%;
+    display: table;
+    &:hover {
+      color: black;
+      transition: all 0.3s ease;
+    }
+  }
+`;
+
+export const NavLinksScroll = styled(RouterLink)`
+  color: #000000;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 5rem;
+  height: 100%;
+  cursor: pointer;
+  @media screen and (max-width: 960px) {
+    text-align: center;
+    padding: 2rem 0rem 0rem 0;
+    width: 100%;
+    display: table;
+    &:hover {
+      color: black;
+      transition: all 0.3s ease;
+    }
+  }
+`;
+
+export const NavLinks2 = styled(RouterLink)`
+  color: #03a301;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -319,4 +375,3 @@ export const NavbarDropdownData = styled.div`
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 `;
-
