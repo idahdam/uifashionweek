@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import logo from "../../assets/image/navbar/Logo-UIFW.png";
+import logo from "../../assets/image/navbar/Logo UIFW 2022 1.png";
 import {
   Nav,
   NavbarContainer,

@@ -2,20 +2,28 @@ import styled from "styled-components";
 
 export const ContactContainer = styled.div`
   background-color: #ffffff;
+  // background-image: linear-gradient(
+  //   to top,
+  //   #497099,
+  //   #6584a8,
+  //   #7f99b7,
+  //   #9aaec6,
+  //   #b5c4d6,
+  //   #c1cedd,
+  //   #ced8e4,
+  //   #dae2eb,
+  //   #dae2eb,
+  //   #dae2eb,
+  //   #dae2eb,
+  //   #dae2eb
+  // );
   background-image: linear-gradient(
     to top,
     #497099,
-    #6584a8,
-    #7f99b7,
-    #9aaec6,
-    #b5c4d6,
-    #c1cedd,
-    #ced8e4,
-    #dae2eb,
-    #dae2eb,
-    #dae2eb,
-    #dae2eb,
-    #dae2eb
+    #7e90b2,
+    #acb3cb,
+    #d7d8e4,
+    #ffffff
   );
   z-index: 1;
   width: 100%;
@@ -154,12 +162,13 @@ export const ContactSectionColumn = styled.div`
 export const ContactPageButton = styled.a`
   background: #03a301;
   left: 0;
-  border: none;
+  border: 3px solid black;
+  border-color: #03a301;
   border-radius: 15px;
   color: white;
-  width: 203px;
-  height: 37px;
-  padding-top: 17px;
+  width: 190px;
+  height: 30px;
+  padding-top: 12px;
   font-family: "Metropolis Bold";
   font-weight: bold;
   font-size: 18px;
@@ -170,8 +179,10 @@ export const ContactPageButton = styled.a`
   transition: 0.3s;
   cursor: pointer;
   margin-top: 5%;
+  cursor: pointer;
   &:hover {
-    opacity: 0.6;
+    background: none;
+    color: #03a301;
   }
 
   @media (max-width: 930px) {

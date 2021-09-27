@@ -37,6 +37,10 @@ export const NavbarContainer = styled(Container)`
 export const NavImg = styled.img`
   padding-top: 2.5%;
   padding-right: 2.5%;
+  width:80%;
+  &:hover{
+    transform: scale(1.1) perspective(0.9px);
+  }
   @media screen and (max-width: 960px) {
     transform: translate(200%, 0);
   }

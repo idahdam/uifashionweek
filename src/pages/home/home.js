@@ -10,8 +10,8 @@ const Home = () => {
     <>
       <LandingPage />
       <About />
-      <Blog />
-      <Sponsor />
+      {/* <Blog />
+      <Sponsor /> */}
       <Contact />
     </>
   );
