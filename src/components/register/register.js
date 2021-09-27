@@ -608,7 +608,7 @@ const Register = () => {
                         </RegisterOption>
                         <RegisterOption value="tiktok">Tiktok</RegisterOption>
                         <RegisterOption value="twitter">Twitter</RegisterOption>
-                        <RegisterOption value="uifwcommitte">
+                        <RegisterOption value="uifwcommittee">
                           UIFW Committee
                         </RegisterOption>
                       </RegisterSelect>
