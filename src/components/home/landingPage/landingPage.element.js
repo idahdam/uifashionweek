@@ -90,10 +90,10 @@ export const LandingPageCaption = styled.div`
 `;
 
 export const LandingPageButton = styled.button`
-  background: #e97300;
+  background: #03a301;
   left: 0;
   border: 3px solid black;
-  border-color:#e97300;
+  border-color:#03a301;
   border-radius: 15px;
   position: absolute;
   color: white;

@@ -30,8 +30,8 @@ const termcontent = () => {
           </ul>
           Male:
           <ul>
-            <li>T-shirt / tank top</li>
-            <li>Skinny jeans</li>
+            <li>T-shirt / tank top (All in black)</li>
+            <li>Skinny jeans (All in black)</li>
             <li>Boots / sneakers (All in black)</li>
           </ul>
         </p>
