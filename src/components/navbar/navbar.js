@@ -43,7 +43,7 @@ const Navbar = () => {
       <IconContext.Provider value={{ color: "#fff" }}>
         <Nav>
           <NavbarContainer>
-            {location.pathname === "/" ? (
+            {/* {location.pathname === "/" ? (
               <NavLogoScroll
                 activeClass="active"
                 to="hero"
@@ -59,11 +59,14 @@ const Navbar = () => {
               <NavLogo to="/" onClick={closeMobileMenu}>
                 <NavImg src={logo} alt="bye" />
               </NavLogo>
-            )}
+            )} */}
 
             {/* <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon> */}
+            <NavLogo to="/" onClick={closeMobileMenu}>
+                <NavImg src={logo} alt="bye" />
+              </NavLogo>
             <NavMenu click={click}>
               <NavItem>
                 {location.pathname === "/" ? (

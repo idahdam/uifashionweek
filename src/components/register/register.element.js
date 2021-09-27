@@ -65,7 +65,8 @@ export const RegisterCardDescription2 = styled.div`
   font-family: "Metropolis Bold";
 `;
 
-export const RegisterFormContainer = styled.div``;
+export const RegisterFormContainer = styled.div`
+overflow-y:none;`;
 
 export const RegisterInput = styled.input`
   width: 100%;
@@ -201,7 +202,7 @@ export const RegisterPageCountContainer = styled.div`
 
 export const RegisterPageFaq = styled.div`
   margin: 0 auto;
-  width: 400px;
+  width: 80%;
   height:450px;
   overflow: auto;
   margin-top:5%;
@@ -223,6 +224,9 @@ export const RegisterPageFaq = styled.div`
   
   ::-webkit-scrollbar-thumb:hover {
     background: #67452a; 
+
+    @media screen and (max-width: 960px) {
+    }
 `;
 
 export const RegisterSlide4box = styled.div`
