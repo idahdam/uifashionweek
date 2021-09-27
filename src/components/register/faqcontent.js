@@ -4,6 +4,7 @@ import "./faq.css";
 const faqcontent = () => {
   return (
     <>
+    <div class="mobile_faq">
       <p>
         <b>1. Can I join if my height is below the requirements? </b>
         <br />
@@ -103,6 +104,7 @@ const faqcontent = () => {
         <br />
         No, you can use bahasa too!
       </p>
+      </div>
     </>
   );
 };

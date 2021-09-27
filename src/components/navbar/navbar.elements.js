@@ -35,10 +35,9 @@ export const NavbarContainer = styled(Container)`
 `;
 
 export const NavImg = styled.img`
-  padding-top: 2.5%;
-  padding-right: 2.5%;
+  width:80%;
   @media screen and (max-width: 960px) {
-    transform: translate(200%, 0);
+    width:100%;
   }
 `;
 
@@ -53,7 +52,9 @@ export const NavLogo = styled(RouterLink)`
   display: flex;
   align-items: center;
   @media screen and (max-width: 960px) {
-    margin-left: 0%;
+    margin: 0 auto;
+    width: 20%;
+    align-items: center;
   }
 `;
 

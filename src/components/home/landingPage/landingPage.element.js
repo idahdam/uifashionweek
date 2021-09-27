@@ -92,7 +92,8 @@ export const LandingPageCaption = styled.div`
 export const LandingPageButton = styled.button`
   background: #e97300;
   left: 0;
-  border: none;
+  border: 3px solid black;
+  border-color:#e97300;
   border-radius: 15px;
   position: absolute;
   color: white;
@@ -108,6 +109,10 @@ export const LandingPageButton = styled.button`
   transition: 0.3s;
   cursor: pointer;
   &:hover {
+    color: #ffffff;
+    background: none;
+  }
+  &:after{
     opacity: 0.6;
   }
   @media screen and (max-width: 960px) {
