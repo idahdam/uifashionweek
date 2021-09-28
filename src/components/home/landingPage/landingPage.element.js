@@ -117,7 +117,6 @@ export const LandingPageButton = styled.button`
   }
   @media screen and (max-width: 960px) {
     padding-left: 0%;
-    background: #f25918;
     border-radius: 15px;
     width: 151px;
     height: 33px;
