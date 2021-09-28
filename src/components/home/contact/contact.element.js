@@ -191,7 +191,7 @@ export const ContactPageButton = styled.a`
     width: 150px;
     height: 20px;
     font-size: 14px;
-    margin-left: 25%;
+    margin-left: 20%;
     margin-bottom: 10%;
   }
 `;
