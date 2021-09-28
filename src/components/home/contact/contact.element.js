@@ -157,6 +157,10 @@ export const ContactSectionColumn = styled.div`
   margin-right: auto;
   padding-bottom: 2px;
   margin-top: 15%;
+  @media (max-width:930px) {
+    width:100%;
+    margin-bottom:5%;
+  }
 `;
 
 export const ContactPageButton = styled.a`
@@ -191,6 +195,7 @@ export const ContactPageButton = styled.a`
     width: 150px;
     height: 20px;
     font-size: 14px;
+    margin-top: 10%;
     margin-left: 20%;
     margin-bottom: 10%;
   }
