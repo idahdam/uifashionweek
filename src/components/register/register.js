@@ -97,16 +97,26 @@ const Register = () => {
   const areYouSure = () => {
     if (
       fullName === null ||
+      !fullName.trim() ||
       gender === null ||
       birthday === null ||
+      !birthday.trim() ||
       idNumber === null ||
+      !idNumber.trim() ||
       profession === null ||
+      !profession.trim() ||
       address === null ||
+      !address.trim() ||
       aboutMe === null ||
+      !aboutMe.trim() ||
       email === null ||
+      !email.trim() ||
       whatsapp === null ||
+      !whatsapp.trim() ||
       lineId === null ||
+      !lineId.trim() ||
       instagram === null ||
+      !instagram.trim() ||
       height === null ||
       weight === null ||
       waist === null ||
@@ -117,12 +127,16 @@ const Register = () => {
       shoe === null ||
       vaccinated === null ||
       vaccineReason === null ||
+      !vaccineReason.trim() ||
       currentlyUnderContract === null ||
       currentAgencyName === null ||
+      !currentAgencyName.trim() ||
       everBeenUnderContract === null ||
       exAgencyName === null ||
+      !exAgencyName.trim() ||
       findOutSource === null ||
       foundFromUIFW === null ||
+      !foundFromUIFW.trim() ||
       image1 === null ||
       image2 === null ||
       image3 === null ||
