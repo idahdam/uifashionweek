@@ -28,7 +28,7 @@ import Faq from "./faqcontent";
 import Terms from "./termcontent";
 import "./slider.css";
 import Swal from "sweetalert2";
-import axios from "axios";
+// import axios from "axios";
 import { useHistory } from "react-router";
 import FadeLoader from "react-spinners/FadeLoader";
 
@@ -39,12 +39,12 @@ const Register = () => {
   const [button, setButton] = useState(true);
 
   // input and files area
-  const [image1, setImage1] = useState(null);
-  const [image2, setImage2] = useState(null);
-  const [image3, setImage3] = useState(null);
-  const [image4, setImage4] = useState(null);
-  const [image5, setImage5] = useState(null);
-  const [image6, setImage6] = useState(null);
+  // const [image1, setImage1] = useState(null);
+  // const [image2, setImage2] = useState(null);
+  // const [image3, setImage3] = useState(null);
+  // const [image4, setImage4] = useState(null);
+  // const [image5, setImage5] = useState(null);
+  // const [image6, setImage6] = useState(null);
 
   const [fullName, setFullName] = useState(null);
   const [gender, setGender] = useState(null);
@@ -94,140 +94,11 @@ const Register = () => {
 
   window.addEventListener("resize", showButton);
   const history = useHistory();
-  const areYouSure = () => {
-    if (
-      fullName === null ||
-      gender === null ||
-      birthday === null ||
-      idNumber === null ||
-      profession === null ||
-      address === null ||
-      aboutMe === null ||
-      email === null ||
-      whatsapp === null ||
-      lineId === null ||
-      instagram === null ||
-      height === null ||
-      weight === null ||
-      waist === null ||
-      bust === null ||
-      hip === null ||
-      top === null ||
-      bottom === null ||
-      shoe === null ||
-      vaccinated === null ||
-      vaccineReason === null ||
-      currentlyUnderContract === null ||
-      currentAgencyName === null ||
-      everBeenUnderContract === null ||
-      exAgencyName === null ||
-      findOutSource === null ||
-      foundFromUIFW === null ||
-      image1 === null ||
-      image2 === null ||
-      image3 === null ||
-      image3 === null ||
-      image4 === null ||
-      image5 === null ||
-      image6 === null
-    ) {
-      Swal.fire("Hold up!", "Make sure to fill all the fields.", "warning");
-    } else {
-      Swal.fire({
-        title: "Submit all of the data?",
-        text: "Make sure you have checked all of the data!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Submit",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          onSubmit();
-        }
-      });
-    }
+
+  const areYouSure = async () => {
+    Swal.fire("Maaf", "Registrasi telah ditutup.", "warning");
   };
 
-  const onSubmit = async () => {
-    const formData = new FormData();
-    formData.append("files", image1);
-    formData.append("files", image2);
-    formData.append("files", image3);
-    formData.append("files", image4);
-    formData.append("files", image5);
-    formData.append("files", image6);
-    try {
-      Swal.fire({
-        icon: "info",
-        title: "Uploading...",
-        showConfirmButton: false,
-        allowOutsideClick: false,
-      });
-      await axios
-        .post("https://api.uifashionweek.com/upload", formData)
-        .then(async (res) => {
-          await axios.post("https://api.uifashionweek.com/forms", {
-            paymentStatus: "unpaid",
-            status: "unchecked",
-            full_name: fullName,
-            sex: gender,
-            dob: birthday,
-            id_number: idNumber,
-            occupation: profession,
-            address: address,
-            about: aboutMe,
-            email: email,
-            wa_number: whatsapp,
-            line_id: lineId,
-            instagram: instagram,
-            height: height,
-            weight: weight,
-            bust: bust,
-            hip: hip,
-            waist: waist,
-            top: top,
-            bottom: bottom,
-            shoes: shoe,
-            vaccinated: vaccinated,
-            vaccinated_reason: vaccineReason,
-            currently_under_contract_with_agency: currentlyUnderContract,
-            current_agency_name: currentAgencyName,
-            ever_been_under_contract: everBeenUnderContract,
-            ex_agency_name: exAgencyName,
-            find_out_source: findOutSource,
-            found_from_uifw_committee: foundFromUIFW,
-            photos: res.data,
-          });
-          console.log(res);
-        })
-        .then((res) => {
-          // setLoading(false);
-          console.log(res);
-          Swal.fire({
-            icon: "success",
-            title: "File is submitted!",
-            html:
-              "Thank you for your submission. " +
-              "Your data has been recorded. Please check your email regularly. " +
-              "We will send you the payment details and further notice regarding the selection process.",
-            showConfirmButton: true,
-          }).then((result) => {
-            if (result.isConfirmed || result.isDismissed) {
-              history.push("/");
-              console.log("asd");
-            }
-          });
-        });
-    } catch (err) {
-      Swal.fire({
-        icon: "error",
-        title: err,
-        text: "Something bad happened.",
-        footer: '<a href="https://google.com">Why do I have this issue?</a>',
-      });
-    }
-  };
   return (
     <>
       <RegisterContainer>
@@ -672,36 +543,12 @@ const Register = () => {
                             <br />
                             <br />
                             <br />
-                            <input
-                              type="file"
-                              accept="image/*"
-                              onChange={(e) => setImage1(e.target.files[0])}
-                            />
-                            <input
-                              type="file"
-                              accept="image/*"
-                              onChange={(e) => setImage2(e.target.files[0])}
-                            />
-                            <input
-                              type="file"
-                              accept="image/*"
-                              onChange={(e) => setImage3(e.target.files[0])}
-                            />
-                            <input
-                              type="file"
-                              accept="image/*"
-                              onChange={(e) => setImage4(e.target.files[0])}
-                            />
-                            <input
-                              type="file"
-                              accept="image/*"
-                              onChange={(e) => setImage5(e.target.files[0])}
-                            />
-                            <input
-                              type="file"
-                              accept="image/*"
-                              onChange={(e) => setImage6(e.target.files[0])}
-                            />
+                            <input type="file" accept="image/*" />
+                            <input type="file" accept="image/*" />
+                            <input type="file" accept="image/*" />
+                            <input type="file" accept="image/*" />
+                            <input type="file" accept="image/*" />
+                            <input type="file" accept="image/*" />
                           </RegisterSlide4box>
                         </>
                       ) : (
