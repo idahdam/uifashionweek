@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   RegisterContainer,
   RegisterContainerRow,
@@ -41,6 +41,8 @@ const Register = () => {
   const [fullName, setFullName] = useState(null);
   const [ticketType, setTicketType] = useState(null);
   const [amount, setAmount] = useState(null);
+  const [multiplier, setMultiplier] = useState(null);
+  const [total, setTotal] = useState(0);
 
   const [email, setEmail] = useState(null);
   const [whatsapp, setWhatsapp] = useState(null);
@@ -54,6 +56,12 @@ const Register = () => {
       setButton(true);
     }
   };
+
+  useEffect(() => {
+    setAmount(amount);
+    setMultiplier(multiplier);
+    setTotal(amount * multiplier);
+  }, [amount, multiplier, total]);
 
   const style = {
     position: "fixed",
@@ -258,7 +266,30 @@ const Register = () => {
                       </RegisterTermsContainer>
                       <RegisterSelect
                         value={ticketType}
-                        onChange={(event) => setTicketType(event.target.value)}
+                        onChange={(event) => {
+                          setTicketType(event.target.value);
+                          if (
+                            ticketType === "day1_session1" ||
+                            ticketType === "day1_session2" ||
+                            ticketType === "day2_session1" ||
+                            ticketType === "day2_session2"
+                          ) {
+                            setMultiplier(50000);
+                            setAmount(0);
+                            setTotal(amount * multiplier);
+                          } else if (
+                            ticketType === "day1_pass" ||
+                            ticketType === "day2_pass"
+                          ) {
+                            setMultiplier(75000);
+                            setAmount(0);
+                            setTotal(amount * multiplier);
+                          } else {
+                            setAmount(0);
+                            setMultiplier(0);
+                            setTotal(amount * multiplier);
+                          }
+                        }}
                       >
                         <RegisterOptionDefault
                           value=""
@@ -299,11 +330,36 @@ const Register = () => {
                             // is A Number
                             val = val >= 0 ? val : Math.abs(val);
                             setAmount(val);
+                            console.log(amount, total);
+                            if (
+                              ticketType === "day1_session1" ||
+                              ticketType === "day1_session2" ||
+                              ticketType === "day2_session1" ||
+                              ticketType === "day2_session2"
+                            ) {
+                              setMultiplier(50000);
+                              setTotal(amount * multiplier);
+                            } else if (
+                              ticketType === "day1_pass" ||
+                              ticketType === "day2_pass"
+                            ) {
+                              setMultiplier(75000);
+                              setTotal(amount * multiplier);
+                            } else {
+                              setMultiplier(0);
+                              setTotal(amount * multiplier);
+                            }
+                            console.log(total);
                           }
                         }}
                         value={amount}
                       />
                     </RegisterFormContainer>
+                    <RegisterCardDescription2>
+                      <br />
+                      Total:{" Rp"}
+                      {total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+                    </RegisterCardDescription2>
                     <RegisterPageCountContainer>
                       (2/3)
                     </RegisterPageCountContainer>
@@ -324,7 +380,13 @@ const Register = () => {
                     <RegisterCardTitle>
                       Ticketing Registration
                     </RegisterCardTitle>
-                    <RegisterCardDescription>Payment</RegisterCardDescription>
+                    <h2>
+                      Total:{" "}
+                      <b>
+                        {"Rp"}
+                        {total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+                      </b>
+                    </h2>
                     <RegisterCardDescription>
                       Please complete your payment through
                       <br />
