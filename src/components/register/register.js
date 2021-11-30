@@ -106,9 +106,9 @@ const Register = () => {
         allowOutsideClick: false,
       });
       await axios
-        .post("http://localhost:1337/upload", formData)
+        .post("api.uifashionweek.com/upload", formData)
         .then(async (res) => {
-          await axios.post("http://localhost:1337/ticketings", {
+          await axios.post("api.uifashionweek.com/ticketings", {
             status: "unchecked",
             full_name: fullName,
             email: email,
