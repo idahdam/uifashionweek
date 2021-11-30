@@ -229,9 +229,9 @@ const Register = () => {
                       (1/3)
                     </RegisterPageCountContainer>
                     <RegisterButtonContainer>
-                      <RegisterButton onClick={() => setPage(0)}>
+                      {/* <RegisterButton onClick={() => setPage(0)}>
                         FAQ
-                      </RegisterButton>
+                      </RegisterButton> */}
                       <RegisterButton onClick={() => setPage(2)}>
                         Next
                       </RegisterButton>
