@@ -66,7 +66,8 @@ export const RegisterCardDescription2 = styled.div`
 `;
 
 export const RegisterFormContainer = styled.div`
-overflow-y:none;`;
+  overflow-y: none;
+`;
 
 export const RegisterInput = styled.input`
   width: 100%;
@@ -294,4 +295,8 @@ export const RegisterUploadSlider = styled.div`
   @media screen and (max-width: 960px) {
     font-size: 13px;
   }
+`;
+
+export const RegisterTermsContainer = styled.div`
+  margin-left: 1rem;
 `;
