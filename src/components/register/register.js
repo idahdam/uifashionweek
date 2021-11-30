@@ -80,6 +80,7 @@ const Register = () => {
       email === null ||
       !email.trim() ||
       whatsapp === null ||
+      ticketType === null ||
       !whatsapp.trim() ||
       amount === null ||
       vaccinated === null ||
