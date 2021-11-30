@@ -40,6 +40,7 @@ const Register = () => {
 
   const [fullName, setFullName] = useState(null);
   const [ticketType, setTicketType] = useState(null);
+  const [amount, setAmount] = useState(null);
 
   const [email, setEmail] = useState(null);
   const [whatsapp, setWhatsapp] = useState(null);
@@ -72,6 +73,7 @@ const Register = () => {
       !email.trim() ||
       whatsapp === null ||
       !whatsapp.trim() ||
+      amount === null ||
       vaccinated === null ||
       image1 === null
     ) {
@@ -104,15 +106,16 @@ const Register = () => {
         allowOutsideClick: false,
       });
       await axios
-        .post("https://api.uifashionweek.com/upload", formData)
+        .post("http://localhost:1337/upload", formData)
         .then(async (res) => {
-          await axios.post("https://api.uifashionweek.com/ticketings", {
+          await axios.post("http://localhost:1337/ticketings", {
             status: "unchecked",
             full_name: fullName,
             email: email,
             wa_number: whatsapp,
             vaccinated: vaccinated,
             ticket_type: ticketType,
+            amount: amount,
             photo: res.data,
           });
           console.log(res);
@@ -284,6 +287,22 @@ const Register = () => {
                           Day 2 Pass - Rp75,000,-
                         </RegisterOption>
                       </RegisterSelect>
+                      <RegisterInput
+                        placeholder="Amount"
+                        type="number"
+                        // onChange={(event) => setHeight(event.target.value)}
+                        onChange={(e) => {
+                          let val = parseInt(e.target.value);
+                          if (isNaN(val)) {
+                            setAmount(null);
+                          } else {
+                            // is A Number
+                            val = val >= 0 ? val : Math.abs(val);
+                            setAmount(val);
+                          }
+                        }}
+                        value={amount}
+                      />
                     </RegisterFormContainer>
                     <RegisterPageCountContainer>
                       (2/3)
