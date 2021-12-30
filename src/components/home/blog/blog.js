@@ -28,7 +28,6 @@ const Blog = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await blogService.getAllBlog();
-      console.log(response);
       setData(response.data);
       setLoading(false);
     };
