@@ -127,11 +127,9 @@ const Register = () => {
             amount: amount,
             photo: res.data,
           });
-          console.log(res);
         })
         .then((res) => {
           // setLoading(false);
-          console.log(res);
           Swal.fire({
             icon: "success",
             title: "Submitted!",
@@ -140,7 +138,6 @@ const Register = () => {
           }).then((result) => {
             if (result.isConfirmed || result.isDismissed) {
               history.push("/");
-              console.log("asd");
             }
           });
         });
@@ -331,7 +328,6 @@ const Register = () => {
                             // is A Number
                             val = val >= 0 ? val : Math.abs(val);
                             setAmount(val);
-                            console.log(amount, total);
                             if (
                               ticketType === "day1_session1" ||
                               ticketType === "day1_session2" ||
@@ -350,7 +346,6 @@ const Register = () => {
                               setMultiplier(0);
                               setTotal(amount * multiplier);
                             }
-                            console.log(total);
                           }
                         }}
                         value={amount}

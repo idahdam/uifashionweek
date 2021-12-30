@@ -20,7 +20,6 @@ import { IconContext } from "react-icons/lib";
 
 const Navbar = () => {
   const location = useLocation();
-  console.log(location.pathname === "/");
   const [click, setClick] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [button, setButton] = useState(false);
