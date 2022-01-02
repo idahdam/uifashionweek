@@ -267,12 +267,12 @@ const Register = () => {
                         onChange={(event) => {
                           setTicketType(event.target.value);
                           if (
-                            ticketType === "day1_session1" ||
-                            ticketType === "day1_session2" ||
-                            ticketType === "day2_session1" ||
-                            ticketType === "day2_session2"
+                            ticketType === "session_1" ||
+                            ticketType === "session_2" ||
+                            ticketType === "session_3" ||
+                            ticketType === "session_4"
                           ) {
-                            setMultiplier(50000);
+                            setMultiplier(30000);
                             setAmount(0);
                             setTotal(amount * multiplier);
                           } else if (
@@ -297,23 +297,17 @@ const Register = () => {
                         >
                           Ticket Type
                         </RegisterOptionDefault>
-                        <RegisterOption value="day1_session1">
-                          Day 1 Session 1 - Rp50,000,-
+                        <RegisterOption value="session_1">
+                          Session 1 - Rp30,000,-
                         </RegisterOption>
-                        <RegisterOption value="day1_session2">
-                          Day 1 Session 2- Rp50,000,-
+                        <RegisterOption value="session_2">
+                          Session 2 - Rp30,000,-
                         </RegisterOption>
-                        <RegisterOption value="day2_session1">
-                          Day 2 Session 1 - Rp50,000,-
+                        <RegisterOption value="session_3">
+                          Session 3 - Rp30,000,-
                         </RegisterOption>
-                        <RegisterOption value="day2_session2">
-                          Day 2 Session 2 - Rp50,000,-
-                        </RegisterOption>
-                        <RegisterOption value="day1_pass">
-                          Day 1 Pass - Rp75,000,-
-                        </RegisterOption>
-                        <RegisterOption value="day2_pass">
-                          Day 2 Pass - Rp75,000,-
+                        <RegisterOption value="session_4">
+                          Session 4 - Rp30,000,-
                         </RegisterOption>
                       </RegisterSelect>
                       <RegisterInput
@@ -329,12 +323,12 @@ const Register = () => {
                             val = val >= 0 ? val : Math.abs(val);
                             setAmount(val);
                             if (
-                              ticketType === "day1_session1" ||
-                              ticketType === "day1_session2" ||
-                              ticketType === "day2_session1" ||
-                              ticketType === "day2_session2"
+                              ticketType === "session_1" ||
+                              ticketType === "session_2" ||
+                              ticketType === "session_3" ||
+                              ticketType === "session_4"
                             ) {
-                              setMultiplier(50000);
+                              setMultiplier(30000);
                               setTotal(amount * multiplier);
                             } else if (
                               ticketType === "day1_pass" ||

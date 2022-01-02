@@ -8,24 +8,17 @@ const termcontent = () => {
         <b>Ticket Types</b>
         <br />
         <br />
-        Day 1 Session 1<br /> Rp50,000,-
+        Session 1<br /> Rp30,000,-
         <br />
         <br />
-        Day 1 Session 2<br /> Rp50,000,-
+        Session 2<br /> Rp30,000,-
         <br />
         <br />
-        Day 2 Session 1<br /> Rp50,000,-
+        Session 3<br /> Rp30,000,-
         <br />
         <br />
-        Day 2 Session 2<br /> Rp50,000,-
+        Session 4<br /> Rp30,000,-
         <br />
-        <br />
-        Day 1 Pass
-        <br /> Rp75,000,-
-        <br />
-        <br />
-        Day 2 Pass
-        <br /> Rp75,000,-
         <br />
       </p>
     </>
