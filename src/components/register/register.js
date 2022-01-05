@@ -108,39 +108,44 @@ const Register = () => {
     const formData = new FormData();
     formData.append("files", image1);
     try {
+      // Swal.fire({
+      //   icon: "info",
+      //   title: "Uploading...",
+      //   showConfirmButton: false,
+      //   allowOutsideClick: false,
+      // });
+      // await axios
+      //   .post("https://api.uifashionweek.com/upload", formData)
+      //   .then(async (res) => {
+      //     await axios.post("https://api.uifashionweek.com/ticketings", {
+      //       status: "unchecked",
+      //       full_name: fullName,
+      //       email: email,
+      //       wa_number: whatsapp,
+      //       vaccinated: vaccinated,
+      //       ticket_type: ticketType,
+      //       amount: amount,
+      //       photo: res.data,
+      //     });
+      //   })
+      //   .then((res) => {
+      //     // setLoading(false);
+      //     Swal.fire({
+      //       icon: "success",
+      //       title: "Submitted!",
+      //       html: "Thank you! Your ticket will be processed via email.",
+      //       showConfirmButton: true,
+      //     }).then((result) => {
+      //       if (result.isConfirmed || result.isDismissed) {
+      //         history.push("/");
+      //       }
+      //     });
+      //   });
       Swal.fire({
-        icon: "info",
-        title: "Uploading...",
-        showConfirmButton: false,
-        allowOutsideClick: false,
+        icon: "information",
+        title: "Notification",
+        text: "Registration is closed.",
       });
-      await axios
-        .post("https://api.uifashionweek.com/upload", formData)
-        .then(async (res) => {
-          await axios.post("https://api.uifashionweek.com/ticketings", {
-            status: "unchecked",
-            full_name: fullName,
-            email: email,
-            wa_number: whatsapp,
-            vaccinated: vaccinated,
-            ticket_type: ticketType,
-            amount: amount,
-            photo: res.data,
-          });
-        })
-        .then((res) => {
-          // setLoading(false);
-          Swal.fire({
-            icon: "success",
-            title: "Submitted!",
-            html: "Thank you! Your ticket will be processed via email.",
-            showConfirmButton: true,
-          }).then((result) => {
-            if (result.isConfirmed || result.isDismissed) {
-              history.push("/");
-            }
-          });
-        });
     } catch (err) {
       Swal.fire({
         icon: "error",
