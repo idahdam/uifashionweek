@@ -8,16 +8,16 @@ const termcontent = () => {
         <b>Ticket Types</b>
         <br />
         <br />
-        Session 1<br /> Rp30,000,-
+        Session 1<br /> Rp50,000,-
         <br />
         <br />
-        Session 2<br /> Rp30,000,-
+        Session 2<br /> Rp50,000,-
         <br />
         <br />
-        Session 3<br /> Rp30,000,-
+        Session 3<br /> Rp50,000,-
         <br />
         <br />
-        Session 4<br /> Rp30,000,-
+        Session 4<br /> Rp50,000,-
         <br />
         <br />
       </p>

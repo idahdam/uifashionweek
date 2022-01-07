@@ -19,6 +19,7 @@ import {
   RegisterPageCountContainer,
   RegisterPageFaq,
   RegisterTermsContainer,
+  RegisterCheckBoxInput,
 } from "./register.element";
 import leftModel from "../../assets/image/register/left.png";
 import Faq from "./faqcontent";
@@ -40,13 +41,19 @@ const Register = () => {
 
   const [fullName, setFullName] = useState(null);
   const [ticketType, setTicketType] = useState(null);
-  const [amount, setAmount] = useState(null);
-  const [multiplier, setMultiplier] = useState(null);
+  const [amount, setAmount] = useState(0);
+  const [multiplier, setMultiplier] = useState(50000);
   const [total, setTotal] = useState(0);
 
   const [email, setEmail] = useState(null);
   const [whatsapp, setWhatsapp] = useState(null);
   const [vaccinated, setVaccinated] = useState(null);
+
+  // sessions
+  const [session1, setSession1] = useState(false);
+  const [session2, setSession2] = useState(false);
+  const [session3, setSession3] = useState(false);
+  const [session4, setSession4] = useState(false);
 
   // mobile photo
   const showButton = () => {
@@ -58,10 +65,8 @@ const Register = () => {
   };
 
   useEffect(() => {
-    setAmount(amount);
-    setMultiplier(multiplier);
     setTotal(amount * multiplier);
-  }, [amount, multiplier, total]);
+  }, [multiplier, amount]);
 
   const style = {
     position: "fixed",
@@ -108,44 +113,43 @@ const Register = () => {
     const formData = new FormData();
     formData.append("files", image1);
     try {
-      // Swal.fire({
-      //   icon: "info",
-      //   title: "Uploading...",
-      //   showConfirmButton: false,
-      //   allowOutsideClick: false,
-      // });
-      // await axios
-      //   .post("https://api.uifashionweek.com/upload", formData)
-      //   .then(async (res) => {
-      //     await axios.post("https://api.uifashionweek.com/ticketings", {
-      //       status: "unchecked",
-      //       full_name: fullName,
-      //       email: email,
-      //       wa_number: whatsapp,
-      //       vaccinated: vaccinated,
-      //       ticket_type: ticketType,
-      //       amount: amount,
-      //       photo: res.data,
-      //     });
-      //   })
-      //   .then((res) => {
-      //     // setLoading(false);
-      //     Swal.fire({
-      //       icon: "success",
-      //       title: "Submitted!",
-      //       html: "Thank you! Your ticket will be processed via email.",
-      //       showConfirmButton: true,
-      //     }).then((result) => {
-      //       if (result.isConfirmed || result.isDismissed) {
-      //         history.push("/");
-      //       }
-      //     });
-      //   });
       Swal.fire({
-        icon: "information",
-        title: "Notification",
-        text: "Registration is closed.",
+        icon: "info",
+        title: "Uploading...",
+        showConfirmButton: false,
+        allowOutsideClick: false,
       });
+      await axios
+        .post("https://api.uifashionweek.com/upload", formData)
+        .then(async (res) => {
+          await axios.post("https://api.uifashionweek.com/ticketings", {
+            status: "unchecked",
+            full_name: fullName,
+            email: email,
+            wa_number: whatsapp,
+            vaccinated: vaccinated,
+            // ticket_type: ticketType,
+            amount: amount,
+            photo: res.data,
+            session_1: session1 ? 1 : 0,
+            session_2: session2 ? 1 : 0,
+            session_3: session3 ? 1 : 0,
+            session_4: session4 ? 1 : 0,
+          });
+        })
+        .then((res) => {
+          // setLoading(false);
+          Swal.fire({
+            icon: "success",
+            title: "Submitted!",
+            html: "Thank you! Your ticket will be processed via email.",
+            showConfirmButton: true,
+          }).then((result) => {
+            if (result.isConfirmed || result.isDismissed) {
+              history.push("/");
+            }
+          });
+        });
     } catch (err) {
       Swal.fire({
         icon: "error",
@@ -267,7 +271,55 @@ const Register = () => {
                       <RegisterTermsContainer>
                         <Terms />
                       </RegisterTermsContainer>
-                      <RegisterSelect
+                      <RegisterCheckBoxInput
+                        type={"checkbox"}
+                        onClick={() => {
+                          setSession1(!session1);
+                          if (!session1 === true) {
+                            setAmount(amount + 1);
+                          } else {
+                            setAmount(amount - 1);
+                          }
+                        }}
+                      />
+                      <label for="Session 1">Session 1 </label>
+                      <RegisterCheckBoxInput
+                        type={"checkbox"}
+                        onClick={() => {
+                          setSession2(!session2);
+                          if (!session2 === true) {
+                            setAmount(amount + 1);
+                          } else {
+                            setAmount(amount - 1);
+                          }
+                        }}
+                      />
+                      <label for="Session 2">Session 2 </label>
+                      <RegisterCheckBoxInput
+                        type={"checkbox"}
+                        onClick={() => {
+                          setSession3(!session3);
+                          if (!session3 === true) {
+                            setAmount(amount + 1);
+                          } else {
+                            setAmount(amount - 1);
+                          }
+                        }}
+                      />
+                      <label for="Session 3">Session 3 </label>
+                      <RegisterCheckBoxInput
+                        type={"checkbox"}
+                        onClick={() => {
+                          setSession4(!session4);
+                          if (!session4 === true) {
+                            setAmount(amount + 1);
+                          } else {
+                            setAmount(amount - 1);
+                          }
+                        }}
+                      />
+                      <label for="Session 4">Session 4 </label>
+                      {/* <RegisterSelect
                         value={ticketType}
                         onChange={(event) => {
                           setTicketType(event.target.value);
@@ -348,7 +400,7 @@ const Register = () => {
                           }
                         }}
                         value={amount}
-                      />
+                      /> */}
                     </RegisterFormContainer>
                     <RegisterCardDescription2>
                       <br />
