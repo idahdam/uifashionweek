@@ -1,7 +1,6 @@
 import axios from "axios";
 
-// const BASE_URL = "https://api.uifashionweek.com";
-const BASE_URL = "http://localhost:1337";
+const BASE_URL = "https://api.uifashionweek.com";
 
 async function http(method, endpoint, body = null, data) {
   const headers = {

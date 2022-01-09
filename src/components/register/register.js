@@ -164,7 +164,6 @@ const Register = () => {
             email: email,
             wa_number: whatsapp,
             vaccinated: vaccinated,
-            // ticket_type: ticketType,
             amount: amount * multiplier,
             photo: res.data,
             photo_url: res.data[0].url,
@@ -320,10 +319,13 @@ const Register = () => {
                           }
                         }}
                         checked={session1}
+                        disabled={totalTickets - sessionOneCount === 0}
                       />
                       <label for="Session 1">
                         {`Session 1: ${
-                          totalTickets - sessionOneCount
+                          totalTickets - sessionOneCount !== 0
+                            ? totalTickets - sessionOneCount
+                            : 0
                         } ticket(s) left!`}{" "}
                       </label>
                       <br />
@@ -339,10 +341,13 @@ const Register = () => {
                           }
                         }}
                         checked={session2}
+                        disabled={totalTickets - sessionTwoCount === 0}
                       />
                       <label for="Session 2">
                         {`Session 2: ${
-                          totalTickets - sessionTwoCount
+                          totalTickets - sessionTwoCount !== 0
+                            ? totalTickets - sessionTwoCount
+                            : 0
                         } ticket(s) left!`}{" "}
                       </label>
                       <br />
@@ -358,10 +363,13 @@ const Register = () => {
                           }
                         }}
                         checked={session3}
+                        disabled={totalTickets - sessionThreeCount === 0}
                       />
                       <label for="Session 3">
                         {`Session 3: ${
-                          totalTickets - sessionThreeCount
+                          totalTickets - sessionThreeCount !== 0
+                            ? totalTickets - sessionThreeCount
+                            : 0
                         } ticket(s) left!`}{" "}
                       </label>
                       <br />
@@ -377,10 +385,13 @@ const Register = () => {
                           }
                         }}
                         checked={session4}
+                        disabled={totalTickets - sessionFourCount === 0}
                       />
                       <label for="Session 4">
                         {`Session 4: ${
-                          totalTickets - sessionFourCount
+                          totalTickets - sessionFourCount !== 0
+                            ? totalTickets - sessionFourCount
+                            : 0
                         } ticket(s) left!`}{" "}
                       </label>
                       <br />
