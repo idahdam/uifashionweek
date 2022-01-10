@@ -266,6 +266,8 @@ export const RegisterUploadSliderInput = styled.input`
   z-index: 2;
 `;
 
+export const RegisterCheckBoxInput = styled.input``;
+
 export const RegisterUploadSlider = styled.div`
   background: #ece3df;
   border-radius: 30px;

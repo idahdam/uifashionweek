@@ -19,6 +19,7 @@ import {
   RegisterPageCountContainer,
   RegisterPageFaq,
   RegisterTermsContainer,
+  RegisterCheckBoxInput,
 } from "./register.element";
 import leftModel from "../../assets/image/register/left.png";
 import Faq from "./faqcontent";
@@ -28,11 +29,18 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import { useHistory } from "react-router";
 import FadeLoader from "react-spinners/FadeLoader";
+import { ticketCounterService } from "../../services/ticketCounterService";
 
 const Register = () => {
   const [page, setPage] = useState(1);
+  let totalTickets = 22;
+  const [counter, setCounter] = useState([]);
+  const [sessionOneCount, setSessionOneCount] = useState(0);
+  const [sessionTwoCount, setSessionTwoCount] = useState(0);
+  const [sessionThreeCount, setSessionThreeCount] = useState(0);
+  const [sessionFourCount, setSessionFourCount] = useState(0);
   // const [upload, setUpload] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [button, setButton] = useState(true);
 
   // input and files area
@@ -40,13 +48,19 @@ const Register = () => {
 
   const [fullName, setFullName] = useState(null);
   const [ticketType, setTicketType] = useState(null);
-  const [amount, setAmount] = useState(null);
-  const [multiplier, setMultiplier] = useState(null);
+  const [amount, setAmount] = useState(0);
+  const [multiplier, setMultiplier] = useState(50000);
   const [total, setTotal] = useState(0);
 
   const [email, setEmail] = useState(null);
   const [whatsapp, setWhatsapp] = useState(null);
   const [vaccinated, setVaccinated] = useState(null);
+
+  // sessions
+  const [session1, setSession1] = useState(false);
+  const [session2, setSession2] = useState(false);
+  const [session3, setSession3] = useState(false);
+  const [session4, setSession4] = useState(false);
 
   // mobile photo
   const showButton = () => {
@@ -58,9 +72,32 @@ const Register = () => {
   };
 
   useEffect(() => {
-    setAmount(amount);
-    setMultiplier(multiplier);
     setTotal(amount * multiplier);
+    const fetchCounters = async () => {
+      await ticketCounterService.getCounters().then((response) => {
+        setCounter(response.data);
+        if (loading !== false) {
+          response.data.forEach((item, index) => {
+            if (item.session_1 === 1) {
+              setSessionOneCount((sessionOneCount) => sessionOneCount + 1);
+            }
+            if (item.session_2 === 1) {
+              setSessionTwoCount((sessionTwoCount) => sessionTwoCount + 1);
+            }
+            if (item.session_3 === 1) {
+              setSessionThreeCount(
+                (sessionThreeCount) => sessionThreeCount + 1
+              );
+            }
+            if (item.session_4 === 1) {
+              setSessionFourCount((sessionFourCount) => sessionFourCount + 1);
+            }
+          });
+        }
+      });
+    };
+    fetchCounters();
+    setLoading(false);
   }, [amount, multiplier, total]);
 
   const style = {
@@ -79,14 +116,18 @@ const Register = () => {
       !fullName.trim() ||
       email === null ||
       !email.trim() ||
+      total === 0 ||
       whatsapp === null ||
-      ticketType === null ||
       !whatsapp.trim() ||
       amount === null ||
       vaccinated === null ||
       image1 === null
     ) {
-      Swal.fire("Hold up!", "Make sure to fill all the fields.", "warning");
+      Swal.fire(
+        "Hold up!",
+        "Make sure to fill all the fields OR choose a ticket to buy",
+        "warning"
+      );
     } else {
       Swal.fire({
         title: "Submit all of the data?",
@@ -108,44 +149,43 @@ const Register = () => {
     const formData = new FormData();
     formData.append("files", image1);
     try {
-      // Swal.fire({
-      //   icon: "info",
-      //   title: "Uploading...",
-      //   showConfirmButton: false,
-      //   allowOutsideClick: false,
-      // });
-      // await axios
-      //   .post("https://api.uifashionweek.com/upload", formData)
-      //   .then(async (res) => {
-      //     await axios.post("https://api.uifashionweek.com/ticketings", {
-      //       status: "unchecked",
-      //       full_name: fullName,
-      //       email: email,
-      //       wa_number: whatsapp,
-      //       vaccinated: vaccinated,
-      //       ticket_type: ticketType,
-      //       amount: amount,
-      //       photo: res.data,
-      //     });
-      //   })
-      //   .then((res) => {
-      //     // setLoading(false);
-      //     Swal.fire({
-      //       icon: "success",
-      //       title: "Submitted!",
-      //       html: "Thank you! Your ticket will be processed via email.",
-      //       showConfirmButton: true,
-      //     }).then((result) => {
-      //       if (result.isConfirmed || result.isDismissed) {
-      //         history.push("/");
-      //       }
-      //     });
-      //   });
       Swal.fire({
-        icon: "information",
-        title: "Notification",
-        text: "Registration is closed.",
+        icon: "info",
+        title: "Uploading...",
+        showConfirmButton: false,
+        allowOutsideClick: false,
       });
+      await axios
+        .post("https://api.uifashionweek.com/upload", formData)
+        .then(async (res) => {
+          await axios.post("https://api.uifashionweek.com/ticketings", {
+            status: "unchecked",
+            full_name: fullName,
+            email: email,
+            wa_number: whatsapp,
+            vaccinated: vaccinated,
+            amount: amount * multiplier,
+            photo: res.data,
+            photo_url: res.data[0].url,
+            session_1: session1 ? 1 : 0,
+            session_2: session2 ? 1 : 0,
+            session_3: session3 ? 1 : 0,
+            session_4: session4 ? 1 : 0,
+          });
+        })
+        .then((res) => {
+          // setLoading(false);
+          Swal.fire({
+            icon: "success",
+            title: "Submitted!",
+            html: "Thank you! Your ticket will be processed via email.",
+            showConfirmButton: true,
+          }).then((result) => {
+            if (result.isConfirmed || result.isDismissed) {
+              history.push("/");
+            }
+          });
+        });
     } catch (err) {
       Swal.fire({
         icon: "error",
@@ -156,6 +196,7 @@ const Register = () => {
     }
   };
 
+  if (loading) return null;
   return (
     <>
       <RegisterContainer>
@@ -267,88 +308,90 @@ const Register = () => {
                       <RegisterTermsContainer>
                         <Terms />
                       </RegisterTermsContainer>
-                      <RegisterSelect
-                        value={ticketType}
-                        onChange={(event) => {
-                          setTicketType(event.target.value);
-                          if (
-                            ticketType === "session_1" ||
-                            ticketType === "session_2" ||
-                            ticketType === "session_3" ||
-                            ticketType === "session_4"
-                          ) {
-                            setMultiplier(30000);
-                            setAmount(0);
-                            setTotal(amount * multiplier);
-                          } else if (
-                            ticketType === "day1_pass" ||
-                            ticketType === "day2_pass"
-                          ) {
-                            setMultiplier(75000);
-                            setAmount(0);
-                            setTotal(amount * multiplier);
+                      <RegisterCheckBoxInput
+                        type={"checkbox"}
+                        onClick={() => {
+                          setSession1(!session1);
+                          if (!session1 === true) {
+                            setAmount(amount + 1);
                           } else {
-                            setAmount(0);
-                            setMultiplier(0);
-                            setTotal(amount * multiplier);
+                            setAmount(amount - 1);
                           }
                         }}
-                      >
-                        <RegisterOptionDefault
-                          value=""
-                          disabled
-                          selected
-                          hidden
-                        >
-                          Ticket Type
-                        </RegisterOptionDefault>
-                        <RegisterOption value="session_1">
-                          Session 1 - Rp30,000,-
-                        </RegisterOption>
-                        <RegisterOption value="session_2">
-                          Session 2 - Rp30,000,-
-                        </RegisterOption>
-                        <RegisterOption value="session_3">
-                          Session 3 - Rp30,000,-
-                        </RegisterOption>
-                        <RegisterOption value="session_4">
-                          Session 4 - Rp30,000,-
-                        </RegisterOption>
-                      </RegisterSelect>
-                      <RegisterInput
-                        placeholder="Amount"
-                        type="number"
-                        // onChange={(event) => setHeight(event.target.value)}
-                        onChange={(e) => {
-                          let val = parseInt(e.target.value);
-                          if (isNaN(val)) {
-                            setAmount(null);
-                          } else {
-                            // is A Number
-                            val = val >= 0 ? val : Math.abs(val);
-                            setAmount(val);
-                            if (
-                              ticketType === "session_1" ||
-                              ticketType === "session_2" ||
-                              ticketType === "session_3" ||
-                              ticketType === "session_4"
-                            ) {
-                              setMultiplier(30000);
-                              setTotal(amount * multiplier);
-                            } else if (
-                              ticketType === "day1_pass" ||
-                              ticketType === "day2_pass"
-                            ) {
-                              setMultiplier(75000);
-                              setTotal(amount * multiplier);
-                            } else {
-                              setMultiplier(0);
-                              setTotal(amount * multiplier);
-                            }
-                          }
-                        }}
-                        value={amount}
+                        checked={session1}
+                        disabled={6 - sessionOneCount === 0}
                       />
+                      <label for="Session 1">
+                        {`Session 1: ${
+                          6 - sessionOneCount !== 0 ? 6 - sessionOneCount : 0
+                        } ticket(s) left!`}{" "}
+                      </label>
+                      <br />
+                      <br />
+                      <RegisterCheckBoxInput
+                        type={"checkbox"}
+                        onClick={() => {
+                          setSession2(!session2);
+                          if (!session2 === true) {
+                            setAmount(amount + 1);
+                          } else {
+                            setAmount(amount - 1);
+                          }
+                        }}
+                        checked={session2}
+                        disabled={21 - sessionTwoCount === 0}
+                      />
+                      <label for="Session 2">
+                        {`Session 2: ${
+                          21 - sessionTwoCount !== 0 ? 21 - sessionTwoCount : 0
+                        } ticket(s) left!`}{" "}
+                      </label>
+                      <br />
+                      <br />
+                      <RegisterCheckBoxInput
+                        type={"checkbox"}
+                        onClick={() => {
+                          setSession3(!session3);
+                          if (!session3 === true) {
+                            setAmount(amount + 1);
+                          } else {
+                            setAmount(amount - 1);
+                          }
+                        }}
+                        checked={session3}
+                        disabled={23 - sessionThreeCount === 0}
+                      />
+                      <label for="Session 3">
+                        {`Session 3: ${
+                          23 - sessionThreeCount !== 0
+                            ? 23 - sessionThreeCount
+                            : 0
+                        } ticket(s) left!`}{" "}
+                      </label>
+                      <br />
+                      <br />
+                      <RegisterCheckBoxInput
+                        type={"checkbox"}
+                        onClick={() => {
+                          setSession4(!session4);
+                          if (!session4 === true) {
+                            setAmount(amount + 1);
+                          } else {
+                            setAmount(amount - 1);
+                          }
+                        }}
+                        checked={session4}
+                        disabled={19 - sessionFourCount === 0}
+                      />
+                      <label for="Session 4">
+                        {`Session 4: ${
+                          19 - sessionFourCount !== 0
+                            ? 19 - sessionFourCount
+                            : 0
+                        } ticket(s) left!`}{" "}
+                      </label>
+                      <br />
+                      <br />
                     </RegisterFormContainer>
                     <RegisterCardDescription2>
                       <br />

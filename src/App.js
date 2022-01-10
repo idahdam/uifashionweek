@@ -13,8 +13,7 @@ function App() {
         <ScrollToTop />
         <Switch>
           <Route exact path="/" component={Home} />
-          {/* <Route exact path="/register" component={Register} /> */}
-          <Route exact path="/register" component={Home} />
+          <Route exact path="/register" component={Register} />
           <Route exact path="/blogs/:id" component={Blogs} />
           <Route exact component={NotFound} />
         </Switch>
