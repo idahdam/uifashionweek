@@ -323,7 +323,7 @@ const Register = () => {
                       />
                       <label for="Session 1">
                         {`Session 1: ${
-                          6 - sessionOneCount !== 0 ? 6 - sessionOneCount : 0
+                          6 - sessionOneCount > 0 ? 6 - sessionOneCount : 0
                         } ticket(s) left!`}{" "}
                       </label>
                       <br />
@@ -339,11 +339,11 @@ const Register = () => {
                           }
                         }}
                         checked={session2}
-                        disabled={21 - sessionTwoCount === 0}
+                        disabled={21 - sessionTwoCount <= 0}
                       />
                       <label for="Session 2">
                         {`Session 2: ${
-                          21 - sessionTwoCount !== 0 ? 21 - sessionTwoCount : 0
+                          21 - sessionTwoCount > 0 ? 21 - sessionTwoCount : 0
                         } ticket(s) left!`}{" "}
                       </label>
                       <br />
@@ -363,7 +363,7 @@ const Register = () => {
                       />
                       <label for="Session 3">
                         {`Session 3: ${
-                          23 - sessionThreeCount !== 0
+                          23 - sessionThreeCount > 0
                             ? 23 - sessionThreeCount
                             : 0
                         } ticket(s) left!`}{" "}
@@ -385,7 +385,7 @@ const Register = () => {
                       />
                       <label for="Session 4">
                         {`Session 4: ${
-                          19 - sessionFourCount !== 0
+                          19 - sessionFourCount > 0
                             ? 19 - sessionFourCount
                             : 0
                         } ticket(s) left!`}{" "}
