@@ -319,7 +319,7 @@ const Register = () => {
                           }
                         }}
                         checked={session1}
-                        disabled={6 - sessionOneCount === 0}
+                        disabled={true}
                       />
                       <label for="Session 1">
                         {`Session 1: ${
@@ -359,7 +359,7 @@ const Register = () => {
                           }
                         }}
                         checked={session3}
-                        disabled={23 - sessionThreeCount === 0}
+                        disabled={true}
                       />
                       <label for="Session 3">
                         {`Session 3: ${
@@ -381,7 +381,7 @@ const Register = () => {
                           }
                         }}
                         checked={session4}
-                        disabled={19 - sessionFourCount === 0}
+                        disabled={true}
                       />
                       <label for="Session 4">
                         {`Session 4: ${
