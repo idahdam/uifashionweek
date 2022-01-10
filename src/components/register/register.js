@@ -339,7 +339,7 @@ const Register = () => {
                           }
                         }}
                         checked={session2}
-                        disabled={21 - sessionTwoCount <= 0}
+                        disabled={true}
                       />
                       <label for="Session 2">
                         {`Session 2: ${
