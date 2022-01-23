@@ -11,7 +11,7 @@ export const SponsorContainer = styled.div`
   );
   z-index: 1;
   width: 100%;
-  height: 1080px;
+  height: 1280px;
   margin-left: auto;
   margin-right: auto;
   -webkit-background-size: cover;
@@ -24,6 +24,9 @@ export const SponsorContainer = styled.div`
   }
   border-bottom-color: transparent;
   padding-bottom: 30%;
+  @media (max-width: 930px) {
+    height: 1380px;
+  }
 `;
 
 export const SponsorDeco = styled.div`
@@ -79,6 +82,10 @@ export const SponsorSection = styled.p`
   font-size: 30px;
   text-align: center;
   font-weight: bold;
+  @media (max-width: 930px) {
+    width: 100%;
+    font-size: 20px;
+  }
 `;
 
 export const SponsorImage = styled.img`
@@ -89,15 +96,36 @@ export const SponsorImage = styled.img`
 `;
 
 export const SponsorRow = styled.div`
-  display: flex;
+margin-left: auto;
+margin-right: auto;
+width: 100%;
+overflow: hidden;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+@media (max-width: 930px) {
+  flex-direction: column;
+}
 `;
 
 export const SponsorColumn = styled.div`
-  flex: 50%;
+  width: 48%;
+  display: flex;
+  float: left;
+  margin-top: 5%;
+  @media (max-width: 930px) {
+    width: 100%;
+    padding-left: 5%;
+  }
+`;
 
-  @media screen and (max-width: 960px) {
-    .column {
-      width: 100%;
-    }
+export const SponsorSectionColumn = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2px;
+  margin-top: 15%;
+  @media (max-width: 930px) {
+    width: 100%;
+    margin-bottom: 5%;
   }
 `;

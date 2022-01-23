@@ -13,6 +13,7 @@ import {
   SponsorImage,
   SponsorRow,
   SponsorColumn,
+  SponsorSectionColumn,
 } from "./sponsor.element";
 const sponsor = () => {
   return (
@@ -24,12 +25,16 @@ const sponsor = () => {
               <SponsorHeader>Sponsor & Partnership</SponsorHeader>
               <SponsorRow>
                 <SponsorColumn>
-                  <SponsorSection>Official Website Partner</SponsorSection>
-                  <SponsorImage src={newtab} width={200}></SponsorImage>
+                  <SponsorSectionColumn>
+                    <SponsorSection>Official Website Partner</SponsorSection>
+                    <SponsorImage src={newtab} width={200}></SponsorImage>
+                  </SponsorSectionColumn>
                 </SponsorColumn>
                 <SponsorColumn>
-                  <SponsorSection>Official Website Partner</SponsorSection>
-                  <SponsorImage src={neo}></SponsorImage>
+                  <SponsorSectionColumn>
+                    <SponsorSection>Official Venue Partner</SponsorSection>
+                    <SponsorImage src={neo}></SponsorImage>
+                  </SponsorSectionColumn>
                 </SponsorColumn>
               </SponsorRow>
               <SponsorSection>Sponsor</SponsorSection>
