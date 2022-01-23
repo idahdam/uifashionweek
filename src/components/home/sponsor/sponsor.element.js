@@ -25,7 +25,7 @@ export const SponsorContainer = styled.div`
   border-bottom-color: transparent;
   padding-bottom: 30%;
   @media (max-width: 930px) {
-    height: 1380px;
+    height: 2100px;
   }
 `;
 
@@ -95,17 +95,38 @@ export const SponsorImage = styled.img`
   width: 100%;
 `;
 
+export const SponsorImage1 = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  @media (max-width: 930px) {
+    display: none;
+  }
+`;
+
+export const SponsorImage2 = styled.img`
+  display: none;
+
+  @media (max-width: 930px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+`;
+
 export const SponsorRow = styled.div`
-margin-left: auto;
-margin-right: auto;
-width: 100%;
-overflow: hidden;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-@media (max-width: 930px) {
-  flex-direction: column;
-}
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media (max-width: 930px) {
+    flex-direction: column;
+  }
 `;
 
 export const SponsorColumn = styled.div`

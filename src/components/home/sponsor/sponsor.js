@@ -2,6 +2,8 @@ import React from "react";
 import medpar_pc from "../../../assets/image/sponsor/medpar-pc.png";
 import sponsor_pc from "../../../assets/image/sponsor/1-pc.png";
 import newtab from "../../../assets/image/sponsor/newtab.png";
+import sponsor_phone from "../../../assets/image/sponsor/1-phone.png";
+import medpar_phone from "../../../assets/image/sponsor/medpar-phone.png";
 import neo from "../../../assets/image/sponsor/neo-soho.png";
 import {
   SponsorContainer,
@@ -11,6 +13,8 @@ import {
   SponsorDeco,
   SponsorSection,
   SponsorImage,
+  SponsorImage1,
+  SponsorImage2,
   SponsorRow,
   SponsorColumn,
   SponsorSectionColumn,
@@ -38,9 +42,11 @@ const sponsor = () => {
                 </SponsorColumn>
               </SponsorRow>
               <SponsorSection>Sponsor</SponsorSection>
-              <SponsorImage src={sponsor_pc}></SponsorImage>
+              <SponsorImage1 src={sponsor_pc}></SponsorImage1>
+              <SponsorImage2 src={sponsor_phone}></SponsorImage2>
               <SponsorSection>Media Partner</SponsorSection>
-              <SponsorImage src={medpar_pc}></SponsorImage>
+              <SponsorImage1 src={medpar_pc}></SponsorImage1>
+              <SponsorImage2 src={medpar_phone}></SponsorImage2>
             </SponsorSectionHeader>
           </SponsorContent>
         </SponsorDeco>
