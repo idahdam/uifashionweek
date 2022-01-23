@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SponsorContainer = styled.div`
   background: linear-gradient(
     to top,
-    #dae2eb,
+    #ffffff,
     #e5e9f0,
     #eef0f5,
     #f7f7fa,
@@ -22,6 +22,8 @@ export const SponsorContainer = styled.div`
   @media screen and (max-width: 960px) {
     padding-top: 5%;
   }
+  border-bottom-color: transparent;
+  padding-bottom: 30%;
 `;
 
 export const SponsorDeco = styled.div`
@@ -71,4 +73,31 @@ export const AboutSection = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 8%;
+`;
+
+export const SponsorSection = styled.p`
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+`;
+
+export const SponsorImage = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+`;
+
+export const SponsorRow = styled.div`
+  display: flex;
+`;
+
+export const SponsorColumn = styled.div`
+  flex: 50%;
+
+  @media screen and (max-width: 960px) {
+    .column {
+      width: 100%;
+    }
+  }
 `;
