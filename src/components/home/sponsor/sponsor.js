@@ -42,7 +42,7 @@ const sponsor = () => {
                 </SponsorColumn>
               </SponsorRow>
               <SponsorSection>Sponsor</SponsorSection>
-              <SponsorImage1 src={sponsor_pc}></SponsorImage1>
+              <SponsorImage1 src={sponsor_pc} width={200}></SponsorImage1>
               <SponsorImage2 src={sponsor_phone}></SponsorImage2>
               <SponsorSection>Media Partner</SponsorSection>
               <SponsorImage1 src={medpar_pc}></SponsorImage1>
