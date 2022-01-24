@@ -144,9 +144,9 @@ export const SponsorSectionColumn = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2px;
-  margin-top: 15%;
   @media (max-width: 930px) {
     width: 100%;
     margin-bottom: 5%;
   }
 `;
+
