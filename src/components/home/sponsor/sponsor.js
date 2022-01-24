@@ -41,10 +41,10 @@ const sponsor = () => {
                   </SponsorSectionColumn>
                 </SponsorColumn>
               </SponsorRow>
-              <SponsorSection>Sponsor</SponsorSection>
+              <SponsorSection>Our Sponsors</SponsorSection>
               <SponsorImage1 src={sponsor_pc} width={200}></SponsorImage1>
               <SponsorImage2 src={sponsor_phone}></SponsorImage2>
-              <SponsorSection>Media Partner</SponsorSection>
+              <SponsorSection>Our Media Partners</SponsorSection>
               <SponsorImage1 src={medpar_pc}></SponsorImage1>
               <SponsorImage2 src={medpar_phone}></SponsorImage2>
             </SponsorSectionHeader>
